@@ -385,10 +385,7 @@ public class RtsCamera : MonoBehaviour
     {
         if (_followTarget != null)
         {
-            if (OnEndFollow != null)
-            {
-                OnEndFollow(_followTarget);
-            }
+            OnEndFollow?.Invoke(_followTarget);
         }
 
         _followTarget = followTarget;
@@ -400,10 +397,7 @@ public class RtsCamera : MonoBehaviour
                 LookAt = _followTarget.position;
             }
 
-            if (OnBeginFollow != null)
-            {
-                OnBeginFollow(_followTarget);
-            }
+            OnBeginFollow?.Invoke(_followTarget);
         }
     }
 
