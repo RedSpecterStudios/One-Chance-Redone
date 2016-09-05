@@ -1,1 +1,2 @@
 - Mines random Y rotation on spawn
+- Min/Max range for mortors
