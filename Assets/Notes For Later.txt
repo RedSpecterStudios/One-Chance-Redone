@@ -1,0 +1,1 @@
+- Mines random Y rotation on spawn
