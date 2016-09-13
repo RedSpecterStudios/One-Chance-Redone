@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class PlaceObject : MonoBehaviour {
 
     public Camera tpCamera;
+    public List<GameObject> objectList;
 
-    public bool _placing = false;
+    private bool _placing = false;
     private float? _pedX;
     private float? _pedZ;
     private GameObject _pedestal;
@@ -16,8 +18,11 @@ public class PlaceObject : MonoBehaviour {
     }
 
     void Update () {
-        // Toggles _placing every time the player hits "1" above the qwerty line
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+        // Toggles _placing every time the player hits a button from 1-8 above the qwerty line
+        if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) ||
+            Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4) ||
+            Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha6) ||
+            Input.GetKeyDown(KeyCode.Alpha7) || Input.GetKeyDown(KeyCode.Alpha8)) {
             _placing = !_placing;
         }
 
