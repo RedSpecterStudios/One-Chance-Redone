@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class Tower : MonoBehaviour {
 
-    public List<GameObject> _colliderChildren;
+    public Material ghostMaterial;
     
 	void Start () {
 	
