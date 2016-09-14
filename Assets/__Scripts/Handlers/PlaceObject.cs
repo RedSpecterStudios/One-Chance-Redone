@@ -9,6 +9,7 @@ public class PlaceObject : MonoBehaviour {
     private bool _placing = false;
     private float? _pedX;
     private float? _pedZ;
+    public GameObject _itemInHand;
     private GameObject _pedestal;
     private Ray _ray;
     private RaycastHit _hit;
@@ -23,7 +24,18 @@ public class PlaceObject : MonoBehaviour {
             Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4) ||
             Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha6) ||
             Input.GetKeyDown(KeyCode.Alpha7) || Input.GetKeyDown(KeyCode.Alpha8)) {
-            _placing = !_placing;
+            if (!_placing) {
+                _placing = !_placing;
+            }
+
+            int _numKey = int.Parse(Input.inputString);
+            _itemInHand = (GameObject)Instantiate(objectList[_numKey-1], Vector3.zero, Quaternion.identity);
+            foreach (Transform child in _itemInHand.transform) {
+                if (child.GetComponent<BoxCollider>() != null) {
+                    child.gameObject.layer = 2;
+                }
+            }
+
         }
 
         // Calls Place method
@@ -37,13 +49,14 @@ public class PlaceObject : MonoBehaviour {
             _ray = tpCamera.ScreenPointToRay(Input.mousePosition);
             // If the raycast hits anything in the loaded world...
             if (Physics.Raycast(_ray, out _hit, Mathf.Infinity)) {
+                _itemInHand.transform.position = _hit.point;
                 // If the hit object has the tag of "Pedestal"...
                 if (_hit.collider.tag == "Pedestal") {
                     // Sets shortcut values and outputs the X and Z co-ords to the debug log
                     _pedestal = _hit.collider.gameObject;
                     _pedX = _pedestal.transform.position.x;
                     _pedZ = _pedestal.transform.position.z;
-                    Debug.Log($"X: {_pedX}, Z: {_pedZ}");
+                    _itemInHand.transform.position = new Vector3((float)_pedX, _itemInHand.transform.position.y, (float)_pedZ);
                 } else {
                     // Else sets the shorcuts to null
                     _pedestal = null;
