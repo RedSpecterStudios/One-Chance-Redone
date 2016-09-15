@@ -5,6 +5,8 @@ public class PlaceObject : MonoBehaviour {
 
     public Camera tpCamera;
 
+    private int i;
+
     private bool _placing = false;
     private float? _pedX;
     private float? _pedZ;
@@ -39,16 +41,9 @@ public class PlaceObject : MonoBehaviour {
             // Determines the object the player wants to spawn and sets _itemInHand as the spawned object
             _itemInHand = (GameObject)Instantiate(objectList[_numKey-1], Vector3.zero, Quaternion.identity);
             // For each child in _itemInHand, if it has a Box Collider, change it's layer to ignore Raycasts
-            foreach (Transform _child in _itemInHand.gameObject.GetComponentInChildren<Transform>()) {
+            foreach (Transform _child in _itemInHand.gameObject.GetComponentsInChildren<Transform>()) {
                 _child.gameObject.layer = 2;
                 _allChildren.Add(_child);
-                Debug.Log(_itemInHand.transform.childCount);
-                Debug.Log(_child.transform.childCount);
-
-
-                /// Get every child if the child has more than one child
-
-
             }
             // For every child (direct and indirect) in the object check if they have a mesh renderer, save the original material
             // and set the material for the object to it's ghost version
@@ -75,39 +70,41 @@ public class PlaceObject : MonoBehaviour {
             if (Physics.Raycast(_ray, out _hit, Mathf.Infinity)) {
                 // Move the object being spawned to where the mouse is over
                 _itemInHand.transform.position = _hit.point;
-                // If the hit object has the tag of "Pedestal"...
-                if (_hit.collider.tag == "Pedestal") {
-                    // Sets shortcut values
-                    _pedestal = _hit.collider.gameObject;
-                    _pedX = _pedestal.transform.position.x;
-                    _pedZ = _pedestal.transform.position.z;
-                    // Sets the _itemInHand to "snap" to the top-center of the pedestal so it looks like it's on it
-                    _itemInHand.transform.position = new Vector3((float)_pedX, CalculateTopPosition(_pedestal), (float)_pedZ);
-                    // If the player left clicks...
-                    if (Input.GetMouseButtonDown(0)) {
-                        // Stop the placing loop
-                        _placing = false;
-                        // Change all materials to the original
-                        foreach(Transform _child in _allChildren) {
-                            if(_child.GetComponent<MeshRenderer>() != null) {
-                                _child.GetComponent<Renderer>().material = _originalMaterial;
-                                _child.gameObject.layer = 0;
+                if (_itemInHand.tag == "Tower") {
+                    // If the hit object has the tag of "Pedestal"...
+                    if(_hit.collider.tag == "Pedestal") {
+                        // Sets shortcut values
+                        _pedestal = _hit.collider.gameObject;
+                        _pedX = _pedestal.transform.position.x;
+                        _pedZ = _pedestal.transform.position.z;
+                        // Sets the _itemInHand to "snap" to the top-center of the pedestal so it looks like it's on it
+                        _itemInHand.transform.position = new Vector3((float)_pedX, CalculateTopPosition(_pedestal), (float)_pedZ);
+                        // If the player left clicks...
+                        if(Input.GetMouseButtonDown(0)) {
+                            // Stop the placing loop
+                            _placing = false;
+                            // Change all materials to the original
+                            foreach(Transform _child in _allChildren) {
+                                if(_child.GetComponent<MeshRenderer>() != null) {
+                                    _child.GetComponent<Renderer>().material = _originalMaterial;
+                                    _child.gameObject.layer = 0;
+                                }
                             }
+                            // Clear and reset all assigned variables
+                            _allChildren.Clear();
+                            _originalMaterial = null;
+                            _pedestal = null;
+                            _pedX = null;
+                            _pedZ = null;
+                            _itemInHand = null;
                         }
-                        // Clear and reset all assigned variables
-                        _allChildren.Clear();
-                        _originalMaterial = null;
+                    } else {
+                        // Else sets the shorcuts to null
                         _pedestal = null;
                         _pedX = null;
                         _pedZ = null;
-                        _itemInHand = null;
                     }
-                } else {
-                    // Else sets the shorcuts to null
-                    _pedestal = null;
-                    _pedX = null;
-                    _pedZ = null;
-                }
+                } else if 
             }
         }
     }
