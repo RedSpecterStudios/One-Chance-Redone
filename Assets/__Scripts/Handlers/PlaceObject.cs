@@ -4,9 +4,6 @@ using System.Collections.Generic;
 public class PlaceObject : MonoBehaviour {
 
     public Camera tpCamera;
-    public List<GameObject> objectList;
-
-    private List<Transform> _allChildren;
 
     private bool _placing = false;
     private float? _pedX;
@@ -16,6 +13,10 @@ public class PlaceObject : MonoBehaviour {
     private Material _originalMaterial;
     private Ray _ray;
     private RaycastHit _hit;
+
+    public List<GameObject> objectList;
+
+    private List<Transform> _allChildren;
 
     void Start () {
         _allChildren = new List<Transform>();
@@ -38,12 +39,27 @@ public class PlaceObject : MonoBehaviour {
             // Determines the object the player wants to spawn and sets _itemInHand as the spawned object
             _itemInHand = (GameObject)Instantiate(objectList[_numKey-1], Vector3.zero, Quaternion.identity);
             // For each child in _itemInHand, if it has a Box Collider, change it's layer to ignore Raycasts
-            foreach (Transform child in _itemInHand.transform) {
-                if (child.GetComponent<BoxCollider>() != null) {
-                    child.gameObject.layer = 2;
+            foreach (Transform _child in _itemInHand.gameObject.GetComponentInChildren<Transform>()) {
+                _child.gameObject.layer = 2;
+                _allChildren.Add(_child);
+                Debug.Log(_itemInHand.transform.childCount);
+                Debug.Log(_child.transform.childCount);
+
+
+                /// Get every child if the child has more than one child
+
+
+            }
+            // For every child (direct and indirect) in the object check if they have a mesh renderer, save the original material
+            // and set the material for the object to it's ghost version
+            foreach(Transform _child in _allChildren) {
+                if(_child.GetComponent<MeshRenderer>() != null) {
+                    Material mat = _child.GetComponent<Renderer>().material;
+                    _originalMaterial = mat;
+                    mat = _itemInHand.GetComponent<Tower>().ghostMaterial;
+                    _child.GetComponent<Renderer>().material = mat;
                 }
             }
-
         }
 
         // Calls Place method
@@ -65,20 +81,27 @@ public class PlaceObject : MonoBehaviour {
                     _pedestal = _hit.collider.gameObject;
                     _pedX = _pedestal.transform.position.x;
                     _pedZ = _pedestal.transform.position.z;
-
-
-                    foreach (Transform child in _allChildren) {
-                        if (child.GetComponent<MeshRenderer>() != null) {
-                            Material mat = child.GetComponent<Renderer>().material;
-                            _originalMaterial = mat;
-                            mat = _itemInHand.GetComponent<Tower>().ghostMaterial;
-                            child.GetComponent<Renderer>().material = mat;
-                        }
-                    }
-
-
                     // Sets the _itemInHand to "snap" to the top-center of the pedestal so it looks like it's on it
                     _itemInHand.transform.position = new Vector3((float)_pedX, CalculateTopPosition(_pedestal), (float)_pedZ);
+                    // If the player left clicks...
+                    if (Input.GetMouseButtonDown(0)) {
+                        // Stop the placing loop
+                        _placing = false;
+                        // Change all materials to the original
+                        foreach(Transform _child in _allChildren) {
+                            if(_child.GetComponent<MeshRenderer>() != null) {
+                                _child.GetComponent<Renderer>().material = _originalMaterial;
+                                _child.gameObject.layer = 0;
+                            }
+                        }
+                        // Clear and reset all assigned variables
+                        _allChildren.Clear();
+                        _originalMaterial = null;
+                        _pedestal = null;
+                        _pedX = null;
+                        _pedZ = null;
+                        _itemInHand = null;
+                    }
                 } else {
                     // Else sets the shorcuts to null
                     _pedestal = null;
