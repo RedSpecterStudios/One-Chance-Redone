@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 
 public class PlaceObject : MonoBehaviour {
@@ -7,12 +7,12 @@ public class PlaceObject : MonoBehaviour {
     
     private bool _placing = false;
     private bool _spawn = false;
-    private float? _pedX;
-    private float? _pedZ;
+    private float? _snapX;
+    private float? _snapZ;
     private int _lastPressed;
     private int _numKey;
     private GameObject _itemInHand;
-    private GameObject _pedestal;
+    private GameObject _snapPoint;
     private Material _originalMaterial;
     private Ray _ray;
     private RaycastHit _hit;
@@ -105,42 +105,51 @@ public class PlaceObject : MonoBehaviour {
             if (_itemInHand.tag == "Tower") {
                 // If the hit object has the tag of "Pedestal"...
                 if(_hit.collider.tag == "Pedestal") {
-                    // Sets shortcut values
-                    _pedestal = _hit.collider.gameObject;
-                    _pedX = _pedestal.transform.position.x;
-                    _pedZ = _pedestal.transform.position.z;
-                    // Sets the _itemInHand to "snap" to the top-center of the pedestal so it looks like it's on it
-                    _itemInHand.transform.position = new Vector3((float)_pedX, CalculateTopPosition(_pedestal), (float)_pedZ);
-                    // If the player left clicks...
-                    if(Input.GetMouseButtonDown(0)) {
-                        // Stop the placing loop
-                        _placing = false;
-                        // Change all materials to the original
-                        foreach(Transform _child in _allChildren) {
-                            if(_child.GetComponent<MeshRenderer>() != null) {
-                                _child.GetComponent<Renderer>().material = _originalMaterial;
-                                _child.gameObject.layer = 0;
-                            }
-                        }
-                        // Clear and reset all assigned variables
-                        _allChildren.Clear();
-                        _originalMaterial = null;
-                        _pedestal = null;
-                        _pedX = null;
-                        _pedZ = null;
-                        _itemInHand = null;
-                    }
+                    Snap();
                 } else {
                     // Else sets the shorcuts to null
-                    _pedestal = null;
-                    _pedX = null;
-                    _pedZ = null;
+                    _snapPoint = null;
+                    _snapX = null;
+                    _snapZ = null;
                 }
             } else if (_itemInHand.tag == "Mine") {
                 if (_hit.collider.tag == "Walkway") {
-                    // TODO: Snap mines to walkway
+                    Snap();
+                } else {
+                    // Else sets the shorcuts to null
+                    _snapPoint = null;
+                    _snapX = null;
+                    _snapZ = null;
                 }
             }
+        }
+    }
+
+    void Snap () {
+        // Sets shortcut values
+        _snapPoint = _hit.collider.gameObject;
+        _snapX = _snapPoint.transform.position.x;
+        _snapZ = _snapPoint.transform.position.z;
+        // Sets the _itemInHand to "snap" to the top-center of the snap point so it looks like it's on it
+        _itemInHand.transform.position = new Vector3((float)_snapX, CalculateTopPosition(_snapPoint), (float)_snapZ);
+        // If the player left clicks...
+        if (Input.GetMouseButtonDown(0)) {
+            // Stop the placing loop
+            _placing = false;
+            // Change all materials to the original
+            foreach (Transform _child in _allChildren) {
+                if (_child.GetComponent<MeshRenderer>() != null) {
+                    _child.GetComponent<Renderer>().material = _originalMaterial;
+                    _child.gameObject.layer = 0;
+                }
+            }
+            // Clear and reset all assigned variables
+            _allChildren.Clear();
+            _originalMaterial = null;
+            _snapPoint = null;
+            _snapX = null;
+            _snapZ = null;
+            _itemInHand = null;
         }
     }
 
@@ -149,7 +158,7 @@ public class PlaceObject : MonoBehaviour {
     float CalculateTopPosition (GameObject _object) {
         float _top = 0;
         
-        _top = _pedestal.GetComponent<Renderer>().bounds.center.y + (_pedestal.GetComponent<Renderer>().bounds.size.y/2);
+        _top = _snapPoint.GetComponent<Renderer>().bounds.center.y + (_snapPoint.GetComponent<Renderer>().bounds.size.y/2);
 
         return _top;
     }
