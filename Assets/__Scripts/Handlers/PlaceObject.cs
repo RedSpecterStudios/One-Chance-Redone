@@ -105,7 +105,8 @@ public class PlaceObject : MonoBehaviour {
             if (_itemInHand.tag == "Tower") {
                 // If the hit object has the tag of "Pedestal"...
                 if(_hit.collider.tag == "Pedestal") {
-                    Snap();
+                    // Calls the CheckSnap method
+                    CheckSnap(_hit.collider.gameObject);
                 } else {
                     // Else sets the shorcuts to null
                     _snapPoint = null;
@@ -114,7 +115,8 @@ public class PlaceObject : MonoBehaviour {
                 }
             } else if (_itemInHand.tag == "Mine") {
                 if (_hit.collider.tag == "Walkway") {
-                    Snap();
+                    // Calls the CheckSnap method
+                    CheckSnap(_hit.collider.gameObject);
                 } else {
                     // Else sets the shorcuts to null
                     _snapPoint = null;
@@ -125,7 +127,15 @@ public class PlaceObject : MonoBehaviour {
         }
     }
 
-    void Snap () {
+    void CheckSnap (GameObject snapPoint) {
+        if (SnapPoint.snapPoints[snapPoint] == null) {
+            Snap(snapPoint);
+        } else {
+            return;
+        }
+    }
+
+    void Snap (GameObject snapPoint) {
         // Sets shortcut values
         _snapPoint = _hit.collider.gameObject;
         _snapX = _snapPoint.transform.position.x;
@@ -143,6 +153,7 @@ public class PlaceObject : MonoBehaviour {
                     _child.gameObject.layer = 0;
                 }
             }
+            SnapPoint.snapPoints[snapPoint] = _itemInHand;
             // Clear and reset all assigned variables
             _allChildren.Clear();
             _originalMaterial = null;
@@ -157,6 +168,8 @@ public class PlaceObject : MonoBehaviour {
     // and adding half the height of the object
     float CalculateTopPosition (GameObject _object) {
         float _top = 0;
+
+        Debug.Log(_object);
         
         _top = _snapPoint.GetComponent<Renderer>().bounds.center.y + (_snapPoint.GetComponent<Renderer>().bounds.size.y/2);
 
