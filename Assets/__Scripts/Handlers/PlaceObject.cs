@@ -114,7 +114,8 @@ public class PlaceObject : MonoBehaviour {
                     _snapZ = null;
                 }
             } else if (_itemInHand.tag == "Mine") {
-                if (_hit.collider.tag == "Walkway") {
+                // Else if the held item is a mine, and the raycast is hitting a walkway
+                if(_hit.collider.tag == "Walkway") {
                     // Calls the CheckSnap method
                     CheckSnap(_hit.collider.gameObject);
                 } else {
@@ -127,6 +128,7 @@ public class PlaceObject : MonoBehaviour {
         }
     }
 
+    // Check the position that the player is wanting to snap to, and if it is clear, snap to it
     void CheckSnap (GameObject snapPoint) {
         if (SnapPoint.snapPoints[snapPoint] == null) {
             Snap(snapPoint);
@@ -167,12 +169,7 @@ public class PlaceObject : MonoBehaviour {
     // Calculates the top-most global y position of any object by finding the center global y position of the object
     // and adding half the height of the object
     float CalculateTopPosition (GameObject _object) {
-        float _top = 0;
-
-        Debug.Log(_object);
-        
-        _top = _snapPoint.GetComponent<Renderer>().bounds.center.y + (_snapPoint.GetComponent<Renderer>().bounds.size.y/2);
-
+        float _top = _snapPoint.GetComponent<Renderer>().bounds.center.y + (_snapPoint.GetComponent<Renderer>().bounds.size.y/2);
         return _top;
     }
 }

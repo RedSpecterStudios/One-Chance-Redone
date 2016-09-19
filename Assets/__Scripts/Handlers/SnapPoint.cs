@@ -14,5 +14,7 @@ public class SnapPoint : MonoBehaviour {
         foreach (GameObject _point in GameObject.FindGameObjectsWithTag("Pedestal")) {
             snapPoints.Add(_point, null);
         }
+
+        TowerStats.CreateAsset();
     }
 }
