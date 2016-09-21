@@ -14,32 +14,32 @@ MonoBehaviour:
   Source: {x: 15.71, y: 0.51, z: 0.0000014795249}
   Target: {x: 0, y: 0.51, z: 0}
   Points:
-  - {x: -5.325, y: 5.21, z: 0}
-  - {x: -1.3929694, y: 6.022152, z: 0}
-  - {x: -28.477028, y: 0.8121518, z: 0}
-  - {x: -24.544998, y: 0, z: 0}
-  SplineLength: 19.913624
-  OriginalLength: 19.913624
-  SplineScale: 1
+  - {x: 16.07, y: 0.5, z: 5.61}
+  - {x: NaN, y: NaN, z: NaN}
+  - {x: NaN, y: NaN, z: NaN}
+  - {x: 0.58, y: 0.5, z: 5.61}
+  SplineLength: 15.71
+  OriginalLength: 15.71
+  SplineScale: NaN
   LenghtVector: {x: -0.93190926, y: -0.25261435, z: 0.26025218}
-  ControlPointLength1: 4.0150285
-  ControlPointVector1: {x: 0.97932816, y: 0.20227799, z: 0}
-  ControlPointLength2: 4.015028
-  ControlPointVector2: {x: 0.9793281, y: -0.20227799, z: 0}
+  ControlPointLength1: 9.723312
+  ControlPointVector1: {x: -0.76039815, y: 0.1500063, z: 0.6318961}
+  ControlPointLength2: 9.7233095
+  ControlPointVector2: {x: -0.76039803, y: -0.15000634, z: 0.6318962}
   OscillateH: 0
-  OscillateV: 1
-  OscillationRangeH: 1.78
-  OscillationRangeV: 7.24
-  OscillationSpeedH: 8
-  OscillationSpeedV: 2
+  OscillateV: 0
+  OscillationRangeH: 0
+  OscillationRangeV: 0
+  OscillationSpeedH: 0
+  OscillationSpeedV: 0
   Orbit: 0
-  OrbitDistance: 10
-  OrbitSpeed: 6
-  FollowSpline: 1
-  RandomV: 0.092
-  RandomH: 0.254
+  OrbitDistance: 0
+  OrbitSpeed: 0
+  FollowSpline: 0
+  RandomV: 0
+  RandomH: 0
   RandomD: 0
-  Reflection: 1
+  Reflection: 0
   Randomize: 1
   Caster: {fileID: 0}
   Victim: {fileID: 0}

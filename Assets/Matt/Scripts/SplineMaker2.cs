@@ -3,10 +3,7 @@ using System.Collections;
 
 public class SplineMaker2 : MonoBehaviour {
 
-
-
-    public static Vector3[] Points (GameObject Source, GameObject Target, CreateSplineProfile Profile)
-    {
+    public static Vector3[] Points (GameObject Source, GameObject Target, CreateSplineProfile Profile) {
         Vector3[] newPoints = new Vector3[4];
         Vector3 Start = Source.transform.position;
         Vector3 End = Target.transform.position;
@@ -19,8 +16,7 @@ public class SplineMaker2 : MonoBehaviour {
         return newPoints;
     }
 
-    public static Vector3 GetPoint(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t)
-    {
+    public static Vector3 GetPoint(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t) {
         t = Mathf.Clamp01(t);
         float oneMinusT = 1f - t;
         return
@@ -30,8 +26,7 @@ public class SplineMaker2 : MonoBehaviour {
             t * t * t * p3;
     }
 
-    public static Vector3 GetTangent(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t)
-    {
+    public static Vector3 GetTangent(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t) {
         t = Mathf.Clamp01(t);
         float oneMinusT = 1f - t;
         return
@@ -40,20 +35,17 @@ public class SplineMaker2 : MonoBehaviour {
             3f * t * t * (p3 - p2);
     }
 
-    public static Vector3 GetBiNormal(Vector3 Tangent)
-    {
+    public static Vector3 GetBiNormal(Vector3 Tangent) {
         Vector3 BiNormal = Vector3.Cross(Tangent, Vector3.up);
         return BiNormal;
     }
 
-    public static Vector3 GetNormal(Vector3 Tangent, Vector3 BiNormal)
-    {
+    public static Vector3 GetNormal(Vector3 Tangent, Vector3 BiNormal) {
         Vector3 Normal = Vector3.Cross(BiNormal, Tangent);
         return Normal;
     }
 
-    public static Vector3 GetVelocity(float t, CreateSplineProfile Spline, Transform Source)
-    {
+    public static Vector3 GetVelocity(float t, CreateSplineProfile Spline, Transform Source) {
         Vector3[] points = new Vector3[4];
         points[0] = Spline.Points[0];
         points[1] = Spline.Points[1];
@@ -65,8 +57,7 @@ public class SplineMaker2 : MonoBehaviour {
         return SplineMaker2.GetTangent(points[0], points[1], points[2], points[3], t) - Source.transform.position;
     }
 
-    public static Vector3 GetPoint(float t, CreateSplineProfile Spline, Transform Source)
-    {
+    public static Vector3 GetPoint(float t, CreateSplineProfile Spline, Transform Source) {
         Vector3[] points = new Vector3[4];
         points[0] = Spline.Points[0];
         points[1] = Spline.Points[1];
@@ -76,36 +67,29 @@ public class SplineMaker2 : MonoBehaviour {
         return Source.TransformPoint(SplineMaker2.GetPoint(points[0], points[1], points[2], points[3], t));
     }
 
-    public static Vector3 GetDirection(float t, CreateSplineProfile Spline, Transform Source)
-    {
+    public static Vector3 GetDirection(float t, CreateSplineProfile Spline, Transform Source) {
         return SplineMaker2.GetVelocity(t, Spline, Source).normalized;
     }
 
-    public static Vector3 HOscialltionPoint(Vector3 Center, Vector3 BiNormal, float Distance, float Speed, float T)
-    {
+    public static Vector3 HOscialltionPoint(Vector3 Center, Vector3 BiNormal, float Distance, float Speed, float T) {
         float Range = 0;
         bool Shrink = false;
 
-        if (T > .5)
-        {
+        if (T > .5) {
             Shrink = true;
         }
 
-        if(T < .5)
-        {
+        if(T < .5) {
             Shrink = false;
         }
 
-        if (Shrink)
-        {
+        if (Shrink) {
             Range = Mathf.Lerp(Distance, 0, T);
         }
-        else
-        {
+        else {
             Range = Mathf.Lerp(0, Distance, T);
         }
-
-
+        
         Vector3 OscP1 = Center - Range / 2 * (Center - (BiNormal + Center));
         Vector3 OscP2 = Center + Range / 2 * (Center - (BiNormal + Center));
 
@@ -115,11 +99,9 @@ public class SplineMaker2 : MonoBehaviour {
         //Vector3 OscialltionPoint = OscP2- Mathf.PingPong(((T * Distance) + Distance/2) * Speed, Distance) * (OscP2 - (BiNormal + OscP2));
 
         return OscillationPoint;
-
     }
 
-    public static Vector3 VOscialltionPoint(Vector3 Center, Vector3 Normal, float Distance, float Speed, float T)
-    {
+    public static Vector3 VOscialltionPoint(Vector3 Center, Vector3 Normal, float Distance, float Speed, float T) {
         //Vector3 OscP1 = Center - Distance / 2 * (Center - (Normal + Center));
         Vector3 OscP2 = Center + Distance / 2 * (Center - (Normal + Center));
 
@@ -129,41 +111,33 @@ public class SplineMaker2 : MonoBehaviour {
 
     }
 
-    public static Vector3 GetOrbitPoint(Vector3 Center, Vector3 TangentVector, Vector3 BiNormalVector, CreateSplineProfile Spline, float T)
-    {
+    public static Vector3 GetOrbitPoint(Vector3 Center, Vector3 TangentVector, Vector3 BiNormalVector, CreateSplineProfile Spline, float T) {
         float Orbit = 0;
         bool Shrink = false;
         float OrbitDistance = Spline.OrbitDistance;
 
         float Degrees = T * 360 * Spline.OrbitSpeed;
 
-        if (T <= .5f)
-        {
+        if (T <= .5f) {
             Orbit = Mathf.Lerp(0, OrbitDistance, T);
             Shrink = false;
         }
 
-        if (T >= .5f)
-        {
+        if (T >= .5f) {
             Shrink = true;
         }
 
-        if (Shrink == true)
-        {
+        if (Shrink == true) {
             Orbit = Mathf.Lerp(OrbitDistance, 0, T);
-        }
-        else
-        {
+        } else {
             Orbit = Mathf.Lerp(0, OrbitDistance, T);
         }
-
-
+        
         Vector3 NewPoint = Center + Quaternion.AngleAxis(Degrees, TangentVector) * (BiNormalVector * Orbit);
         return NewPoint;
     }
 
-    public static void UpdateSpline(CreateSplineProfile Spline, GameObject Source, GameObject Target)
-    {
+    public static void UpdateSpline(CreateSplineProfile Spline, GameObject Source, GameObject Target) {
         Spline.Caster = Source;
         Spline.Victim = Target;
 
@@ -181,11 +155,9 @@ public class SplineMaker2 : MonoBehaviour {
         Spline.Points[2] = (Spline.Points[3] + (Spline.ControlPointLength2 * Spline.SplineScale) * (Spline.Points[3] - (Spline.ControlPointVector2 + Spline.Points[3])));
     }
 
-    public static void TraverseSpline(GameObject Source, GameObject Target, CreateSplineProfile Spline, GameObject ObjectToMove, float T)
-    {
+    public static void TraverseSpline(GameObject Source, GameObject Target, CreateSplineProfile Spline, GameObject ObjectToMove, float T) {
 
-        if (Spline.Orbit) // for oribiting the spline
-        {
+        if (Spline.Orbit) { // for oribiting the spline
             Vector3 Center = GetPoint(Spline.Points[0], Spline.Points[1], Spline.Points[2], Spline.Points[3], T);
             Vector3 TangentVector = GetDirection(T, Spline, Source.transform);
             Vector3 Binormal = GetBiNormal(TangentVector);
@@ -193,8 +165,7 @@ public class SplineMaker2 : MonoBehaviour {
             ObjectToMove.transform.position = NewPoint;
         }
 
-        if (Spline.OscillateH) // horizontal Oscillation
-        {
+        if (Spline.OscillateH) { // horizontal Oscillation
             Vector3 Center = GetPoint(Spline.Points[0], Spline.Points[1], Spline.Points[2], Spline.Points[3], T);
             Vector3 TangentVector = GetDirection(T, Spline, Source.transform);
             Vector3 Binormal = GetBiNormal(TangentVector);
@@ -202,8 +173,7 @@ public class SplineMaker2 : MonoBehaviour {
             ObjectToMove.transform.position = NewPoint;
         }
 
-        if (Spline.OscillateV) // Vertical Oscillation
-        {
+        if (Spline.OscillateV) { // Vertical Oscillation
             Vector3 Center = GetPoint(Spline.Points[0], Spline.Points[1], Spline.Points[2], Spline.Points[3], T);
             Vector3 TangentVector = GetDirection(T, Spline, Source.transform);
             Vector3 Binormal = GetBiNormal(TangentVector);
@@ -212,19 +182,15 @@ public class SplineMaker2 : MonoBehaviour {
             ObjectToMove.transform.position = NewPoint;
         }
 
-        if (Spline.FollowSpline) // follows the Spline Exactly
-        {
+        if (Spline.FollowSpline) { // follows the Spline Exactly
             Vector3 NewPoint = GetPoint(Spline.Points[0], Spline.Points[1], Spline.Points[2], Spline.Points[3], T);
             ObjectToMove.transform.position = NewPoint;
         }
 
         UpdateSpline(Spline, Source, Target);
-
     }
 
-    public static void RandomControlPoints(GameObject Caster, GameObject Target, CreateSplineProfile Spline)
-    {
-
+    public static void RandomControlPoints(GameObject Caster, GameObject Target, CreateSplineProfile Spline) {
         Vector3 CasterPOS = Caster.transform.position;
         Vector3 TargetPOS = Target.transform.position;
 
@@ -232,8 +198,7 @@ public class SplineMaker2 : MonoBehaviour {
         Spline.SplineLength = Vector3.Distance(CasterPOS, TargetPOS);
         Spline.SplineScale = 1;
 
-        if (Spline.Reflection)
-        {
+        if (Spline.Reflection) {
             float RandomH = Random.Range(-Spline.RandomH * Spline.SplineLength, Spline.RandomH * Spline.SplineLength);
             float RandomV = Random.Range(0, Spline.RandomV) * Spline.SplineLength;
             float RandomD = Random.Range(0, Spline.RandomD) * Spline.SplineLength;
@@ -250,9 +215,7 @@ public class SplineMaker2 : MonoBehaviour {
             Spline.Points[1] = CP1c;
             Spline.Points[2] = CP2c;
             Spline.Points[3] = TargetPOS;
-        }
-        else
-        {
+        } else {
             float RandomH = Random.Range(-Spline.RandomH * Spline.SplineLength, Spline.RandomH * Spline.SplineLength);
             float RandomV = Random.Range(0, Spline.RandomV) * Spline.SplineLength;
             float RandomD = Random.Range(0, Spline.RandomD) * Spline.SplineLength;

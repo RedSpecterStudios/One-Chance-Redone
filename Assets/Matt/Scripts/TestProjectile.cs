@@ -8,8 +8,7 @@ public class TestProjectile : MonoBehaviour {
     public GameObject Target;
     public float TravelTime;
 
-    public void Test()
-    {
+    public void Test() {
         GameObject ObjectToMove = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         ObjectToMove.AddComponent<ParticleMover>();
         ObjectToMove.GetComponent<ParticleMover>().Source = Source;

@@ -2,11 +2,8 @@
 using System.Collections;
 
 public class Spawn : MonoBehaviour {
-
-  
-
-    public static CreateSplineProfile NewSpline(GameObject Target, CreateSplineProfile Original, GameObject Source)
-    {
+    
+    public static CreateSplineProfile NewSpline(GameObject Target, CreateSplineProfile Original, GameObject Source) {
         CreateSplineProfile Spline = Instantiate<CreateSplineProfile>(Original);
         Spline.name = Original.name;
         Spline.Caster = Source;
@@ -17,4 +14,4 @@ public class Spawn : MonoBehaviour {
         Spline.Points[3] = Spline.Target;
         return Spline;
     }
-    }
+}

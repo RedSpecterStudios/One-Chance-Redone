@@ -9,15 +9,11 @@ public class ParticleMover : MonoBehaviour {
     public CreateSplineProfile Spline;
     public float T;
 
-    public void Launch(float Time)
-    {
-        if (Spline.Randomize)
-        {
+    public void Launch(float Time) {
+        if (Spline.Randomize) {
             Spline = Spawn.NewSpline(Target, Spline, Source);
             SplineMaker2.RandomControlPoints(Source, Target, Spline);
-        }
-        else
-        {
+        } else {
             Spline = Spawn.NewSpline(Target, Spline, Source);
         }
 
@@ -25,23 +21,19 @@ public class ParticleMover : MonoBehaviour {
     }
 
 
-    public IEnumerator MoveObject(float duration)
-    {
+    public IEnumerator MoveObject(float duration) {
         float startTime = Time.time;
 
-        while (Time.time < startTime + (duration * Spline.SplineScale))
-        {
+        while (Time.time < startTime + (duration * Spline.SplineScale)) {
             T = Mathf.Lerp(0, 1, (Time.time - startTime) / (duration * Spline.SplineScale));
             SplineMaker2.TraverseSpline(Source, Target, Spline, gameObject, T);
             yield return 0f;
         }
-        if (Target.activeInHierarchy)
-        {
+
+        if (Target.activeInHierarchy) {
             //put your code that triggers damage/explosions or whatever here
         }
         Destroy(Spline);
         Destroy(this.gameObject);
-        
     }
-
 }
