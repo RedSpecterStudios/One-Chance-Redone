@@ -15,17 +15,17 @@ MonoBehaviour:
   Target: {x: 0, y: 0.51, z: 0}
   Points:
   - {x: 16.07, y: 0.5, z: 5.61}
-  - {x: NaN, y: NaN, z: NaN}
-  - {x: NaN, y: NaN, z: NaN}
+  - {x: 17.894718, y: 1.8898809, z: 5.61}
+  - {x: -1.2447188, y: 1.8898809, z: 5.61}
   - {x: 0.58, y: 0.5, z: 5.61}
-  SplineLength: 15.71
-  OriginalLength: 15.71
-  SplineScale: NaN
+  SplineLength: 15.49
+  OriginalLength: 15.49
+  SplineScale: 1
   LenghtVector: {x: -0.93190926, y: -0.25261435, z: 0.26025218}
-  ControlPointLength1: 9.723312
-  ControlPointVector1: {x: -0.76039815, y: 0.1500063, z: 0.6318961}
-  ControlPointLength2: 9.7233095
-  ControlPointVector2: {x: -0.76039803, y: -0.15000634, z: 0.6318962}
+  ControlPointLength1: 2.2937667
+  ControlPointVector1: {x: 0.7955118, y: 0.6059382, z: 0}
+  ControlPointLength2: 2.293767
+  ControlPointVector2: {x: 0.7955118, y: -0.60593814, z: 0}
   OscillateH: 0
   OscillateV: 0
   OscillationRangeH: 0
@@ -35,11 +35,11 @@ MonoBehaviour:
   Orbit: 0
   OrbitDistance: 0
   OrbitSpeed: 0
-  FollowSpline: 0
-  RandomV: 0
-  RandomH: 0
+  FollowSpline: 1
+  RandomV: 0.092
+  RandomH: 0.254
   RandomD: 0
-  Reflection: 0
+  Reflection: 1
   Randomize: 1
   Caster: {fileID: 0}
   Victim: {fileID: 0}
