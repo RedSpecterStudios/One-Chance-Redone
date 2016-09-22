@@ -17,15 +17,18 @@ public class BasicDefault : MonoBehaviour {
 	}
 	
 	void Update () {
+        Vector3 dirAB = (_target.transform.position - _top.transform.position).normalized;
+        float dotProd = Vector3.Dot(dirAB, _top.transform.forward);
+
+
+
         float dist = Vector3.Distance(transform.position, _target.transform.position);
         if (_target != null && dist < _range) {
             Vector3 _targetPoint = _target.transform.position - _top.transform.position;
-            Quaternion _rotation = Quaternion.Slerp(_top.transform.rotation, Quaternion.LookRotation(_targetPoint), 10 * Time.deltaTime);
+            Quaternion _rotation = Quaternion.Slerp(_top.transform.rotation, Quaternion.LookRotation(_targetPoint), 10 * Time.fixedDeltaTime);
             _top.transform.rotation = _rotation;
             float y = _top.transform.eulerAngles.y;
             _top.transform.eulerAngles = new Vector3(0, y, 0);
-        } else {
-            
         }
     }
 
