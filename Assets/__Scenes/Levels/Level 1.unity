@@ -8333,7 +8333,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954453232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.01, y: 4.9380937, z: 0.71}
+  m_LocalPosition: {x: -20.72, y: 4.9380937, z: -1.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -11416,6 +11416,73 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.019028, y: 2.0190275, z: 2.3544426}
   m_Center: {x: 0, y: 0.00000047683716, z: 0.34194678}
+--- !u!1 &1309128245 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013715838130, guid: 9b105eefcdd17a2448aaae5dce7513f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1445730484}
+--- !u!114 &1309128246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309128245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f78ab0a8792da474dbef39c897d009a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TravelTime: 0.2
+  Spline: {fileID: 11400000, guid: a4faea361d64f034ab2fb4657e76820d, type: 2}
+  Source: {fileID: 1481987823}
+  Target: {fileID: 954453232}
+--- !u!114 &1309128247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309128245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19500ba6f68fc1641b486ea97cde5df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spline: {fileID: 11400000, guid: a4faea361d64f034ab2fb4657e76820d, type: 2}
+  EditorHandles: 0
+  LockOrigins: 0
+  ShowControlPoints: 0
+  ShowDirection: 0
+  OscillateHorizontal: 0
+  OscillateVertical: 0
+  Orbit: 0
+  FollowSpline: 0
+  RandomizerReflection: 0
+  AutoRandom: 0
+  Debug: 0
+  lineSteps: 0
+  Source: {fileID: 1481987823}
+  Target: {fileID: 954453232}
+  ControlPointSize: 0
+  SplineLineWidth: 0
+  ControlPointColor: {r: 0, g: 0, b: 0, a: 0}
+  PointColor: {r: 0, g: 0, b: 0, a: 0}
+  LabelHeight: 0
+  DirectionDistance: 0
+  OscillationRangeH: 0
+  OscillationRangeV: 0
+  OrbitRange: 0
+  OrbitSpeed: 0
+  OscillationSpeedH: 0
+  OscillationSpeedV: 0
+  RandomH: 0
+  RandomV: 0
+  RandomD: 0
+  T: 0
+  SplineScale: 0
+  OriginalLength: 0
+  CurrentLength: 0
+  LockScale: 0
+  Point: {x: 0, y: 0, z: 0}
 --- !u!4 &1312526837 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d417898973e1ff44e9b878394baee6e8, type: 3}
@@ -13186,6 +13253,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0190277, y: 2.0190275, z: 2.3544426}
   m_Center: {x: 0, y: 0.0000009536743, z: 0.3419466}
+--- !u!1 &1481987823 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010530834074, guid: 9b105eefcdd17a2448aaae5dce7513f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1445730484}
 --- !u!1 &1482016856
 GameObject:
   m_ObjectHideFlags: 0
@@ -14819,7 +14891,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400038, guid: 8581b76a08d67c343bdf46ba1a36609a, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1713464512}
-  m_LocalRotation: {x: 0.08292965, y: 0.8300188, z: 0.54867846, w: -0.05606473}
+  m_LocalRotation: {x: 0.082929656, y: 0.83001894, z: 0.5486785, w: -0.056064736}
   m_LocalPosition: {x: -12.493714, y: 0.75, z: 9.59}
   m_LocalScale: {x: 1.839161, y: 1.8391602, z: 1.8391596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

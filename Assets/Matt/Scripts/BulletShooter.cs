@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TestProjectile : MonoBehaviour {
-
+public class BulletShooter : MonoBehaviour {
+    
+    public float TravelTime;
     public CreateSplineProfile Spline;
     public GameObject Source;
     public GameObject Target;
-    public float TravelTime;
 
-    public void Test() {
+    public void Shoot() {
         GameObject ObjectToMove = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         ObjectToMove.AddComponent<ParticleMover>();
         ObjectToMove.GetComponent<ParticleMover>().Source = Source;

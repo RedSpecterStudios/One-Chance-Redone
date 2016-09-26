@@ -4,26 +4,27 @@ using System.Collections.Generic;
 
 public class BasicDefault : MonoBehaviour {
 
-    private bool _canFire;
-    private float _fireRate;
+    public bool _canFire = true;
+    private float _dist;
+    private float _dotProd;
+    private float _fireRate = 5;
     private float _range = 20f;
     public GameObject _target;
     private GameObject _top;
+    private Vector3 _dirAB;
     
 	void Start () {
-        StartCoroutine(fireTimer(_fireRate));
+        StartCoroutine(FireTimer(_fireRate));
 
         _top = transform.FindChild("Top").gameObject;
 	}
 	
 	void Update () {
-        Vector3 dirAB = (_target.transform.position - _top.transform.position).normalized;
-        float dotProd = Vector3.Dot(dirAB, _top.transform.forward);
+        _dirAB = (_target.transform.position - _top.transform.position).normalized;
+        _dotProd = Vector3.Dot(_dirAB, _top.transform.forward);
 
-
-
-        float dist = Vector3.Distance(transform.position, _target.transform.position);
-        if (_target != null && dist < _range) {
+        _dist = Vector3.Distance(transform.position, _target.transform.position);
+        if (_target != null && _dist < _range) {
             Vector3 _targetPoint = _target.transform.position - _top.transform.position;
             Quaternion _rotation = Quaternion.Slerp(_top.transform.rotation, Quaternion.LookRotation(_targetPoint), 10 * Time.fixedDeltaTime);
             _top.transform.rotation = _rotation;
@@ -33,11 +34,14 @@ public class BasicDefault : MonoBehaviour {
     }
 
     void Fire () {
-
+        if (_dotProd >= 0.9 && _dist < _range) {
+            
+        }
     }
 
-    IEnumerator fireTimer (float fireRate) {
+    IEnumerator FireTimer (float fireRate) {
         Fire();
         yield return new WaitForSeconds(fireRate);
+        StartCoroutine(FireTimer(_fireRate));
     }
 }
