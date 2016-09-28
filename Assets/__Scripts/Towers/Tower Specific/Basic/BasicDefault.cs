@@ -35,7 +35,7 @@ public class BasicDefault : MonoBehaviour {
 
     void Fire () {
         if (_dotProd >= 0.9 && _dist < _range) {
-            Debug.Log("Fire!");
+            BulletShooter.instance.Shoot();
         }
     }
 
