@@ -15,7 +15,7 @@ public class BasicDefault : MonoBehaviour {
     
 	void Start () {
         StartCoroutine(FireTimer(_fireRate));
-
+        
         _top = transform.FindChild("Top").gameObject;
 	}
 	
@@ -35,7 +35,7 @@ public class BasicDefault : MonoBehaviour {
 
     void Fire () {
         if (_dotProd >= 0.9 && _dist < _range) {
-            
+            Debug.Log("Fire!");
         }
     }
 
