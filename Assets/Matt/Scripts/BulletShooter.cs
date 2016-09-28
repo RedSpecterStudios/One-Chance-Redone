@@ -8,6 +8,12 @@ public class BulletShooter : MonoBehaviour {
     public GameObject Source;
     public GameObject Target;
 
+    public static BulletShooter instance;
+
+    void Start () {
+        instance = this;
+    }
+
     public void Shoot() {
         GameObject ObjectToMove = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         ObjectToMove.AddComponent<ParticleMover>();
