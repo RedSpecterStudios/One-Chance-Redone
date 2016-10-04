@@ -1,34 +1,5 @@
 ********************************************************************************
-*                  Wednesday, September 28, 2016 10:09:29 AM                   *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-firstpass.dll
-Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-ea896329872369c4b987e7384d7a6be5
-Exit code: 0
-Elapsed time: 2.96 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-firstpass.dll
-Exit code: 0
-Elapsed time: 0.23 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                  Wednesday, September 28, 2016 10:09:33 AM                   *
+*                    Tuesday, October 04, 2016 10:43:28 AM                     *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -40,46 +11,25 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-f28cd65bbb063114c805032b6c8edd1f
-Exit code: 1
-Elapsed time: 0.63 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (2 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(42,27): error CS1001: Identifier expected
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(42,27): error CS1002: ; expected
-********************************************************************************
-*                  Wednesday, September 28, 2016 10:10:48 AM                   *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-344268df1cb44f4489accc10d21318d7
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-718126e59cc82cd449af8ae139a0f5c6
 Exit code: 0
-Elapsed time: 2.31 sec
+Elapsed time: 2.12 sec
 
 - Compiler output (0 lines):
 
-- Compiler errors (0 lines):
+- Compiler errors (1 line):
+0: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(13,24): warning CS0649: Field 'BasicDefault._target' is never assigned to, and will always have its default value null
 
 - PDB to MDB conversion --------------------------------------
 
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp.dll
 Exit code: 0
-Elapsed time: 0.12 sec
+Elapsed time: 0.11 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                  Wednesday, September 28, 2016 10:10:51 AM                   *
+*                    Tuesday, October 04, 2016 10:43:30 AM                     *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -91,9 +41,9 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-866c3c403a805554882eb39c2924976f
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-fd5cec797b6f61c45ac6b126f8f0c009
 Exit code: 0
-Elapsed time: 2.45 sec
+Elapsed time: 2.24 sec
 
 - Compiler output (0 lines):
 
@@ -104,6 +54,36 @@ Elapsed time: 2.45 sec
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp-Editor.dll
 Exit code: 0
-Elapsed time: 0.12 sec
+Elapsed time: 0.11 sec
+
+- pdb2mdb.exe output (0 lines):
+********************************************************************************
+*                    Tuesday, October 04, 2016 10:44:20 AM                     *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 1.10.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-f3d1923da06483a4291531f32dccbd88
+Exit code: 0
+Elapsed time: 2.11 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (1 line):
+0: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(13,24): warning CS0649: Field 'BasicDefault._target' is never assigned to, and will always have its default value null
+
+- PDB to MDB conversion --------------------------------------
+
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.11 sec
 
 - pdb2mdb.exe output (0 lines):
