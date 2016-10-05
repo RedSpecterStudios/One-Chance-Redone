@@ -38,10 +38,11 @@ public class BasicDefault : MonoBehaviour {
     }
 
     void FindTarget () {
-        Collider[] hitColliders = Physics.OverlapSphere(new Vector3(0,0,0), 10);
+        Collider[] hitColliders = Physics.OverlapCapsule(transform.position - new Vector3(0, 25, 0), transform.position + new Vector3(0, 35, 0), 20);
         foreach (Collider target in hitColliders) {
-            Debug.Log(target.gameObject);
-            // http://answers.unity3d.com/questions/208192/see-the-size-of-an-overlap-sphere.html
+            if (target.name == "Enemy") {
+                
+            }
         }
     }
 
@@ -55,5 +56,9 @@ public class BasicDefault : MonoBehaviour {
         Fire();
         yield return new WaitForSeconds(fireRate);
         StartCoroutine(FireTimer(_fireRate));
+    }
+
+    void OnDrawGizmos () {
+        //DebugExtension.DrawCapsule(transform.position - new Vector3(0, 25, 0), transform.position + new Vector3(0, 35, 0), 20);
     }
 }

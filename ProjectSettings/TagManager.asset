@@ -10,7 +10,7 @@ TagManager:
   - Walkway
   - Core
   - Gem
-  - Walker
+  - Enemy
   layers:
   - Default
   - TransparentFX
