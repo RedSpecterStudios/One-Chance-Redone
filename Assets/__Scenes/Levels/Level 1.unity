@@ -8347,7 +8347,7 @@ GameObject:
   - 23: {fileID: 954453233}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Walker
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11506,58 +11506,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f78ab0a8792da474dbef39c897d009a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  travelTime: 0
-  spline: {fileID: 0}
+  travelTime: 0.5
+  spline: {fileID: 11400000, guid: a4faea361d64f034ab2fb4657e76820d, type: 2}
   bulletToMove: {fileID: 0}
-  source: {fileID: 0}
+  source: {fileID: 1481987823}
   target: {fileID: 0}
---- !u!114 &1309128247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1309128245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19500ba6f68fc1641b486ea97cde5df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Spline: {fileID: 11400000, guid: a4faea361d64f034ab2fb4657e76820d, type: 2}
-  EditorHandles: 0
-  LockOrigins: 0
-  ShowControlPoints: 0
-  ShowDirection: 0
-  OscillateHorizontal: 0
-  OscillateVertical: 0
-  Orbit: 0
-  FollowSpline: 0
-  RandomizerReflection: 0
-  AutoRandom: 0
-  Debug: 0
-  lineSteps: 0
-  Source: {fileID: 1481987823}
-  Target: {fileID: 954453232}
-  ControlPointSize: 0
-  SplineLineWidth: 0
-  ControlPointColor: {r: 0, g: 0, b: 0, a: 0}
-  PointColor: {r: 0, g: 0, b: 0, a: 0}
-  LabelHeight: 0
-  DirectionDistance: 0
-  OscillationRangeH: 0
-  OscillationRangeV: 0
-  OrbitRange: 0
-  OrbitSpeed: 0
-  OscillationSpeedH: 0
-  OscillationSpeedV: 0
-  RandomH: 0
-  RandomV: 0
-  RandomD: 0
-  T: 0
-  SplineScale: 0
-  OriginalLength: 0
-  CurrentLength: 0
-  LockScale: 0
-  Point: {x: 0, y: 0, z: 0}
 --- !u!4 &1309128251 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000014150736682, guid: 9b105eefcdd17a2448aaae5dce7513f7,

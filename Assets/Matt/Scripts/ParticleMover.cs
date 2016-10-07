@@ -10,7 +10,7 @@ public class ParticleMover : MonoBehaviour {
     public float T;
 
     public void Launch(float Time) {
-        if (Spline.Randomize) {
+        if(Spline.Randomize) {
             Spline = Spawn.NewSpline(Target, Spline, Source);
             SplineMaker2.RandomControlPoints(Source, Target, Spline);
         } else {
