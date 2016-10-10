@@ -10,6 +10,7 @@ public class BasicDefault : MonoBehaviour {
     private float _dotProd;
     private float _fireRate = 5;
     private float _range = 20f;
+    private int _mode = 3;
     private BulletShooter _bulletShooter;
     private GameObject _target;
     private GameObject _top;
@@ -47,23 +48,71 @@ public class BasicDefault : MonoBehaviour {
     void FindTarget () {
         List<Collider> _hitColliders = Physics.OverlapCapsule(transform.position - new Vector3(0, 25, 0), transform.position + new Vector3(0, 35, 0), 20).ToList();
         foreach (Collider target in _hitColliders) {
-
-            for (int i = 0; i < _enemies.Count; i++) {
-                if (!_hitColliders.Contains(_enemies[i].GetComponent<Collider>())) {
+            for(int i = 0; i < _enemies.Count; i++) {
+                if(!_hitColliders.Contains(_enemies[i].GetComponent<Collider>())) {
+                    if(_enemies[i] = _target) {
+                        _target = null;
+                    }
                     _enemies.Remove(_enemies[i]);
                 }
             }
-
-            Debug.Log(ArrayOutput(_enemies));
 
             if(target.tag == "Enemy") {
                 if (!_enemies.Contains(target.gameObject)) {
                     _enemies.Add(target.gameObject);
                 }
-                _target = target.gameObject;
-                _bulletShooter.target = target.gameObject;
+
+                switch(_mode) {
+                    #region Closest Target
+                    case 1:
+                        if (_enemies.Count > 1) {
+                            GameObject _closest;
+                            _closest = _enemies[0];
+                            foreach (GameObject cTar in _enemies) {
+                                if (Vector3.Distance(cTar.transform.position, transform.position) <
+                                    Vector3.Distance(_closest.transform.position, transform.position)) {
+                                    _closest = cTar;
+                                }
+                            }
+                            _target = _closest;
+                        } else {
+                            _target = _enemies[0];
+                        }
+                        break;
+                    #endregion
+                    #region Farthest Target
+                    case 2:
+                        if(_enemies.Count > 1) {
+                            GameObject _farthest;
+                            _farthest = _enemies[0];
+                            foreach(GameObject fTar in _enemies) {
+                                if(Vector3.Distance(fTar.transform.position, transform.position) >
+                                    Vector3.Distance(_farthest.transform.position, transform.position)) {
+                                    _farthest = fTar;
+                                }
+                            }
+                            _target = _farthest;
+                        } else {
+                            _target = _enemies[0];
+                        }
+                        break;
+                    #endregion
+                    #region First Target
+                    case 3:
+                        if (_enemies.Count > 0) {
+                            _target = _enemies[0];
+                        }
+                        break;
+                    #endregion
+                    default:
+                        _target = null;
+                        break;
+                }
+                _bulletShooter.target = _target;
             }
         }
+
+
     }
 
     void Fire () {
@@ -78,17 +127,10 @@ public class BasicDefault : MonoBehaviour {
         StartCoroutine(FireTimer(_fireRate));
     }
 
-    string ArrayOutput (List<GameObject> _array) {
-        string _output = "";
-
-        foreach (GameObject item in _array) {
-            _output = _output + item.ToString();
-        }
-
-        return _output;
-    }
-
     void OnDrawGizmos () {
         //DebugExtension.DrawCapsule(transform.position - new Vector3(0, 25, 0), transform.position + new Vector3(0, 35, 0), 20);
+        if (_target != null) {
+            Gizmos.DrawLine(transform.position, _target.transform.position);
+        }
     }
 }
