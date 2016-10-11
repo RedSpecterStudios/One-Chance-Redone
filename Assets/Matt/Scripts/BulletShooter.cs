@@ -10,11 +10,13 @@ public class BulletShooter : MonoBehaviour {
     public GameObject target;
 
     public void Shoot() {
-        GameObject ObjectToMove = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        ObjectToMove.AddComponent<ParticleMover>();
-        ObjectToMove.GetComponent<ParticleMover>().Source = source;
-        ObjectToMove.GetComponent<ParticleMover>().Target = target;
-        ObjectToMove.GetComponent<ParticleMover>().Spline = spline;
-        ObjectToMove.GetComponent<ParticleMover>().Launch(travelTime);
+        if (bulletToMove == null) {
+            bulletToMove = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        }
+        bulletToMove.AddComponent<ParticleMover>();
+        bulletToMove.GetComponent<ParticleMover>().Source = source;
+        bulletToMove.GetComponent<ParticleMover>().Target = target;
+        bulletToMove.GetComponent<ParticleMover>().Spline = spline;
+        bulletToMove.GetComponent<ParticleMover>().Launch(travelTime);
     }
 }
