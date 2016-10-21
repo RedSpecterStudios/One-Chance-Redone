@@ -28,3 +28,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+CSharp60Support/compilation.log
