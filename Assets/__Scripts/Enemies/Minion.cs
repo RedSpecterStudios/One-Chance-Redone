@@ -2,13 +2,12 @@
 using System.Collections;
 
 public class Minion : MonoBehaviour {
+
+    public Transform goal;
     
 	void Start () {
-	
+        // Initializes the NavMeshAgent and sets the goal
+        NavMeshAgent _agent = GetComponentInChildren<NavMeshAgent>();
+        _agent.destination = goal.position;
 	}
-	
-	void Update () {
-        transform.Translate(Vector3.forward * Time.deltaTime * 7.5f);
-        // https://docs.unity3d.com/Manual/nav-CreateNavMeshAgent.html
-    }
 }
