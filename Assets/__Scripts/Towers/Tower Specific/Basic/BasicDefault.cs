@@ -10,7 +10,7 @@ public class BasicDefault : MonoBehaviour {
     private float _dotProd;
     private float _fireRate = 5;
     private float _range = 20f;
-    private int _mode = 4;
+    private int _mode = 1;
     private BulletShooter _bulletShooter;
     private GameObject _lastEntered;
     private GameObject _target;
@@ -20,6 +20,7 @@ public class BasicDefault : MonoBehaviour {
     private List<GameObject> _enemies;
     
 	void Start () {
+        // Starts the fire timer
         StartCoroutine(FireTimer(_fireRate));
 
         _bulletShooter = GetComponent<BulletShooter>();
@@ -29,14 +30,15 @@ public class BasicDefault : MonoBehaviour {
 	}
 	
 	void Update () {
+        // Finds the target
         FindTarget();
-
+        // Follows the target, when their is one and it's within the range of the tower
         if (_target != null) {
             _dirAB = (_target.transform.position - _top.transform.position).normalized;
             _dotProd = Vector3.Dot(_dirAB, _top.transform.forward);
-
+            
             _dist = Vector3.Distance(transform.position, _target.transform.position);
-            if (_target != null && _dist < _range) {
+            if (_dist < _range) {
                 Vector3 _targetPoint = _target.transform.position - _top.transform.position;
                 Quaternion _rotation = Quaternion.Slerp(_top.transform.rotation, Quaternion.LookRotation(_targetPoint), 10 * Time.fixedDeltaTime);
                 _top.transform.rotation = _rotation;
@@ -47,8 +49,10 @@ public class BasicDefault : MonoBehaviour {
     }
 
     void FindTarget () {
+        // Sets the range sphere
         List<Collider> _hitColliders = Physics.OverlapCapsule(transform.position - new Vector3(0, 25, 0), transform.position + new Vector3(0, 35, 0), 20).ToList();
         foreach (Collider target in _hitColliders) {
+            // Removes the target from the list of enemies, and nulls the target when they leave the range.
             for (int i = 0; i < _enemies.Count; i++) {
                 if (!_hitColliders.Contains(_enemies[i].GetComponent<Collider>())) {
                     if (_enemies[i] = _target) {
@@ -58,16 +62,17 @@ public class BasicDefault : MonoBehaviour {
                     _enemies.Remove(_enemies[i]);
                 }
             }
-
+            // If the object caught in the range is an enemy, add it to the list of enemies
             if (target.tag == "Enemy") {
                 if (!_enemies.Contains(target.gameObject)) {
                     _enemies.Add(target.gameObject);
                     _lastEntered = target.gameObject;
                 }
-
+                // Finds the target based on the mode of the tower
                 switch (_mode) {
                     #region Closest Target
                     case 1:
+                        // If their is more than one enemy in the list, look for the closest and target it, else target the only target
                         if (_enemies.Count > 1) {
                             GameObject _closest;
                             _closest = _enemies[0];
@@ -85,6 +90,7 @@ public class BasicDefault : MonoBehaviour {
                     #endregion
                     #region Farthest Target
                     case 2:
+                        // If their is more than one enemy in the list, look for the farthest and target it, else target the only target
                         if (_enemies.Count > 1) {
                             GameObject _farthest;
                             _farthest = _enemies[0];
@@ -102,6 +108,7 @@ public class BasicDefault : MonoBehaviour {
                     #endregion
                     #region First Target
                     case 3:
+                        // Targets the first enemy in the array, aka the target closest to the end.
                         if (_enemies.Count > 0) {
                             _target = _enemies[0];
                         }
@@ -109,10 +116,12 @@ public class BasicDefault : MonoBehaviour {
                     #endregion
                     #region Last Target
                     case 4:
+                        // Target the enemy that last entered the range. Why would any heathan even think about using this?
                         _target = _lastEntered;
                         break;
                     #endregion
                     default:
+                        // If for whatever reason the mode is invalid, target nothing.
                         _target = null;
                         break;
                 }
@@ -122,12 +131,14 @@ public class BasicDefault : MonoBehaviour {
     }
 
     void Fire () {
-        if (_dotProd >= 0.9 && _dist < _range) {
+        // If the shot is realistic looking, and the target is in the range, fire at it.
+        if (_dotProd >= 0.7 && _dist < _range) {
             _bulletShooter.Shoot();
         }
     }
 
     IEnumerator FireTimer (float fireRate) {
+        // Calls Fire() every 2 seconds
         Fire();
         yield return new WaitForSeconds(fireRate);
         StartCoroutine(FireTimer(_fireRate));
