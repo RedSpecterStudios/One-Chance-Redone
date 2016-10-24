@@ -1,48 +1,19 @@
 ********************************************************************************
-*                     Sunday, October 23, 2016 6:54:31 PM                      *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-firstpass.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-ff49387b4e3a80441b948493d791adf6
-Exit code: 0
-Elapsed time: 1.41 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-firstpass.dll
-Exit code: 0
-Elapsed time: 0.45 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                     Sunday, October 23, 2016 6:54:34 PM                      *
+*                     Monday, October 24, 2016 10:42:31 AM                     *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
 Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
+Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
 Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
 Compiler: Microsoft C# 6.0
 
 - Compilation -----------------------------------------------
 
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-036fc25aa6c202f43b80c05b95e4485f
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-59c3695579697144c9cbc9d63707c86b
 Exit code: 0
-Elapsed time: 0.49 sec
+Elapsed time: 2.14 sec
 
 - Compiler output (0 lines):
 
@@ -50,28 +21,86 @@ Elapsed time: 0.49 sec
 
 - PDB to MDB conversion --------------------------------------
 
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.09 sec
+
+- pdb2mdb.exe output (0 lines):
+********************************************************************************
+*                     Monday, October 24, 2016 10:42:34 AM                     *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 1.10.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp-Editor.dll
+Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-d1c9981b6af265b49afc1ac1c25725f1
+Exit code: 0
+Elapsed time: 2.22 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp-Editor.dll
+Exit code: 0
+Elapsed time: 0.10 sec
+
+- pdb2mdb.exe output (0 lines):
+********************************************************************************
+*                     Monday, October 24, 2016 10:43:19 AM                     *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 1.10.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-0e0b51be11d443e498e80ef45ac07d3a
+Exit code: 0
+Elapsed time: 2.17 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp.dll
 Exit code: 0
 Elapsed time: 0.10 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                     Sunday, October 23, 2016 6:54:35 PM                      *
+*                     Monday, October 24, 2016 10:43:22 AM                     *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
 Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
+Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
 Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
 Compiler: Microsoft C# 6.0
 
 - Compilation -----------------------------------------------
 
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-1c43170d93a2d7040b97210cc030bf6d
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-4dcced2460957e44999118afad1f07c9
 Exit code: 0
-Elapsed time: 0.46 sec
+Elapsed time: 2.18 sec
 
 - Compiler output (0 lines):
 
@@ -79,67 +108,9 @@ Elapsed time: 0.46 sec
 
 - PDB to MDB conversion --------------------------------------
 
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp-Editor.dll
 Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                     Sunday, October 23, 2016 6:58:11 PM                      *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-c807fdfa26acb80498fa7905628b438a
-Exit code: 0
-Elapsed time: 0.86 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.35 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                     Sunday, October 23, 2016 6:58:13 PM                      *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-fdfed654cb8a7e147a58bf8e56dc1711
-Exit code: 0
-Elapsed time: 0.43 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.08 sec
+Elapsed time: 0.10 sec
 
 - pdb2mdb.exe output (0 lines):
