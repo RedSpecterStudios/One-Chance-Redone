@@ -1,13 +1,14 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using CurveExtended;
 
 public class ProceduralSpawn : MonoBehaviour {
 
-    WeightDictionary _enemies = new WeightDictionary();
+    public Hashtable _enemies;
 
     void Start () {
-
+        
     }
 
     void Update () {
@@ -15,8 +16,3 @@ public class ProceduralSpawn : MonoBehaviour {
     }
 }
 
-[System.Serializable]
-public struct WeightDictionary {
-    public Transform EnemyTansform;
-    public float EnemyWeight;
-}
