@@ -2,20 +2,12 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class ProceduralSpawn : MonoBehaviour {
-    
-    public static Enemy GetEnemy (List<Enemy> enemies, float totalWeight) {
-        float _randNum = Random.Range(0, totalWeight);
-        Enemy _selectedEnemy = null;
 
-        foreach (Enemy enemy in enemies) {
-            if (_randNum < enemy.Weight) {
-                _selectedEnemy = enemy;
-                break;
-            }
-            _randNum = _randNum - enemy.Weight;
-        }
-        return _selectedEnemy;
-    }
+    private float _1 = 0;
+    private float _2 = 0;
+    private float _3 = 0;
+    private float _4 = 0;
+    private float _ran = 0;
 
     void Start () {
         List<Enemy> enemies = new List<Enemy>();
@@ -44,8 +36,29 @@ public class ProceduralSpawn : MonoBehaviour {
                 }
             }
 
-            Debug.Log($"1: {_result["Test1"]}, 2: {_result["Test2"]}, 3: {_result["Test3"]}, 4: {_result["Test4"]}");
+            _1 += _result["Test1"];
+            _2 += _result["Test2"];
+            _3 += _result["Test3"];
+            _4 += _result["Test4"];
+            _ran++;
+
+            Debug.Log($"Test1: {_result["Test1"]}, Test2: {_result["Test2"]}, Test3: {_result["Test3"]}, Test4: {_result["Test4"]}");
         }
+        Debug.Log($"Test1: {_1/_ran}, Test2: {_2/_ran}, Test3: {_3/_ran}, Test4: {_4/_ran}, _ran: {_ran}, Total: {(_1+_2+_3+_4)/_ran}");
+    }
+
+    public static Enemy GetEnemy (List<Enemy> enemies, float totalWeight) {
+        float _randNum = Random.Range(0, totalWeight);
+        Enemy _selectedEnemy = null;
+
+        foreach (Enemy enemy in enemies) {
+            if (_randNum <= enemy.Weight) {
+                _selectedEnemy = enemy;
+                break;
+            }
+            _randNum = _randNum - enemy.Weight;
+        }
+        return _selectedEnemy;
     }
 }
 
