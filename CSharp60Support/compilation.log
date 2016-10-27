@@ -1,5 +1,5 @@
 ********************************************************************************
-*                    Thursday, October 27, 2016 12:08:54 PM                    *
+*                    Thursday, October 27, 2016 12:30:55 PM                    *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -11,183 +11,9 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-0d5f5e551b6d9964ca7c14243b2cf273
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-7e85fc1a2e710174d8a705e11c3ee4cf
 Exit code: 0
-Elapsed time: 2.06 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Thursday, October 27, 2016 12:08:57 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-cfa353335aa892d46adae542440b51eb
-Exit code: 0
-Elapsed time: 2.14 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Thursday, October 27, 2016 12:09:22 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-90dc8e09f02649b4485cfc40bf072c17
-Exit code: 0
-Elapsed time: 2.07 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Thursday, October 27, 2016 12:09:25 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-fcfa20d21de2f8a45bb81960978b4a35
-Exit code: 0
-Elapsed time: 2.15 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Thursday, October 27, 2016 12:10:18 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-46f947a59e3b79d44972b460bb7ee7dd
-Exit code: 0
-Elapsed time: 2.06 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Thursday, October 27, 2016 12:10:20 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-03567a22494da8e49b92701e7b68aa00
-Exit code: 0
-Elapsed time: 2.16 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Thursday, October 27, 2016 12:11:01 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-aa480c34d7845c9419c3753ec3c3e0c3
-Exit code: 0
-Elapsed time: 2.06 sec
+Elapsed time: 2.20 sec
 
 - Compiler output (0 lines):
 
@@ -202,7 +28,7 @@ Elapsed time: 0.10 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                    Thursday, October 27, 2016 12:11:03 PM                    *
+*                    Thursday, October 27, 2016 12:30:58 PM                    *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -214,9 +40,9 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-c4756b9cf2b17bd4dacecc1a177a3429
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-f0589075fed25d942ae063e4439084e2
 Exit code: 0
-Elapsed time: 2.17 sec
+Elapsed time: 2.26 sec
 
 - Compiler output (0 lines):
 
@@ -227,11 +53,256 @@ Elapsed time: 2.17 sec
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp-Editor.dll
 Exit code: 0
-Elapsed time: 0.09 sec
+Elapsed time: 0.10 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                    Thursday, October 27, 2016 12:11:58 PM                    *
+*                    Thursday, October 27, 2016 12:31:32 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 1.10.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp-Editor.dll
+Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-f4000a120c694ad4089da7fbb7d628dd
+Exit code: 1
+Elapsed time: 1.96 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (83 lines):
+0: Assets\ExtendedInspector\Editor\ArrayTool.cs(84,9): warning CS0618: 'Undo.RegisterSceneUndo(string)' is obsolete: 'Use DestroyObjectImmediate, RegisterCreatedObjectUndo or RegisterUndo instead.'
+1: Assets\ExtendedInspector\Editor\ArrayTool.cs(104,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+2: Assets\ExtendedInspector\Editor\ArrayTool.cs(111,39): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+3: Assets\ExtendedInspector\Editor\ArrayTool.cs(143,38): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+4: Assets\ExtendedInspector\Editor\ArrayTool.cs(150,44): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+5: Assets\ExtendedInspector\Editor\ArrayTool.cs(182,42): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+6: Assets\ExtendedInspector\Editor\ArrayTool.cs(190,48): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+7: Assets\ExtendedInspector\Editor\PivotTool.cs(134,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+8: Assets\ExtendedInspector\Editor\PivotTool.cs(135,13): warning CS0618: 'Undo.CreateSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+9: Assets\ExtendedInspector\Editor\PivotTool.cs(136,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+10: Assets\ExtendedInspector\Editor\PivotTool.cs(144,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+11: Assets\ExtendedInspector\Editor\PivotTool.cs(145,13): warning CS0618: 'Undo.RegisterSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+12: Assets\ExtendedInspector\Editor\PivotTool.cs(146,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+13: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(135,9): warning CS0618: 'EditorGUIUtility.LookLikeControls()' is obsolete: 'LookLikeControls and LookLikeInspector modes are deprecated. Use EditorGUIUtility.labelWidth and EditorGUIUtility.fieldWidth to control label and field widths.'
+14: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(380,28): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+15: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(381,9): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+16: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(381,68): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+17: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(393,13): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+18: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(396,25): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+19: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(417,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+20: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(417,59): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+21: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(426,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+22: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(426,55): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+23: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(435,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+24: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(435,48): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+25: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(438,33): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+26: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(438,59): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+27: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(570,17): warning CS0618: 'EditorUtility.GetPrefabType(Object)' is obsolete: 'Use PrefabUtility.GetPrefabType'
+28: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(581,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+29: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(589,35): error CS0117: 'EditorUtility' does not contain a definition for 'ResetGameObjectToPrefabState'
+30: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(599,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+31: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(600,21): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+32: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(618,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+33: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(627,35): error CS0117: 'EditorUtility' does not contain a definition for 'ResetGameObjectToPrefabState'
+34: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(645,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+35: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(653,21): warning CS0618: 'EditorUtility.ReconnectToLastPrefab(GameObject)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+36: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(662,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+37: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(663,21): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+38: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(671,21): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+39: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(684,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+40: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(692,21): warning CS0618: 'EditorUtility.ReconnectToLastPrefab(GameObject)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+41: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1218,18): warning CS0618: 'EditorUtility.CreateEmptyPrefab(string)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+42: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1219,9): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+43: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1231,9): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+44: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1275,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+45: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1276,13): warning CS0618: 'Undo.CreateSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+46: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1277,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+47: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1288,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+48: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1289,13): warning CS0618: 'Undo.RegisterSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+49: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1290,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+50: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1297,9): warning CS0618: 'Undo.RegisterSceneUndo(string)' is obsolete: 'Use DestroyObjectImmediate, RegisterCreatedObjectUndo or RegisterUndo instead.'
+51: Assets\ExtendedInspector\Editor\SpecialCases.cs(295,9): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+52: Assets\ExtendedInspector\Editor\SpecialCases.cs(295,29): error CS1061: 'Component' does not contain a definition for 'mass' and no extension method 'mass' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+53: Assets\ExtendedInspector\Editor\SpecialCases.cs(295,71): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+54: Assets\ExtendedInspector\Editor\SpecialCases.cs(295,91): error CS1061: 'Component' does not contain a definition for 'mass' and no extension method 'mass' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+55: Assets\ExtendedInspector\Editor\SpecialCases.cs(296,9): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+56: Assets\ExtendedInspector\Editor\SpecialCases.cs(296,29): error CS1061: 'Component' does not contain a definition for 'drag' and no extension method 'drag' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+57: Assets\ExtendedInspector\Editor\SpecialCases.cs(296,71): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+58: Assets\ExtendedInspector\Editor\SpecialCases.cs(296,91): error CS1061: 'Component' does not contain a definition for 'drag' and no extension method 'drag' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+59: Assets\ExtendedInspector\Editor\SpecialCases.cs(297,9): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+60: Assets\ExtendedInspector\Editor\SpecialCases.cs(297,29): error CS1061: 'Component' does not contain a definition for 'angularDrag' and no extension method 'angularDrag' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+61: Assets\ExtendedInspector\Editor\SpecialCases.cs(297,86): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+62: Assets\ExtendedInspector\Editor\SpecialCases.cs(297,106): error CS1061: 'Component' does not contain a definition for 'angularDrag' and no extension method 'angularDrag' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+63: Assets\ExtendedInspector\Editor\SpecialCases.cs(298,9): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+64: Assets\ExtendedInspector\Editor\SpecialCases.cs(298,29): error CS1061: 'Component' does not contain a definition for 'useGravity' and no extension method 'useGravity' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+65: Assets\ExtendedInspector\Editor\SpecialCases.cs(298,80): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+66: Assets\ExtendedInspector\Editor\SpecialCases.cs(298,100): error CS1061: 'Component' does not contain a definition for 'useGravity' and no extension method 'useGravity' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+67: Assets\ExtendedInspector\Editor\SpecialCases.cs(299,9): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+68: Assets\ExtendedInspector\Editor\SpecialCases.cs(299,29): error CS1061: 'Component' does not contain a definition for 'isKinematic' and no extension method 'isKinematic' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+69: Assets\ExtendedInspector\Editor\SpecialCases.cs(299,82): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+70: Assets\ExtendedInspector\Editor\SpecialCases.cs(299,102): error CS1061: 'Component' does not contain a definition for 'isKinematic' and no extension method 'isKinematic' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+71: Assets\ExtendedInspector\Editor\SpecialCases.cs(300,9): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+72: Assets\ExtendedInspector\Editor\SpecialCases.cs(300,29): error CS1061: 'Component' does not contain a definition for 'interpolation' and no extension method 'interpolation' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+73: Assets\ExtendedInspector\Editor\SpecialCases.cs(300,110): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+74: Assets\ExtendedInspector\Editor\SpecialCases.cs(300,130): error CS1061: 'Component' does not contain a definition for 'interpolation' and no extension method 'interpolation' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+75: Assets\ExtendedInspector\Editor\SpecialCases.cs(301,9): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+76: Assets\ExtendedInspector\Editor\SpecialCases.cs(301,29): error CS1061: 'Component' does not contain a definition for 'collisionDetectionMode' and no extension method 'collisionDetectionMode' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+77: Assets\ExtendedInspector\Editor\SpecialCases.cs(301,127): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+78: Assets\ExtendedInspector\Editor\SpecialCases.cs(301,147): error CS1061: 'Component' does not contain a definition for 'collisionDetectionMode' and no extension method 'collisionDetectionMode' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+79: Assets\ExtendedInspector\Editor\SpecialCases.cs(307,30): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+80: Assets\ExtendedInspector\Editor\SpecialCases.cs(307,50): error CS1061: 'Component' does not contain a definition for 'constraints' and no extension method 'constraints' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+81: Assets\ExtendedInspector\Editor\SpecialCases.cs(345,13): error CS0619: 'Component.rigidbody' is obsolete: 'Property rigidbody has been deprecated. Use GetComponent<Rigidbody>() instead. (UnityUpgradable)'
+82: Assets\ExtendedInspector\Editor\SpecialCases.cs(345,33): error CS1061: 'Component' does not contain a definition for 'constraints' and no extension method 'constraints' accepting a first argument of type 'Component' could be found (are you missing a using directive or an assembly reference?)
+********************************************************************************
+*                    Thursday, October 27, 2016 12:31:40 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 1.10.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp-Editor.dll
+Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-d1277e0b76396b244ae3e3d10dd24cb1
+Exit code: 1
+Elapsed time: 1.90 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (51 lines):
+0: Assets\ExtendedInspector\Editor\ArrayTool.cs(84,9): warning CS0618: 'Undo.RegisterSceneUndo(string)' is obsolete: 'Use DestroyObjectImmediate, RegisterCreatedObjectUndo or RegisterUndo instead.'
+1: Assets\ExtendedInspector\Editor\ArrayTool.cs(104,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+2: Assets\ExtendedInspector\Editor\ArrayTool.cs(111,39): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+3: Assets\ExtendedInspector\Editor\ArrayTool.cs(143,38): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+4: Assets\ExtendedInspector\Editor\ArrayTool.cs(150,44): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+5: Assets\ExtendedInspector\Editor\ArrayTool.cs(182,42): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+6: Assets\ExtendedInspector\Editor\ArrayTool.cs(190,48): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+7: Assets\ExtendedInspector\Editor\PivotTool.cs(134,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+8: Assets\ExtendedInspector\Editor\PivotTool.cs(135,13): warning CS0618: 'Undo.CreateSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+9: Assets\ExtendedInspector\Editor\PivotTool.cs(136,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+10: Assets\ExtendedInspector\Editor\PivotTool.cs(144,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+11: Assets\ExtendedInspector\Editor\PivotTool.cs(145,13): warning CS0618: 'Undo.RegisterSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+12: Assets\ExtendedInspector\Editor\PivotTool.cs(146,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+13: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(135,9): warning CS0618: 'EditorGUIUtility.LookLikeControls()' is obsolete: 'LookLikeControls and LookLikeInspector modes are deprecated. Use EditorGUIUtility.labelWidth and EditorGUIUtility.fieldWidth to control label and field widths.'
+14: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(380,28): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+15: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(381,9): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+16: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(381,68): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+17: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(393,13): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+18: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(396,25): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+19: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(417,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+20: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(417,59): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+21: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(426,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+22: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(426,55): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+23: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(435,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+24: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(435,48): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+25: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(438,33): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+26: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(438,59): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+27: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(570,17): warning CS0618: 'EditorUtility.GetPrefabType(Object)' is obsolete: 'Use PrefabUtility.GetPrefabType'
+28: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(581,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+29: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(589,35): error CS0117: 'EditorUtility' does not contain a definition for 'ResetGameObjectToPrefabState'
+30: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(599,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+31: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(600,21): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+32: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(618,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+33: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(627,35): error CS0117: 'EditorUtility' does not contain a definition for 'ResetGameObjectToPrefabState'
+34: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(645,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+35: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(653,21): warning CS0618: 'EditorUtility.ReconnectToLastPrefab(GameObject)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+36: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(662,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+37: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(663,21): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+38: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(671,21): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+39: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(684,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+40: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(692,21): warning CS0618: 'EditorUtility.ReconnectToLastPrefab(GameObject)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+41: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1218,18): warning CS0618: 'EditorUtility.CreateEmptyPrefab(string)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+42: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1219,9): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+43: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1231,9): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+44: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1275,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+45: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1276,13): warning CS0618: 'Undo.CreateSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+46: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1277,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+47: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1288,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+48: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1289,13): warning CS0618: 'Undo.RegisterSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+49: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1290,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+50: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1297,9): warning CS0618: 'Undo.RegisterSceneUndo(string)' is obsolete: 'Use DestroyObjectImmediate, RegisterCreatedObjectUndo or RegisterUndo instead.'
+********************************************************************************
+*                    Thursday, October 27, 2016 12:31:43 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 1.10.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp-Editor.dll
+Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-f0247e543eebebe42b69dffaf7ea8b76
+Exit code: 1
+Elapsed time: 1.94 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (51 lines):
+0: Assets\ExtendedInspector\Editor\ArrayTool.cs(84,9): warning CS0618: 'Undo.RegisterSceneUndo(string)' is obsolete: 'Use DestroyObjectImmediate, RegisterCreatedObjectUndo or RegisterUndo instead.'
+1: Assets\ExtendedInspector\Editor\ArrayTool.cs(104,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+2: Assets\ExtendedInspector\Editor\ArrayTool.cs(111,39): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+3: Assets\ExtendedInspector\Editor\ArrayTool.cs(143,38): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+4: Assets\ExtendedInspector\Editor\ArrayTool.cs(150,44): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+5: Assets\ExtendedInspector\Editor\ArrayTool.cs(182,42): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+6: Assets\ExtendedInspector\Editor\ArrayTool.cs(190,48): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+7: Assets\ExtendedInspector\Editor\PivotTool.cs(134,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+8: Assets\ExtendedInspector\Editor\PivotTool.cs(135,13): warning CS0618: 'Undo.CreateSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+9: Assets\ExtendedInspector\Editor\PivotTool.cs(136,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+10: Assets\ExtendedInspector\Editor\PivotTool.cs(144,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+11: Assets\ExtendedInspector\Editor\PivotTool.cs(145,13): warning CS0618: 'Undo.RegisterSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+12: Assets\ExtendedInspector\Editor\PivotTool.cs(146,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+13: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(135,9): warning CS0618: 'EditorGUIUtility.LookLikeControls()' is obsolete: 'LookLikeControls and LookLikeInspector modes are deprecated. Use EditorGUIUtility.labelWidth and EditorGUIUtility.fieldWidth to control label and field widths.'
+14: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(380,28): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+15: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(381,9): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+16: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(381,68): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+17: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(393,13): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+18: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(396,25): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+19: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(417,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+20: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(417,59): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+21: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(426,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+22: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(426,55): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+23: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(435,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+24: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(435,48): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+25: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(438,33): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+26: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(438,59): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+27: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(570,17): warning CS0618: 'EditorUtility.GetPrefabType(Object)' is obsolete: 'Use PrefabUtility.GetPrefabType'
+28: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(581,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+29: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(589,35): error CS0117: 'EditorUtility' does not contain a definition for 'ResetGameObjectToPrefabState'
+30: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(599,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+31: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(600,21): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+32: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(618,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+33: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(627,35): error CS0117: 'EditorUtility' does not contain a definition for 'ResetGameObjectToPrefabState'
+34: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(645,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+35: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(653,21): warning CS0618: 'EditorUtility.ReconnectToLastPrefab(GameObject)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+36: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(662,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+37: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(663,21): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+38: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(671,21): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+39: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(684,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+40: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(692,21): warning CS0618: 'EditorUtility.ReconnectToLastPrefab(GameObject)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+41: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1218,18): warning CS0618: 'EditorUtility.CreateEmptyPrefab(string)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+42: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1219,9): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+43: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1231,9): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+44: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1275,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+45: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1276,13): warning CS0618: 'Undo.CreateSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+46: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1277,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+47: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1288,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+48: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1289,13): warning CS0618: 'Undo.RegisterSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+49: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1290,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+50: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1297,9): warning CS0618: 'Undo.RegisterSceneUndo(string)' is obsolete: 'Use DestroyObjectImmediate, RegisterCreatedObjectUndo or RegisterUndo instead.'
+********************************************************************************
+*                    Thursday, October 27, 2016 12:32:34 PM                    *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -243,18 +314,13 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-7f454ac27cd68b04b8054d92a410fbfe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-faf52d62db238fc499e4c054e7fd547c
 Exit code: 0
-Elapsed time: 2.07 sec
+Elapsed time: 2.11 sec
 
 - Compiler output (0 lines):
 
-- Compiler errors (5 lines):
-0: Assets\__Scripts\Enemies\ProceduralSpawn.cs(16,19): warning CS0414: The field 'ProceduralSpawn._ran' is assigned but its value is never used
-1: Assets\__Scripts\Enemies\ProceduralSpawn.cs(14,19): warning CS0414: The field 'ProceduralSpawn._3' is assigned but its value is never used
-2: Assets\__Scripts\Enemies\ProceduralSpawn.cs(15,19): warning CS0414: The field 'ProceduralSpawn._4' is assigned but its value is never used
-3: Assets\__Scripts\Enemies\ProceduralSpawn.cs(12,19): warning CS0414: The field 'ProceduralSpawn._1' is assigned but its value is never used
-4: Assets\__Scripts\Enemies\ProceduralSpawn.cs(13,19): warning CS0414: The field 'ProceduralSpawn._2' is assigned but its value is never used
+- Compiler errors (0 lines):
 
 - PDB to MDB conversion --------------------------------------
 
@@ -265,7 +331,7 @@ Elapsed time: 0.10 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                    Thursday, October 27, 2016 12:12:00 PM                    *
+*                    Thursday, October 27, 2016 12:32:37 PM                    *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -277,19 +343,140 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-05569f57c0d70e94d99fbf15273393c7
-Exit code: 0
-Elapsed time: 2.17 sec
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-647cf67408cc66847b2f067fb80f8d4e
+Exit code: 1
+Elapsed time: 1.94 sec
 
 - Compiler output (0 lines):
 
-- Compiler errors (0 lines):
+- Compiler errors (51 lines):
+0: Assets\ExtendedInspector\Editor\ArrayTool.cs(84,9): warning CS0618: 'Undo.RegisterSceneUndo(string)' is obsolete: 'Use DestroyObjectImmediate, RegisterCreatedObjectUndo or RegisterUndo instead.'
+1: Assets\ExtendedInspector\Editor\ArrayTool.cs(104,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+2: Assets\ExtendedInspector\Editor\ArrayTool.cs(111,39): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+3: Assets\ExtendedInspector\Editor\ArrayTool.cs(143,38): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+4: Assets\ExtendedInspector\Editor\ArrayTool.cs(150,44): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+5: Assets\ExtendedInspector\Editor\ArrayTool.cs(182,42): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+6: Assets\ExtendedInspector\Editor\ArrayTool.cs(190,48): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+7: Assets\ExtendedInspector\Editor\PivotTool.cs(134,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+8: Assets\ExtendedInspector\Editor\PivotTool.cs(135,13): warning CS0618: 'Undo.CreateSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+9: Assets\ExtendedInspector\Editor\PivotTool.cs(136,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+10: Assets\ExtendedInspector\Editor\PivotTool.cs(144,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+11: Assets\ExtendedInspector\Editor\PivotTool.cs(145,13): warning CS0618: 'Undo.RegisterSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+12: Assets\ExtendedInspector\Editor\PivotTool.cs(146,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+13: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(135,9): warning CS0618: 'EditorGUIUtility.LookLikeControls()' is obsolete: 'LookLikeControls and LookLikeInspector modes are deprecated. Use EditorGUIUtility.labelWidth and EditorGUIUtility.fieldWidth to control label and field widths.'
+14: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(380,28): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+15: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(381,9): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+16: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(381,68): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+17: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(393,13): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+18: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(396,25): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+19: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(417,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+20: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(417,59): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+21: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(426,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+22: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(426,55): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+23: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(435,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+24: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(435,48): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+25: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(438,33): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+26: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(438,59): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+27: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(570,17): warning CS0618: 'EditorUtility.GetPrefabType(Object)' is obsolete: 'Use PrefabUtility.GetPrefabType'
+28: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(581,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+29: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(589,35): error CS0117: 'EditorUtility' does not contain a definition for 'ResetGameObjectToPrefabState'
+30: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(599,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+31: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(600,21): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+32: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(618,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+33: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(627,35): error CS0117: 'EditorUtility' does not contain a definition for 'ResetGameObjectToPrefabState'
+34: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(645,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+35: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(653,21): warning CS0618: 'EditorUtility.ReconnectToLastPrefab(GameObject)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+36: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(662,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+37: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(663,21): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+38: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(671,21): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+39: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(684,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+40: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(692,21): warning CS0618: 'EditorUtility.ReconnectToLastPrefab(GameObject)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+41: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1218,18): warning CS0618: 'EditorUtility.CreateEmptyPrefab(string)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+42: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1219,9): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+43: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1231,9): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+44: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1275,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+45: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1276,13): warning CS0618: 'Undo.CreateSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+46: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1277,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+47: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1288,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+48: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1289,13): warning CS0618: 'Undo.RegisterSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+49: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1290,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+50: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1297,9): warning CS0618: 'Undo.RegisterSceneUndo(string)' is obsolete: 'Use DestroyObjectImmediate, RegisterCreatedObjectUndo or RegisterUndo instead.'
+********************************************************************************
+*                    Thursday, October 27, 2016 12:33:35 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 1.10.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp-Editor.dll
+Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-c3246734748535b48bab0c60ebb5ad6d
+Exit code: 0
+Elapsed time: 2.26 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (50 lines):
+0: Assets\ExtendedInspector\Editor\ArrayTool.cs(84,9): warning CS0618: 'Undo.RegisterSceneUndo(string)' is obsolete: 'Use DestroyObjectImmediate, RegisterCreatedObjectUndo or RegisterUndo instead.'
+1: Assets\ExtendedInspector\Editor\ArrayTool.cs(104,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+2: Assets\ExtendedInspector\Editor\ArrayTool.cs(111,39): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+3: Assets\ExtendedInspector\Editor\ArrayTool.cs(143,38): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+4: Assets\ExtendedInspector\Editor\ArrayTool.cs(150,44): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+5: Assets\ExtendedInspector\Editor\ArrayTool.cs(182,42): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+6: Assets\ExtendedInspector\Editor\ArrayTool.cs(190,48): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+7: Assets\ExtendedInspector\Editor\PivotTool.cs(134,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+8: Assets\ExtendedInspector\Editor\PivotTool.cs(135,13): warning CS0618: 'Undo.CreateSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+9: Assets\ExtendedInspector\Editor\PivotTool.cs(136,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+10: Assets\ExtendedInspector\Editor\PivotTool.cs(144,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+11: Assets\ExtendedInspector\Editor\PivotTool.cs(145,13): warning CS0618: 'Undo.RegisterSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+12: Assets\ExtendedInspector\Editor\PivotTool.cs(146,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+13: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(135,9): warning CS0618: 'EditorGUIUtility.LookLikeControls()' is obsolete: 'LookLikeControls and LookLikeInspector modes are deprecated. Use EditorGUIUtility.labelWidth and EditorGUIUtility.fieldWidth to control label and field widths.'
+14: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(380,28): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+15: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(381,9): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+16: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(381,68): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+17: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(393,13): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+18: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(396,25): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+19: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(417,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+20: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(417,59): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+21: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(426,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+22: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(426,55): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+23: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(435,29): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+24: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(435,48): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+25: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(438,33): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+26: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(438,59): warning CS0618: 'GameObject.active' is obsolete: 'GameObject.active is obsolete. Use GameObject.SetActive(), GameObject.activeSelf or GameObject.activeInHierarchy.'
+27: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(570,17): warning CS0618: 'EditorUtility.GetPrefabType(Object)' is obsolete: 'Use PrefabUtility.GetPrefabType'
+28: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(581,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+29: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(589,21): warning CS0618: 'EditorUtility.ResetToPrefabState(Object)' is obsolete: 'Use PrefabUtility.ResetToPrefabState'
+30: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(599,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+31: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(600,21): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+32: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(618,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+33: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(645,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+34: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(653,21): warning CS0618: 'EditorUtility.ReconnectToLastPrefab(GameObject)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+35: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(662,34): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+36: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(663,21): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+37: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(671,21): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+38: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(684,46): warning CS0618: 'EditorUtility.GetPrefabParent(Object)' is obsolete: 'Use PrefabUtility.GetPrefabParent'
+39: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(692,21): warning CS0618: 'EditorUtility.ReconnectToLastPrefab(GameObject)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+40: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1218,18): warning CS0618: 'EditorUtility.CreateEmptyPrefab(string)' is obsolete: 'Use PrefabUtility.CreateEmptyPrefab'
+41: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1219,9): warning CS0618: 'EditorUtility.ReplacePrefab(GameObject, Object)' is obsolete: 'Use PrefabUtility.ReplacePrefab'
+42: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1231,9): warning CS0618: 'EditorUtility.InstantiatePrefab(Object)' is obsolete: 'Use PrefabUtility.InstantiatePrefab'
+43: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1275,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+44: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1276,13): warning CS0618: 'Undo.CreateSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+45: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1277,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+46: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1288,13): warning CS0618: 'Undo.SetSnapshotTarget(Object[], string)' is obsolete: 'Use Undo.RecordObject instead'
+47: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1289,13): warning CS0618: 'Undo.RegisterSnapshot()' is obsolete: 'Use Undo.RecordObject instead'
+48: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1290,13): warning CS0618: 'Undo.ClearSnapshotTarget()' is obsolete: 'Use Undo.RecordObject instead'
+49: Assets\ExtendedInspector\Editor\ExtendedInspector.cs(1297,9): warning CS0618: 'Undo.RegisterSceneUndo(string)' is obsolete: 'Use DestroyObjectImmediate, RegisterCreatedObjectUndo or RegisterUndo instead.'
 
 - PDB to MDB conversion --------------------------------------
 
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp-Editor.dll
 Exit code: 0
-Elapsed time: 0.09 sec
+Elapsed time: 0.10 sec
 
 - pdb2mdb.exe output (0 lines):

@@ -9,14 +9,15 @@ public class ProceduralSpawn : MonoBehaviour {
     public GameObject mobThree;
     public GameObject mobFour;
 
+    private float _totalWeight = 0f;
+    private Dictionary<GameObject, float> enemies = new Dictionary<GameObject, float>();
+
     void Start () {
-        Dictionary<GameObject, float> enemies = new Dictionary<GameObject, float>();
         enemies.Add(mobOne, 15);
         enemies.Add(mobTwo, 20);
         enemies.Add(mobThree, 35);
         enemies.Add(mobFour, 30);
-
-        float _totalWeight = 0f;
+        
         foreach (KeyValuePair<GameObject, float> enemy in enemies) {
             _totalWeight += enemy.Value;
         }
