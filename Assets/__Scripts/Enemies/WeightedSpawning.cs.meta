@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: 112fe0e3c0930514cbc5e32b7430cba2
-labels:
-- inspector
-- editor
-- extension
-- mass
-- batch
-- enhanced
-- debug
+guid: 43179918c826dc84aa025165546123df
+timeCreated: 1477927307
+licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
