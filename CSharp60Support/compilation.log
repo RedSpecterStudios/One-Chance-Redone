@@ -1,5 +1,5 @@
 ********************************************************************************
-*                   Saturday, November 05, 2016 11:45:18 PM                    *
+*                     Sunday, November 06, 2016 1:25:55 PM                     *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -11,16 +11,17 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-a04d84ff9718b354898d3d17ec1d5394
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-b1a14da581a87614bbba506934b8fd4a
 Exit code: 0
 Elapsed time: 0.49 sec
 
 - Compiler output (0 lines):
 
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
+- Compiler errors (4 lines):
+0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(16,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
+1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(12,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
+2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
+3: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
 
 - PDB to MDB conversion --------------------------------------
 
@@ -31,7 +32,7 @@ Elapsed time: 0.08 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                   Saturday, November 05, 2016 11:45:19 PM                    *
+*                     Sunday, November 06, 2016 1:25:56 PM                     *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -43,7 +44,131 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-fa582877459da5f43b8e2167659a996f
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-3f0f46b1629f2814ab977a47b449e180
+Exit code: 0
+Elapsed time: 0.43 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp-Editor.dll
+Exit code: 0
+Elapsed time: 0.08 sec
+
+- pdb2mdb.exe output (0 lines):
+********************************************************************************
+*                     Sunday, November 06, 2016 1:26:45 PM                     *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 1.10.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-0f9029f4483e070429bd93987ae83776
+Exit code: 0
+Elapsed time: 0.49 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (4 lines):
+0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
+1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(16,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
+2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(12,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
+3: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
+
+- PDB to MDB conversion --------------------------------------
+
+Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.08 sec
+
+- pdb2mdb.exe output (0 lines):
+********************************************************************************
+*                     Sunday, November 06, 2016 1:26:46 PM                     *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 1.10.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp-Editor.dll
+Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-777c48a90774fa44d8d97d748586cd4f
+Exit code: 0
+Elapsed time: 0.43 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp-Editor.dll
+Exit code: 0
+Elapsed time: 0.08 sec
+
+- pdb2mdb.exe output (0 lines):
+********************************************************************************
+*                     Sunday, November 06, 2016 1:27:32 PM                     *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 1.10.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-3d9ed11769532ac47a3fe29a5f906b61
+Exit code: 0
+Elapsed time: 0.49 sec
+
+- Compiler output (0 lines):
+
+- Compiler errors (4 lines):
+0: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
+1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
+2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(12,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
+3: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(16,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
+
+- PDB to MDB conversion --------------------------------------
+
+Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.08 sec
+
+- pdb2mdb.exe output (0 lines):
+********************************************************************************
+*                     Sunday, November 06, 2016 1:27:34 PM                     *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 1.10.0.0
+Platform: Windows
+Target assembly: Assembly-CSharp-Editor.dll
+Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
+Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
+Compiler: Microsoft C# 6.0
+
+- Compilation -----------------------------------------------
+
+Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-2a2650f794b1c9d4f85c6002e0a40017
 Exit code: 0
 Elapsed time: 0.44 sec
 
@@ -60,36 +185,7 @@ Elapsed time: 0.08 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                   Saturday, November 05, 2016 11:49:05 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-firstpass.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-692237bb15da5db4781b2ad75053c0e7
-Exit code: 0
-Elapsed time: 0.55 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-firstpass.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:49:07 PM                    *
+*                     Sunday, November 06, 2016 1:29:38 PM                     *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -101,271 +197,28 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-fea9265b0eb4aaa4d81dacfefceda477
-Exit code: 0
-Elapsed time: 0.49 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:49:08 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-cc6030e1393d2014581b63963e463e98
-Exit code: 0
-Elapsed time: 0.45 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:51:38 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-08a08dee519016d47857cb66ae161e41
-Exit code: 0
-Elapsed time: 0.49 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:51:39 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-4e7a6a15a8ca59a4fa31d1254c5f07da
-Exit code: 0
-Elapsed time: 0.50 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.10 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:53:26 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-e6e96f202cbddf94e99a391d8112b73d
-Exit code: 0
-Elapsed time: 0.49 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:53:27 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-7af8e364df398f24d8855a4aa420fd6d
-Exit code: 0
-Elapsed time: 0.49 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:54:19 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-55f41df2e3c50e344b00a1b4f5a93bea
-Exit code: 0
-Elapsed time: 0.49 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.08 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:54:21 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-eadfd5a91b272514a9845fa3f265f181
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-622dfa4186119554cb1ba81eec7b9d48
 Exit code: 0
 Elapsed time: 0.48 sec
 
 - Compiler output (0 lines):
 
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:56:51 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-639e0d4d861c12441995d0df8e1df6d1
-Exit code: 0
-Elapsed time: 0.51 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
+- Compiler errors (4 lines):
+0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(16,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
+1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(12,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
+2: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
+3: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
 
 - PDB to MDB conversion --------------------------------------
 
 Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp.dll
 Exit code: 0
-Elapsed time: 0.09 sec
+Elapsed time: 0.08 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                   Saturday, November 05, 2016 11:56:52 PM                    *
+*                     Sunday, November 06, 2016 1:29:39 PM                     *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -377,192 +230,9 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-d5312457547cbe94a901d2b401f87e77
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-750e442d9c3f5f24ab320d9dc55ba9ff
 Exit code: 0
-Elapsed time: 0.46 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:57:31 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-0ce5c5100cfcf2c48b4d1ee02a1034e4
-Exit code: 0
-Elapsed time: 0.49 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:57:32 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-7f4950b4d5bacf34299b940035ef0c81
-Exit code: 0
-Elapsed time: 0.64 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.11 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:58:43 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-b8bc955d4580a5746b0a80e56c91e0f7
-Exit code: 0
-Elapsed time: 0.50 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:58:44 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-02f2626cb596a6741acfcbe03a7b448c
-Exit code: 0
-Elapsed time: 0.44 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:59:36 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-f659e61595e7c7241bec455553e0b921
-Exit code: 0
-Elapsed time: 0.49 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Saturday, November 05, 2016 11:59:37 PM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-439126107b1db6f42a79b0017e2db1ab
-Exit code: 0
-Elapsed time: 0.46 sec
+Elapsed time: 0.43 sec
 
 - Compiler output (0 lines):
 
@@ -577,7 +247,7 @@ Elapsed time: 0.08 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                    Sunday, November 06, 2016 12:00:20 AM                     *
+*                     Sunday, November 06, 2016 1:31:24 PM                     *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -589,408 +259,16 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-cb1f04b3d0f429c438904de19d26b041
-Exit code: 0
-Elapsed time: 0.50 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:00:21 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-92e693415f21d394d93fe2c05b00b3c8
-Exit code: 0
-Elapsed time: 0.47 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:00:37 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-6ad79115b89c7e34e9478e6e9ad1b8d4
-Exit code: 0
-Elapsed time: 0.51 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:00:38 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-9932174b0aa48f64e996f36ba0e134df
-Exit code: 0
-Elapsed time: 0.47 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:00:57 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-7c17a9b8f72934d44909a24d430014c8
-Exit code: 1
-Elapsed time: 0.40 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (4 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(142,124): error CS1503: Argument 3: cannot convert from 'double' to 'UnityEngine.Color'
-1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-3: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-********************************************************************************
-*                    Sunday, November 06, 2016 12:01:04 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-681a1504df133c74fa6ba2239f53f4a8
-Exit code: 0
-Elapsed time: 0.49 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:01:06 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-9359b8ee812c71b4f814dbaced8a60a2
-Exit code: 0
-Elapsed time: 0.45 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:01:45 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-c54d197245fff4d4fadd35d8d114d4b0
-Exit code: 0
-Elapsed time: 0.50 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (3 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:01:46 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-1d1e4daa90e9a3947a51d4fff4a6654c
-Exit code: 0
-Elapsed time: 0.45 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:02:37 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-befd8ceeca9b92c4d98229d70a3e095f
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-f48aa2c840991824ea10f700bd917ce8
 Exit code: 0
 Elapsed time: 0.49 sec
 
 - Compiler output (0 lines):
 
 - Compiler errors (4 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-3: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.10 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:02:38 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-f9ca5ac2b1ab6ae4c85404661ddf6ffa
-Exit code: 0
-Elapsed time: 0.49 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:07:20 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-7f8cac0a56e73014992f435bd1ddc0a0
-Exit code: 0
-Elapsed time: 0.52 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (4 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-3: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:07:21 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-838da1c010233c1448c1d47aa9cf9799
-Exit code: 0
-Elapsed time: 0.47 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:07:59 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-6f78a868e8064964a9ca49a867eda36e
-Exit code: 0
-Elapsed time: 0.50 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (4 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
+0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(16,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
+1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(12,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
+2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
 3: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
 
 - PDB to MDB conversion --------------------------------------
@@ -1002,7 +280,7 @@ Elapsed time: 0.09 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                    Sunday, November 06, 2016 12:08:00 AM                     *
+*                     Sunday, November 06, 2016 1:31:26 PM                     *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -1014,255 +292,7 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-750902027b783f14cb37d7e39160cc90
-Exit code: 0
-Elapsed time: 0.46 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:08:16 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-a6504b1c59e372e4d8109913fa9de07b
-Exit code: 0
-Elapsed time: 0.50 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (4 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
-3: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:08:17 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-e6bc286c8fe5f4948a4f41240e3fb7f4
-Exit code: 0
-Elapsed time: 0.46 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:09:47 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-979831de0566b274db262acb7837cc05
-Exit code: 0
-Elapsed time: 0.50 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (4 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
-3: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.08 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:09:48 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-6a1f67fbb79116840a1cae27620ae069
-Exit code: 0
-Elapsed time: 0.45 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.08 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:10:09 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-05e016d24bbbea04db0bb0d22e982ff9
-Exit code: 0
-Elapsed time: 0.48 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (4 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-3: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.08 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:10:10 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-0f1ebee0d2a9d1a48abfdadcfedb6ffb
-Exit code: 0
-Elapsed time: 0.45 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:10:36 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-5e4c2c02ead6ff04c921664680d489fe
-Exit code: 0
-Elapsed time: 0.48 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (4 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
-3: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.08 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:10:37 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-b3d8fc3ff235fa543819d963ddeb4ca4
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-39cf0de47aabe61458b22abc257e1a04
 Exit code: 0
 Elapsed time: 0.44 sec
 
@@ -1278,90 +308,3 @@ Exit code: 0
 Elapsed time: 0.08 sec
 
 - pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:11:13 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-1b55f311662182d41a4b45a53f18c6c8
-Exit code: 0
-Elapsed time: 0.50 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (4 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
-1: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-3: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:11:15 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-b6ff6a702c1009b41a0be045520a7fcb
-Exit code: 0
-Elapsed time: 0.45 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.09 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                    Sunday, November 06, 2016 12:13:14 AM                     *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp.dll
-Project directory: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\Benjamin\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-7471d462f320c924eb6fa0ca618c2b5b
-Exit code: 1
-Elapsed time: 0.40 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (5 lines):
-0: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(50,13): error CS0029: Cannot implicitly convert type 'UnityEngine.Vector3' to 'float'
-1: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(15,19): warning CS0414: The field 'GatlingDefault._range' is assigned but its value is never used
-2: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(11,18): warning CS0414: The field 'GatlingDefault._canFire' is assigned but its value is never used
-3: Assets\__Scripts\Towers\Tower Specific\Gatling\GatlingDefault.cs(14,19): warning CS0414: The field 'GatlingDefault._fireRate' is assigned but its value is never used
-4: Assets\__Scripts\Towers\Tower Specific\Basic\BasicDefault.cs(8,18): warning CS0414: The field 'BasicDefault._canFire' is assigned but its value is never used

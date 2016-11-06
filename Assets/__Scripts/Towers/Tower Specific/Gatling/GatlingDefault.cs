@@ -5,8 +5,9 @@ using System.Linq;
 
 public class GatlingDefault : MonoBehaviour {
 
-    public GameObject _top;
-    public GameObject _barrel;
+    public GameObject top;
+    public GameObject barrel;
+    public Vector3 velocity;
 
     private bool _canFire = true;
     private float _dist;
@@ -33,21 +34,21 @@ public class GatlingDefault : MonoBehaviour {
         FindTarget();
         // Follows the target, when their is one and it's within the range of the tower
         if (_target != null) {
-            _dirAB = (_target.transform.position - _top.transform.position).normalized;
-            _dotProd = Vector3.Dot(_dirAB, _top.transform.forward);
+            _dirAB = (_target.transform.position - top.transform.position).normalized;
+            _dotProd = Vector3.Dot(_dirAB, top.transform.forward);
 
             _dist = Vector3.Distance(transform.position, _target.transform.position);
-            Vector3 _targetPoint = _target.transform.position - _top.transform.position;
-            Quaternion _rotation = Quaternion.Lerp(_top.transform.rotation, Quaternion.LookRotation(_targetPoint), 25 * Time.fixedDeltaTime);
-            _top.transform.rotation = _rotation;
-            float y = _top.transform.eulerAngles.y;
-            _top.transform.eulerAngles = new Vector3(0, y, 0);
+            Vector3 _targetPoint = _target.transform.position - top.transform.position;
+            Quaternion _rotation = Quaternion.Lerp(top.transform.rotation, Quaternion.LookRotation(_targetPoint), 25 * Time.fixedDeltaTime);
+            top.transform.rotation = _rotation;
+            float y = top.transform.eulerAngles.y;
+            top.transform.eulerAngles = new Vector3(0, y, 0);
         }
+    }
 
+    void FixedUpdate() {
         if (_target != null) {
-            _currentRotation = _barrel.transform.eulerAngles;
-            _currentRotation.z = 
-            _barrel.transform.eulerAngles = _currentRotation;
+
         }
     }
 
