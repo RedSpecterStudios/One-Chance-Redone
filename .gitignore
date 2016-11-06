@@ -29,3 +29,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 CSharp60Support/compilation.log
+*.db
