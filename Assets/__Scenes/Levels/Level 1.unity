@@ -7702,7 +7702,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &874656296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8436,7 +8436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _top: {fileID: 460782717}
-  _pivot: {fileID: 0}
+  _barrel: {fileID: 806571839}
 --- !u!114 &926770945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13430,7 +13430,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014150736682, guid: 9b105eefcdd17a2448aaae5dce7513f7, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1000013715838130, guid: 9b105eefcdd17a2448aaae5dce7513f7, type: 2}
       propertyPath: m_IsActive

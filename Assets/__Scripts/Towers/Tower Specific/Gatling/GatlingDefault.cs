@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +17,7 @@ public class GatlingDefault : MonoBehaviour {
     private BulletShooter _bulletShooter;
     private GameObject _lastEntered;
     private GameObject _target;
+    private Vector3 _currentRotation;
     private Vector3 _dirAB;
 
     private List<GameObject> _enemies;
@@ -36,17 +37,17 @@ public class GatlingDefault : MonoBehaviour {
             _dotProd = Vector3.Dot(_dirAB, _top.transform.forward);
 
             _dist = Vector3.Distance(transform.position, _target.transform.position);
-            if (_dist < _range) {
-                Vector3 _targetPoint = _target.transform.position - _top.transform.position;
-                Quaternion _rotation = Quaternion.Slerp(_top.transform.rotation, Quaternion.LookRotation(_targetPoint), 25 * Time.fixedDeltaTime);
-                _top.transform.rotation = _rotation;
-                float y = _top.transform.eulerAngles.y;
-                _top.transform.eulerAngles = new Vector3(0, y, 0);
-            }
+            Vector3 _targetPoint = _target.transform.position - _top.transform.position;
+            Quaternion _rotation = Quaternion.Lerp(_top.transform.rotation, Quaternion.LookRotation(_targetPoint), 25 * Time.fixedDeltaTime);
+            _top.transform.rotation = _rotation;
+            float y = _top.transform.eulerAngles.y;
+            _top.transform.eulerAngles = new Vector3(0, y, 0);
         }
 
         if (_target != null) {
-            _barrel.GetComponent<Rigidbody>().rotation
+            _currentRotation = _barrel.transform.eulerAngles;
+            _currentRotation.z = 
+            _barrel.transform.eulerAngles = _currentRotation;
         }
     }
 
@@ -133,5 +134,6 @@ public class GatlingDefault : MonoBehaviour {
     }
 
     void Fire () {
+
     }
 }
