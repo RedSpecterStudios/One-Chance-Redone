@@ -3,7 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class BasicDefault : MonoBehaviour {
+public class GatlingDefault : MonoBehaviour {
+
+    public GameObject top;
+    public GameObject barrel;
+    public Vector3 velocity;
 
     private bool _canFire = true;
     private float _dist;
@@ -14,35 +18,37 @@ public class BasicDefault : MonoBehaviour {
     private BulletShooter _bulletShooter;
     private GameObject _lastEntered;
     private GameObject _target;
-    private GameObject _top;
+    private Vector3 _currentRotation;
     private Vector3 _dirAB;
 
     private List<GameObject> _enemies;
-    
-	void Start () {
-        // Starts the fire timer
-        StartCoroutine(FireTimer(_fireRate));
 
+    void Start () {
         _bulletShooter = GetComponent<BulletShooter>();
-        _top = transform.FindChild("Top").gameObject;
 
         _enemies = new List<GameObject>();
-	}
+    }
 	
 	void Update () {
         // Finds the target
         FindTarget();
         // Follows the target, when their is one and it's within the range of the tower
         if (_target != null) {
-            _dirAB = (_target.transform.position - _top.transform.position).normalized;
-            _dotProd = Vector3.Dot(_dirAB, _top.transform.forward);
-            
+            _dirAB = (_target.transform.position - top.transform.position).normalized;
+            _dotProd = Vector3.Dot(_dirAB, top.transform.forward);
+
             _dist = Vector3.Distance(transform.position, _target.transform.position);
-            Vector3 _targetPoint = _target.transform.position - _top.transform.position;
-            Quaternion _rotation = Quaternion.Slerp(_top.transform.rotation, Quaternion.LookRotation(_targetPoint), 10 * Time.fixedDeltaTime);
-            _top.transform.rotation = _rotation;
-            float y = _top.transform.eulerAngles.y;
-            _top.transform.eulerAngles = new Vector3(0, y, 0);
+            Vector3 _targetPoint = _target.transform.position - top.transform.position;
+            Quaternion _rotation = Quaternion.Lerp(top.transform.rotation, Quaternion.LookRotation(_targetPoint), 25 * Time.fixedDeltaTime);
+            top.transform.rotation = _rotation;
+            float y = top.transform.eulerAngles.y;
+            top.transform.eulerAngles = new Vector3(0, y, 0);
+        }
+    }
+
+    void FixedUpdate() {
+        if (_target != null) {
+
         }
     }
 
@@ -92,7 +98,7 @@ public class BasicDefault : MonoBehaviour {
                         if (_enemies.Count > 1) {
                             GameObject _farthest;
                             _farthest = _enemies[0];
-                            foreach(GameObject fTar in _enemies) {
+                            foreach (GameObject fTar in _enemies) {
                                 if (Vector3.Distance(fTar.transform.position, transform.position) >
                                     Vector3.Distance(_farthest.transform.position, transform.position)) {
                                     _farthest = fTar;
@@ -129,23 +135,6 @@ public class BasicDefault : MonoBehaviour {
     }
 
     void Fire () {
-        // If the shot is realistic looking, and the target is in the range, fire at it
-        if (_dotProd >= 0.7 && _dist < _range) {
-            _bulletShooter.Shoot();
-        }
-    }
 
-    IEnumerator FireTimer (float fireRate) {
-        // Calls Fire() every 2 seconds
-        Fire();
-        yield return new WaitForSeconds(fireRate);
-        StartCoroutine(FireTimer(_fireRate));
     }
-
-    /*void OnDrawGizmos () {
-        DebugExtension.DrawCapsule(transform.position - new Vector3(0, 25, 0), transform.position + new Vector3(0, 35, 0), 20);
-        if (_target != null) {
-            Gizmos.DrawLine(transform.position, _target.transform.position);
-        }
-    }*/
 }
