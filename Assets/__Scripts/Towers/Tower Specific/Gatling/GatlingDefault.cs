@@ -5,16 +5,18 @@ using System.Linq;
 
 public class GatlingDefault : MonoBehaviour {
 
+    public AnimationClip clip;
     public GameObject top;
     public GameObject barrel;
     public Vector3 velocity;
-
-    private bool _canFire = true;
+    
     private float _dist;
     private float _dotProd;
     private float _fireRate = 5;
     private float _range = 20f;
+    private float _revLerp = 0;
     private int _mode = 1;
+    private Animation _rev;
     private BulletShooter _bulletShooter;
     private GameObject _lastEntered;
     private GameObject _target;
@@ -24,9 +26,11 @@ public class GatlingDefault : MonoBehaviour {
     private List<GameObject> _enemies;
 
     void Start () {
+        _rev = GetComponent<Animation>();
         _bulletShooter = GetComponent<BulletShooter>();
-
         _enemies = new List<GameObject>();
+        
+        _rev["GatlingSpin"].speed = 0;
     }
 	
 	void Update () {
@@ -48,8 +52,19 @@ public class GatlingDefault : MonoBehaviour {
 
     void FixedUpdate() {
         if (_target != null) {
-
+            if (_revLerp < 1) {
+                _revLerp += Time.fixedDeltaTime / 2;
+            } else {
+                _revLerp = 1;
+            }
+        } else {
+            if (_revLerp > 0) {
+                _revLerp -= Time.fixedDeltaTime / 3;
+            } else {
+                _revLerp = 0;
+            }
         }
+        _rev["GatlingSpin"].speed = _revLerp;
     }
 
     void FindTarget () {

@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class BasicDefault : MonoBehaviour {
-
-    private bool _canFire = true;
+    
     private float _dist;
     private float _dotProd;
     private float _fireRate = 5;
