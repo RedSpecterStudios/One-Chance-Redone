@@ -5,11 +5,11 @@ public class BulletShooter : MonoBehaviour {
     
     public float travelTime;
     public CreateSplineProfile spline;
-    public GameObject bulletToMove;
+    //public GameObject bulletToMove;
     public GameObject source;
     public GameObject target;
 
-    public void Shoot() {
+    public void Shoot(GameObject bulletToMove = null) {
         if (bulletToMove == null) {
             bulletToMove = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         }

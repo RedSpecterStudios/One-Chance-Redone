@@ -34,6 +34,6 @@ public class ParticleMover : MonoBehaviour {
             //put your code that triggers damage/explosions or whatever here
         }
         Destroy(Spline);
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }

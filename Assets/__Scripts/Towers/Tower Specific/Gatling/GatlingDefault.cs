@@ -12,7 +12,7 @@ public class GatlingDefault : MonoBehaviour {
     
     private float _dist;
     private float _dotProd;
-    private float _fireRate = 5;
+    private float _fireRate = .1f;
     private float _range = 20f;
     private float _revLerp = 0;
     private int _mode = 1;
@@ -26,10 +26,12 @@ public class GatlingDefault : MonoBehaviour {
     private List<GameObject> _enemies;
 
     void Start () {
+        StartCoroutine(FireTimer(_fireRate));
+
         _rev = GetComponent<Animation>();
         _bulletShooter = GetComponent<BulletShooter>();
         _enemies = new List<GameObject>();
-        
+        // Makes sure the gattling barrel isn't spinning when the game starts
         _rev["GatlingSpin"].speed = 0;
     }
 	
@@ -51,6 +53,8 @@ public class GatlingDefault : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        // Revs up the barrel until at max speed, if a target is present
+        // Lets the barrel spin itself down until stopping, if their is no longer a target
         if (_target != null) {
             if (_revLerp < 1) {
                 _revLerp += Time.fixedDeltaTime / 2;
@@ -150,6 +154,15 @@ public class GatlingDefault : MonoBehaviour {
     }
 
     void Fire () {
+        // If the shot is realistic looking, and the target is in the range, fire at it
+        if (_dotProd >= 0.7 && _dist < _range) {
+            _bulletShooter.Shoot();
+        }
+    }
 
+    IEnumerator FireTimer (float _timeToWait) {
+        Fire();
+        yield return new WaitForSeconds(_timeToWait);
+        StartCoroutine(FireTimer(_fireRate));
     }
 }
