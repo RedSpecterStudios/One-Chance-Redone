@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class GatlingDefault : MonoBehaviour {
-
-    public AnimationClip clip;
+    
     public GameObject top;
     public GameObject barrel;
     public Vector3 velocity;
@@ -148,6 +147,13 @@ public class GatlingDefault : MonoBehaviour {
                         _target = null;
                         break;
                 }
+
+                if (_target.transform.parent.FindChild("Center") != null) {
+                    _target = _target.transform.parent.FindChild("Center").gameObject;
+                } else {
+                    Debug.LogWarning($"No \"Center\" child in \"{_target}\"");
+                }
+
                 _bulletShooter.target = _target;
             }
         }

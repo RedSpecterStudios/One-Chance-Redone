@@ -413,7 +413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab69cfff6e68a8478bf448e9848475e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 7400000, guid: dbfdf5cc68d22fb4f9200a7fcf01b642, type: 2}
   top: {fileID: 1000011637621378}
   barrel: {fileID: 1000011010328046}
   velocity: {x: 0, y: 0, z: 0}
@@ -430,7 +429,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   travelTime: 0.5
   spline: {fileID: 11400000, guid: a4faea361d64f034ab2fb4657e76820d, type: 2}
-  bulletToMove: {fileID: 0}
   source: {fileID: 1000010623559596}
   target: {fileID: 0}
 --- !u!114 &114000013832652564
