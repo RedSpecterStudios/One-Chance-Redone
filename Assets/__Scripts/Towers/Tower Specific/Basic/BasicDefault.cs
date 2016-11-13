@@ -122,6 +122,13 @@ public class BasicDefault : MonoBehaviour {
                         _target = null;
                         break;
                 }
+
+                if (_target.transform.parent.FindChild("Center") != null) {
+                    _target = _target.transform.parent.FindChild("Center").gameObject;
+                } else {
+                    Debug.LogWarning($"No \"Center\" child in \"{_target}\"");
+                }
+
                 _bulletShooter.target = _target;
             }
         }
