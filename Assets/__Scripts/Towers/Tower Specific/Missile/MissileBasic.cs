@@ -1,37 +1,35 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class GatlingDefault : MonoBehaviour {
-    
+public class MissileBasic : MonoBehaviour {
+
     public GameObject top;
-    public GameObject barrel;
-    public Vector3 velocity;
-    
+
     private float _dist;
     private float _dotProd;
-    private float _fireRate = .1f;
+    private float _fireRate = 1.5f;
     private float _range = 20f;
-    private float _revLerp = 0;
     private int _mode = 1;
-    private Animation _rev;
+    private int _incrament = 0;
     private BulletShooter _bulletShooter;
     private GameObject _lastEntered;
     private GameObject _target;
     private Vector3 _dirAB;
 
+    public GameObject[] _firePoints;
+
     private List<GameObject> _enemies = new List<GameObject>();
 
+    // Use this for initialization
     void Start () {
         StartCoroutine(FireTimer(_fireRate));
 
-        _rev = GetComponent<Animation>();
         _bulletShooter = GetComponent<BulletShooter>();
-        // Makes sure the gattling barrel isn't spinning when the game starts
-        _rev["GatlingSpin"].speed = 0;
     }
 	
+	// Update is called once per frame
 	void Update () {
         // Finds the target
         FindTarget();
@@ -47,25 +45,6 @@ public class GatlingDefault : MonoBehaviour {
             float y = top.transform.eulerAngles.y;
             top.transform.eulerAngles = new Vector3(0, y, 0);
         }
-    }
-
-    void FixedUpdate() {
-        // Revs up the barrel until at max speed, if a target is present
-        // Lets the barrel spin itself down until stopping, if their is no longer a target
-        if (_target != null) {
-            if (_revLerp < 1) {
-                _revLerp += Time.fixedDeltaTime / 2;
-            } else {
-                _revLerp = 1;
-            }
-        } else {
-            if (_revLerp > 0) {
-                _revLerp -= Time.fixedDeltaTime / 3;
-            } else {
-                _revLerp = 0;
-            }
-        }
-        _rev["GatlingSpin"].speed = _revLerp;
     }
 
     void FindTarget () {
@@ -160,6 +139,16 @@ public class GatlingDefault : MonoBehaviour {
     void Fire () {
         // If the shot is realistic looking, and the target is in the range, fire at it
         if (_dotProd >= 0.7 && _dist < _range) {
+            if (_bulletShooter.source == null) {
+                _bulletShooter.source = _firePoints[0];
+                _incrament = 0;
+            } else {
+                if (_incrament >= _firePoints.Count()) {
+                    _incrament = 0;
+                }
+                _bulletShooter.source = _firePoints[_incrament];
+                _incrament++;
+            }
             _bulletShooter.Shoot();
         }
     }

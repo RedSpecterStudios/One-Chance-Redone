@@ -3,10 +3,10 @@ using System.Collections;
 
 public class WeightedSpawning : MonoBehaviour {
 
+    public float _spawnTime = 6;
     public Transform spawnPoint;
     public SubDict[] levelMobs;
 
-    private float _spawnTime = 6;
     private float _totalWeight = 0f;
     private GameObject _goal;
 

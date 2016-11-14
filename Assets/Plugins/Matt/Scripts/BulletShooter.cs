@@ -5,7 +5,7 @@ public class BulletShooter : MonoBehaviour {
     
     public float travelTime;
     public CreateSplineProfile spline;
-    //public GameObject bulletToMove;
+    public GameObject bulletToMove;
     public GameObject source;
     public GameObject target;
 

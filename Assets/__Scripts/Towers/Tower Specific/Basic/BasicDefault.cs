@@ -16,16 +16,14 @@ public class BasicDefault : MonoBehaviour {
     private GameObject _top;
     private Vector3 _dirAB;
 
-    private List<GameObject> _enemies;
-    
-	void Start () {
+    private List<GameObject> _enemies = new List<GameObject>();
+
+    void Start () {
         // Starts the fire timer
         StartCoroutine(FireTimer(_fireRate));
 
         _bulletShooter = GetComponent<BulletShooter>();
         _top = transform.FindChild("Top").gameObject;
-
-        _enemies = new List<GameObject>();
 	}
 	
 	void Update () {
