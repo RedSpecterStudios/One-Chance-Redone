@@ -2177,7 +2177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43179918c826dc84aa025165546123df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnTime: 2.5
+  _spawnTime: 4.5
   spawnPoint: {fileID: 1676455895}
   levelMobs:
   - mob: {fileID: 1000013606294606, guid: 4e26e7e018c587d4ba299a032b300c0e, type: 2}

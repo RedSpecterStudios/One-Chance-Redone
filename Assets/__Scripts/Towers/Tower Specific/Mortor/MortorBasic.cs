@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,8 @@ public class MortorBasic : MonoBehaviour {
     private float _dist;
     private float _dotProd;
     private float _fireRate = 2f;
-    private float _range = 20f;
+    private float _rangeMax = 45f;
+    private float _rangeMin = 15f;
     private int _mode = 1;
     private BulletShooter _bulletShooter;
     private GameObject _lastEntered;
@@ -42,9 +43,11 @@ public class MortorBasic : MonoBehaviour {
         }
     }
 
+    // Honestly, I don't even know how some of this works but it does so... ¯\_(ツ)_/¯
     void FindTarget () {
         // Sets the range sphere
-        List<Collider> _hitColliders = Physics.OverlapCapsule(transform.position - new Vector3(0, 25, 0), transform.position + new Vector3(0, 35, 0), 20).ToList();
+        List<Collider> _hitColliders = Physics.OverlapCapsule(transform.position - new Vector3(0, 35, 0), transform.position + new Vector3(0, 75, 0), _rangeMax).ToList();
+        List<Collider> _tooClose = Physics.OverlapCapsule(transform.position - new Vector3(0, 35, 0), transform.position + new Vector3(0, 75, 0), _rangeMin).ToList();
         foreach (Collider target in _hitColliders) {
             // Removes the target from the list of enemies, and nulls the target when they leave the range
             for (int i = 0; i < _enemies.Count; i++) {
@@ -78,7 +81,11 @@ public class MortorBasic : MonoBehaviour {
                             }
                             _target = _closest;
                         } else {
-                            _target = _enemies[0];
+                            if (!_tooClose.Contains(_enemies[0].GetComponent<Collider>())) {
+                                _target = _enemies[0];
+                            } else {
+                                break;
+                            }
                         }
                         break;
                     #endregion
@@ -133,7 +140,7 @@ public class MortorBasic : MonoBehaviour {
 
     void Fire () {
         // If the shot is realistic looking, and the target is in the range, fire at it
-        if (_dotProd >= 0.7 && _dist < _range) {
+        if (_dotProd >= 0.7 && _dist < _rangeMax && _dist > _rangeMin) {
             _bulletShooter.Shoot();
         }
     }
@@ -142,5 +149,10 @@ public class MortorBasic : MonoBehaviour {
         Fire();
         yield return new WaitForSeconds(_timeToWait);
         StartCoroutine(FireTimer(_fireRate));
+    }
+
+    void OnDrawGizmos () {
+        DebugExtension.DrawCapsule(transform.position - new Vector3(0, 75, 0), transform.position + new Vector3(0, 75, 0), Color.red, _rangeMax);
+        DebugExtension.DrawCapsule(transform.position - new Vector3(0, 75, 0), transform.position + new Vector3(0, 75, 0), Color.blue, _rangeMin);
     }
 }
