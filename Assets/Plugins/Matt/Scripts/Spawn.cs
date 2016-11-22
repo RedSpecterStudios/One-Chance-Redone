@@ -4,7 +4,7 @@ using System.Collections;
 public class Spawn : MonoBehaviour {
     
     public static CreateSplineProfile NewSpline(GameObject Target, CreateSplineProfile Original, GameObject Source) {
-        CreateSplineProfile Spline = Instantiate<CreateSplineProfile>(Original);
+        CreateSplineProfile Spline = Instantiate(Original);
         Spline.name = Original.name;
         Spline.Caster = Source;
         Spline.Victim = Target;

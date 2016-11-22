@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class MortorBasic : MonoBehaviour {
+public class MortarBasic : MonoBehaviour {
 
     public GameObject top;
 
@@ -12,7 +12,7 @@ public class MortorBasic : MonoBehaviour {
     private float _fireRate = 2f;
     private float _rangeMax = 45f;
     private float _rangeMin = 15f;
-    private int _mode = 1;
+    private int _mode = 3;
     private BulletShooter _bulletShooter;
     private GameObject _lastEntered;
     private GameObject _target;
@@ -48,6 +48,22 @@ public class MortorBasic : MonoBehaviour {
         // Sets the range sphere
         List<Collider> _hitColliders = Physics.OverlapCapsule(transform.position - new Vector3(0, 35, 0), transform.position + new Vector3(0, 75, 0), _rangeMax).ToList();
         List<Collider> _tooClose = Physics.OverlapCapsule(transform.position - new Vector3(0, 35, 0), transform.position + new Vector3(0, 75, 0), _rangeMin).ToList();
+        List<Collider> _toRemove = new List<Collider>();
+
+        foreach (Collider enemyCollider in _hitColliders) {
+            if (_tooClose.Contains(enemyCollider)) {
+                _toRemove.Add(enemyCollider);
+            }
+        }
+        
+        foreach (Collider tr in _toRemove) {
+            _hitColliders.Remove(tr);
+            if (_target == tr) {
+                _target = _enemies[0];
+                _bulletShooter.target = _target.gameObject;
+            }
+        }
+
         foreach (Collider target in _hitColliders) {
             // Removes the target from the list of enemies, and nulls the target when they leave the range
             for (int i = 0; i < _enemies.Count; i++) {
@@ -81,7 +97,7 @@ public class MortorBasic : MonoBehaviour {
                             }
                             _target = _closest;
                         } else {
-                            if (!_tooClose.Contains(_enemies[0].GetComponent<Collider>())) {
+                            if (_enemies.Count == 1) {
                                 _target = _enemies[0];
                             } else {
                                 break;
@@ -103,16 +119,18 @@ public class MortorBasic : MonoBehaviour {
                             }
                             _target = _farthest;
                         } else {
-                            _target = _enemies[0];
+                            if (_enemies.Count == 1) {
+                                _target = _enemies[0];
+                            } else {
+                                break;
+                            }
                         }
                         break;
                     #endregion
                     #region First Target
                     case 3:
-                        // Targets the first enemy in the array, aka the target closest to the end.
-                        if (_enemies.Count > 0) {
-                            _target = _enemies[0];
-                        }
+                        // Targets the first enemy based on ID numbers given to them
+                       
                         break;
                     #endregion
                     #region Last Target
