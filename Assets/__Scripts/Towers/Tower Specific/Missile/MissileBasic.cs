@@ -11,7 +11,7 @@ public class MissileBasic : MonoBehaviour {
     private float _dotProd;
     private float _fireRate = 1.5f;
     private float _range = 20f;
-    private int _mode = 1;
+    private int _mode = 3;
     private int _incrament = 0;
     private BulletShooter _bulletShooter;
     private GameObject _lastEntered;

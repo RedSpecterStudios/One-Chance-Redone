@@ -11,8 +11,8 @@ public class MortarBasic : MonoBehaviour {
     private float _dotProd;
     private float _fireRate = 2f;
     private float _rangeMax = 45f;
-    private float _rangeMin = 15f;
-    private int _mode = 3;
+    private float _rangeMin = 20f;
+    private int _mode = 1;
     private BulletShooter _bulletShooter;
     private GameObject _lastEntered;
     private GameObject _target;
@@ -46,11 +46,11 @@ public class MortarBasic : MonoBehaviour {
     // Honestly, I don't even know how some of this works but it does so... ¯\_(ツ)_/¯
     void FindTarget () {
         // Sets the range sphere
-        List<Collider> _hitColliders = Physics.OverlapCapsule(transform.position - new Vector3(0, 35, 0), transform.position + new Vector3(0, 75, 0), _rangeMax).ToList();
-        List<Collider> _tooClose = Physics.OverlapCapsule(transform.position - new Vector3(0, 35, 0), transform.position + new Vector3(0, 75, 0), _rangeMin).ToList();
-        List<Collider> _toRemove = new List<Collider>();
+        List<Collider> _hitColliders = Physics.OverlapCapsule(transform.position - new Vector3(0, 75, 0), transform.position + new Vector3(0, 75, 0), _rangeMax).ToList();
+        //List<Collider> _tooClose = Physics.OverlapCapsule(transform.position - new Vector3(0, 75, 0), transform.position + new Vector3(0, 75, 0), _rangeMin).ToList();
+        //List<Collider> _toRemove = new List<Collider>();
 
-        foreach (Collider enemyCollider in _hitColliders) {
+        /*foreach (Collider enemyCollider in _hitColliders) {
             if (_tooClose.Contains(enemyCollider)) {
                 _toRemove.Add(enemyCollider);
             }
@@ -63,6 +63,8 @@ public class MortarBasic : MonoBehaviour {
                 _bulletShooter.target = _target.gameObject;
             }
         }
+
+        _toRemove.Clear();*/
 
         foreach (Collider target in _hitColliders) {
             // Removes the target from the list of enemies, and nulls the target when they leave the range
@@ -90,12 +92,16 @@ public class MortarBasic : MonoBehaviour {
                             GameObject _closest;
                             _closest = _enemies[0];
                             foreach (GameObject cTar in _enemies) {
-                                if (Vector3.Distance(cTar.transform.position, transform.position) <
+                                if (Vector3.Distance(cTar.transform.position, transform.position) <= _rangeMax &&
+                                Vector3.Distance(cTar.transform.position, transform.position) >= _rangeMin) {
+                                    if (Vector3.Distance(cTar.transform.position, transform.position) <
                                     Vector3.Distance(_closest.transform.position, transform.position)) {
-                                    _closest = cTar;
+                                        _closest = cTar;
+                                        _target = _closest;
+                                        break;
+                                    }
                                 }
                             }
-                            _target = _closest;
                         } else {
                             if (_enemies.Count == 1) {
                                 _target = _enemies[0];
@@ -129,8 +135,14 @@ public class MortarBasic : MonoBehaviour {
                     #endregion
                     #region First Target
                     case 3:
-                        // Targets the first enemy based on ID numbers given to them
-                       
+                        // Targets the first enemy in the array, aka the target closest to the end.
+                        foreach (GameObject tar in _enemies) {
+                            if (Vector3.Distance(tar.transform.position, transform.position) <= _rangeMax &&
+                                Vector3.Distance(tar.transform.position, transform.position) >= _rangeMin) {
+                                _target = tar;
+                                break;
+                            }
+                        }
                         break;
                     #endregion
                     #region Last Target

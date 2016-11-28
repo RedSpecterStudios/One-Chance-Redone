@@ -3,16 +3,16 @@ using System.Collections;
 
 public class Minion : MonoBehaviour {
 
-    public int distance;
+    public float distance;
     public Transform goal;
 
-    void Start () {
+    private void Start () {
         // Initializes the NavMeshAgent and sets the goal
         NavMeshAgent _agent = GetComponentInChildren<NavMeshAgent>();
         _agent.destination = goal.position;
 	}
 
-    void Update () {
-
+    private void Update () {
+        distance = Vector3.Distance(transform.position, goal.position);
     }
 }
