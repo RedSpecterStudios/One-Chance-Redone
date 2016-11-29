@@ -12,7 +12,7 @@ public class MissileBasic : MonoBehaviour {
     private float _fireRate = 1.5f;
     private float _range = 20f;
     private int _mode = 3;
-    private int _incrament = 0;
+    private int _increment = 0;
     private BulletShooter _bulletShooter;
     private GameObject _lastEntered;
     private GameObject _target;
@@ -141,13 +141,13 @@ public class MissileBasic : MonoBehaviour {
         if (_dotProd >= 0.7 && _dist < _range) {
             if (_bulletShooter.source == null) {
                 _bulletShooter.source = _firePoints[0];
-                _incrament = 0;
+                _increment = 0;
             } else {
-                if (_incrament >= _firePoints.Count()) {
-                    _incrament = 0;
+                if (_increment >= _firePoints.Count()) {
+                    _increment = 0;
                 }
-                _bulletShooter.source = _firePoints[_incrament];
-                _incrament++;
+                _bulletShooter.source = _firePoints[_increment];
+                _increment++;
             }
             _bulletShooter.Shoot();
         }

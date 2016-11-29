@@ -169,7 +169,7 @@ public class PlaceObject : MonoBehaviour {
     // Calculates the top-most global y position of any object by finding the center global y position of the object
     // and adding half the height of the object
     float CalculateTopPosition (GameObject _object) {
-        float _top = _snapPoint.GetComponent<Renderer>().bounds.center.y + (_snapPoint.GetComponent<Renderer>().bounds.size.y/2);
+        float _top = _object.GetComponent<Renderer>().bounds.center.y + (_object.GetComponent<Renderer>().bounds.size.y/2);
         return _top;
     }
 }

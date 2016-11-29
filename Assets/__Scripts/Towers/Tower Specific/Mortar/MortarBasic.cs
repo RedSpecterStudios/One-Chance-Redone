@@ -12,7 +12,7 @@ public class MortarBasic : MonoBehaviour {
     private float _fireRate = 2f;
     private float _rangeMax = 45f;
     private float _rangeMin = 20f;
-    private int _mode = 1;
+    private int _mode = 2;
     private BulletShooter _bulletShooter;
     private GameObject _lastEntered;
     private GameObject _target;
@@ -20,13 +20,13 @@ public class MortarBasic : MonoBehaviour {
 
     private List<GameObject> _enemies = new List<GameObject>();
 
-    void Start () {
+    private void Start () {
         StartCoroutine(FireTimer(_fireRate));
         
         _bulletShooter = GetComponent<BulletShooter>();
     }
 
-    void Update () {
+    private void Update () {
         // Finds the target
         FindTarget();
         // Follows the target, when their is one and it's within the range of the tower
@@ -44,27 +44,9 @@ public class MortarBasic : MonoBehaviour {
     }
 
     // Honestly, I don't even know how some of this works but it does so... ¯\_(ツ)_/¯
-    void FindTarget () {
+    private void FindTarget () {
         // Sets the range sphere
         List<Collider> _hitColliders = Physics.OverlapCapsule(transform.position - new Vector3(0, 75, 0), transform.position + new Vector3(0, 75, 0), _rangeMax).ToList();
-        //List<Collider> _tooClose = Physics.OverlapCapsule(transform.position - new Vector3(0, 75, 0), transform.position + new Vector3(0, 75, 0), _rangeMin).ToList();
-        //List<Collider> _toRemove = new List<Collider>();
-
-        /*foreach (Collider enemyCollider in _hitColliders) {
-            if (_tooClose.Contains(enemyCollider)) {
-                _toRemove.Add(enemyCollider);
-            }
-        }
-        
-        foreach (Collider tr in _toRemove) {
-            _hitColliders.Remove(tr);
-            if (_target == tr) {
-                _target = _enemies[0];
-                _bulletShooter.target = _target.gameObject;
-            }
-        }
-
-        _toRemove.Clear();*/
 
         foreach (Collider target in _hitColliders) {
             // Removes the target from the list of enemies, and nulls the target when they leave the range
@@ -92,10 +74,10 @@ public class MortarBasic : MonoBehaviour {
                             GameObject _closest;
                             _closest = _enemies[0];
                             foreach (GameObject cTar in _enemies) {
-                                if (Vector3.Distance(cTar.transform.position, transform.position) <= _rangeMax &&
-                                Vector3.Distance(cTar.transform.position, transform.position) >= _rangeMin) {
-                                    if (Vector3.Distance(cTar.transform.position, transform.position) <
+                                if (Vector3.Distance(cTar.transform.position, transform.position) <
                                     Vector3.Distance(_closest.transform.position, transform.position)) {
+                                    if (Vector3.Distance(cTar.transform.position, transform.position) <= _rangeMax &&
+                                        Vector3.Distance(cTar.transform.position, transform.position) >= _rangeMin) {
                                         _closest = cTar;
                                         _target = _closest;
                                         break;
@@ -104,7 +86,12 @@ public class MortarBasic : MonoBehaviour {
                             }
                         } else {
                             if (_enemies.Count == 1) {
-                                _target = _enemies[0];
+                                if (Vector3.Distance(_enemies[0].transform.position, transform.position) <= _rangeMax &&
+                                    Vector3.Distance(_enemies[0].transform.position, transform.position) >= _rangeMin) {
+                                    _target = _enemies[0];
+                                } else {
+                                    _target = null;
+                                }
                             } else {
                                 break;
                             }
@@ -120,13 +107,21 @@ public class MortarBasic : MonoBehaviour {
                             foreach (GameObject fTar in _enemies) {
                                 if (Vector3.Distance(fTar.transform.position, transform.position) >
                                     Vector3.Distance(_farthest.transform.position, transform.position)) {
-                                    _farthest = fTar;
+                                    if (Vector3.Distance(fTar.transform.position, transform.position) <= _rangeMax &&
+                                        Vector3.Distance(fTar.transform.position, transform.position) >= _rangeMin) {
+                                        _farthest = fTar;
+                                    }
                                 }
                             }
                             _target = _farthest;
                         } else {
                             if (_enemies.Count == 1) {
-                                _target = _enemies[0];
+                                if (Vector3.Distance(_enemies[0].transform.position, transform.position) <= _rangeMax &&
+                                    Vector3.Distance(_enemies[0].transform.position, transform.position) >= _rangeMin) {
+                                    _target = _enemies[0];
+                                } else {
+                                    _target = null;
+                                }
                             } else {
                                 break;
                             }
@@ -157,10 +152,12 @@ public class MortarBasic : MonoBehaviour {
                         break;
                 }
 
-                if (_target.transform.parent.FindChild("Center") != null) {
-                    _target = _target.transform.parent.FindChild("Center").gameObject;
-                } else {
-                    Debug.LogWarning($"No \"Center\" child in \"{_target}\"");
+                if (_target != null) {
+                    if (_target.transform.parent.FindChild("Center") != null) {
+                        _target = _target.transform.parent.FindChild("Center").gameObject;
+                    } else {
+                        Debug.LogWarning($"No \"Center\" child in \"{_target}\"");
+                    }
                 }
 
                 _bulletShooter.target = _target;
@@ -168,21 +165,16 @@ public class MortarBasic : MonoBehaviour {
         }
     }
 
-    void Fire () {
+    private void Fire () {
         // If the shot is realistic looking, and the target is in the range, fire at it
         if (_dotProd >= 0.7 && _dist < _rangeMax && _dist > _rangeMin) {
             _bulletShooter.Shoot();
         }
     }
 
-    IEnumerator FireTimer (float _timeToWait) {
+    private IEnumerator FireTimer (float _timeToWait) {
         Fire();
         yield return new WaitForSeconds(_timeToWait);
         StartCoroutine(FireTimer(_fireRate));
-    }
-
-    void OnDrawGizmos () {
-        DebugExtension.DrawCapsule(transform.position - new Vector3(0, 75, 0), transform.position + new Vector3(0, 75, 0), Color.red, _rangeMax);
-        DebugExtension.DrawCapsule(transform.position - new Vector3(0, 75, 0), transform.position + new Vector3(0, 75, 0), Color.blue, _rangeMin);
     }
 }

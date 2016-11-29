@@ -51,6 +51,8 @@ GameObject:
   - 4: {fileID: 4000011016162622}
   - 95: {fileID: 95000013490566802}
   - 114: {fileID: 114000014294044596}
+  - 114: {fileID: 114000010781183220}
+  - 114: {fileID: 114000010742083196}
   m_Layer: 0
   m_Name: MortorDefault100
   m_TagString: Tower
@@ -100,11 +102,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013767453124}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
   m_LocalPosition: {x: 0, y: 2.8980026, z: 0}
   m_LocalScale: {x: 2.1772687, y: 2.1772697, z: 2.1772697}
-  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
-  m_Children: []
+  m_LocalEulerAnglesHint: {x: 270, y: 90, z: 0}
+  m_Children:
+  - {fileID: 4000011245344536}
   m_Father: {fileID: 4000012055856636}
   m_RootOrder: 0
 --- !u!4 &4000011016162622
@@ -114,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012579384682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -26.316574, y: 5.2768326, z: -10.828659}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -129,12 +132,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012281832366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.91, y: 4.31, z: 0}
+  m_LocalPosition: {x: -1.377, y: 0, z: 0.655}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 4000012055856636}
-  m_RootOrder: 1
+  m_Father: {fileID: 4000010684446422}
+  m_RootOrder: 0
 --- !u!4 &4000011614781812
 Transform:
   m_ObjectHideFlags: 1
@@ -160,7 +163,6 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010684446422}
-  - {fileID: 4000011245344536}
   m_Father: {fileID: 4000011016162622}
   m_RootOrder: 1
 --- !u!23 &23000011441198638
@@ -277,6 +279,34 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000010742083196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012579384682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f78ab0a8792da474dbef39c897d009a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  travelTime: 3
+  spline: {fileID: 11400000, guid: a4faea361d64f034ab2fb4657e76820d, type: 2}
+  bulletToMove: {fileID: 0}
+  source: {fileID: 1000012281832366}
+  target: {fileID: 0}
+--- !u!114 &114000010781183220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012579384682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce78344522d40b94aa55e64cd734ca93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  top: {fileID: 1000010569671266}
 --- !u!114 &114000014294044596
 MonoBehaviour:
   m_ObjectHideFlags: 1
