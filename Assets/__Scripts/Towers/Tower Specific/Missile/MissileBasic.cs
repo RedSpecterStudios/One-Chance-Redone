@@ -138,6 +138,7 @@ public class MissileBasic : MonoBehaviour {
 
     void Fire () {
         // If the shot is realistic looking, and the target is in the range, fire at it
+        // Also cycles through the firepoints
         if (_dotProd >= 0.7 && _dist < _range) {
             if (_bulletShooter.source == null) {
                 _bulletShooter.source = _firePoints[0];

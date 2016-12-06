@@ -2,5 +2,6 @@
 
 public class Tower : MonoBehaviour {
 
+    // Holds the ghost material
     public Material ghostMaterial { get; }
 }

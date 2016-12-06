@@ -5,6 +5,7 @@ public class SnapPoint : MonoBehaviour {
     
     public static Dictionary<GameObject, GameObject> snapPoints;
 
+    // Creates modular array of all available snap points, to be used by the PlaceObject script
     void Start () {
         snapPoints = new Dictionary<GameObject, GameObject>();
 
