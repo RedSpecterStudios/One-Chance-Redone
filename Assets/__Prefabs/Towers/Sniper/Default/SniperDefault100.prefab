@@ -90,6 +90,8 @@ GameObject:
   - component: {fileID: 4000010049971294}
   - component: {fileID: 95000013324404580}
   - component: {fileID: 114000012239217600}
+  - component: {fileID: 114647933235263322}
+  - component: {fileID: 114785296796169728}
   m_Layer: 0
   m_Name: SniperDefault100
   m_TagString: Tower
@@ -373,3 +375,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bffcb80e26c0f6746b13c7fcda58aa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114647933235263322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013718602914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9f69fcc9d9c684d8aba4cc7fa7904e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114785296796169728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013718602914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f78ab0a8792da474dbef39c897d009a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  travelTime: 0.5
+  spline: {fileID: 11400000, guid: a4faea361d64f034ab2fb4657e76820d, type: 2}
+  bulletToMove: {fileID: 0}
+  source: {fileID: 1000013266741058}
+  target: {fileID: 0}

@@ -1,34 +1,5 @@
 ********************************************************************************
-*                   Wednesday, January 04, 2017 10:03:54 AM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-firstpass.dll
-Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-a12584b1c0d3baf45ac2af6fbbe3980d
-Exit code: 0
-Elapsed time: 2.98 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-firstpass.dll
-Exit code: 0
-Elapsed time: 0.13 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Wednesday, January 04, 2017 10:04:19 AM                    *
+*                   Wednesday, January 04, 2017 11:22:46 AM                    *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -40,48 +11,48 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-0a0493c5485e272418c3e79079f5cd78
-Exit code: 0
-Elapsed time: 3.33 sec
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-629974a0a0b902a4ca186af8021ac2bc
+Exit code: 1
+Elapsed time: 1.93 sec
 
 - Compiler output (0 lines):
 
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp.dll
-Exit code: 0
-Elapsed time: 0.13 sec
-
-- pdb2mdb.exe output (0 lines):
-********************************************************************************
-*                   Wednesday, January 04, 2017 10:04:24 AM                    *
-********************************************************************************
-CSharpCompilerWrapper.exe version: 1.10.0.0
-Platform: Windows
-Target assembly: Assembly-CSharp-Editor.dll
-Project directory: C:\Users\webgang\Documents\GitHub\One-Chance-Redone
-Unity 'Data' or 'Frameworks' directory: C:/Program Files/Unity/Editor/Data
-Compiler: Microsoft C# 6.0
-
-- Compilation -----------------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-f75dee36809c0ec4fb84cc07c58bd81c
-Exit code: 0
-Elapsed time: 5.65 sec
-
-- Compiler output (0 lines):
-
-- Compiler errors (0 lines):
-
-- PDB to MDB conversion --------------------------------------
-
-Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
-Arguments: Temp\Assembly-CSharp-Editor.dll
-Exit code: 0
-Elapsed time: 0.12 sec
-
-- pdb2mdb.exe output (0 lines):
+- Compiler errors (38 lines):
+0: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(19,155): error CS1061: 'Collider[]' does not contain a definition for 'ToList' and no extension method 'ToList' accepting a first argument of type 'Collider[]' could be found (are you missing a using directive or an assembly reference?)
+1: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(22,33): error CS0103: The name '_enemies' does not exist in the current context
+2: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(23,45): error CS0103: The name '_enemies' does not exist in the current context
+3: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(24,25): error CS0103: The name '_enemies' does not exist in the current context
+4: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(24,39): error CS0103: The name '_target' does not exist in the current context
+5: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(25,25): error CS0103: The name '_target' does not exist in the current context
+6: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(26,25): error CS0103: The name '_bulletShooter' does not exist in the current context
+7: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(26,49): error CS0103: The name '_target' does not exist in the current context
+8: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(28,37): error CS0103: The name '_enemies' does not exist in the current context
+9: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(28,21): error CS0103: The name '_enemies' does not exist in the current context
+10: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(33,22): error CS0103: The name '_enemies' does not exist in the current context
+11: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(34,21): error CS0103: The name '_enemies' does not exist in the current context
+12: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(35,21): error CS0103: The name '_lastEntered' does not exist in the current context
+13: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(38,25): error CS0103: The name '_mode' does not exist in the current context
+14: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(42,29): error CS0103: The name '_enemies' does not exist in the current context
+15: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(44,40): error CS0103: The name '_enemies' does not exist in the current context
+16: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(45,57): error CS0103: The name '_enemies' does not exist in the current context
+17: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(51,29): error CS0103: The name '_target' does not exist in the current context
+18: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(53,29): error CS0103: The name '_target' does not exist in the current context
+19: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(53,39): error CS0103: The name '_enemies' does not exist in the current context
+20: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(60,29): error CS0103: The name '_enemies' does not exist in the current context
+21: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(62,41): error CS0103: The name '_enemies' does not exist in the current context
+22: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(63,57): error CS0103: The name '_enemies' does not exist in the current context
+23: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(69,29): error CS0103: The name '_target' does not exist in the current context
+24: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(71,29): error CS0103: The name '_target' does not exist in the current context
+25: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(71,39): error CS0103: The name '_enemies' does not exist in the current context
+26: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(78,29): error CS0103: The name '_enemies' does not exist in the current context
+27: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(79,29): error CS0103: The name '_target' does not exist in the current context
+28: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(79,39): error CS0103: The name '_enemies' does not exist in the current context
+29: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(86,25): error CS0103: The name '_target' does not exist in the current context
+30: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(86,35): error CS0103: The name '_lastEntered' does not exist in the current context
+31: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(91,25): error CS0103: The name '_target' does not exist in the current context
+32: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(95,21): error CS0103: The name '_target' does not exist in the current context
+33: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(96,21): error CS0103: The name '_target' does not exist in the current context
+34: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(96,31): error CS0103: The name '_target' does not exist in the current context
+35: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(98,66): error CS0103: The name '_target' does not exist in the current context
+36: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(101,17): error CS0103: The name '_bulletShooter' does not exist in the current context
+37: Assets\__Scripts\Towers\Tower Specific\Sniper\SniperDefault.cs(101,41): error CS0103: The name '_target' does not exist in the current context
