@@ -1,22 +1,51 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
 
 public class SniperDefault : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    private float _dist;
+    private float _dotProd;
+    private float _fireRate = 5;
+    private float _range = 35f;
+    private int _mode = 1;
+    private BulletShooter _bulletShooter;
+    private GameObject _lastEntered;
+    private GameObject _target;
+    private GameObject _top;
+    private Vector3 _dirAB;
+
+    private List<GameObject> _enemies = new List<GameObject>();
+    
+    void Start () {
+        // Starts the fire timer
+        StartCoroutine(FireTimer(_fireRate));
+
+        _bulletShooter = GetComponent<BulletShooter>();
+        _top = transform.FindChild("Top").gameObject;
+    }
 	
-	// Update is called once per frame
 	void Update () {
-		
-	}
+        // Finds the target
+        FindTarget();
+        // Follows the target, when their is one and it's within the range of the tower
+        if (_target != null) {
+            _dirAB = (_target.transform.position - _top.transform.position).normalized;
+            _dotProd = Vector3.Dot(_dirAB, _top.transform.forward);
+
+            _dist = Vector3.Distance(transform.position, _target.transform.position);
+            Vector3 _targetPoint = _target.transform.position - _top.transform.position;
+            Quaternion _rotation = Quaternion.Slerp(_top.transform.rotation, Quaternion.LookRotation(_targetPoint), 10 * Time.fixedDeltaTime);
+            _top.transform.rotation = _rotation;
+            float y = _top.transform.eulerAngles.y;
+            _top.transform.eulerAngles = new Vector3(0, y, 0);
+        }
+    }
 
     void FindTarget() {
         // Sets the range sphere
-        List<Collider> _hitColliders = Physics.OverlapCapsule(transform.position - new Vector3(0, 25, 0), transform.position + new Vector3(0, 35, 0), 20).ToList();
+        List<Collider> _hitColliders = Physics.OverlapCapsule(transform.position - new Vector3(0, 25, 0), transform.position + new Vector3(0, 35, 0), 35).ToList();
         foreach (Collider target in _hitColliders) {
             // Removes the target from the list of enemies, and nulls the target when they leave the range
             for (int i = 0; i < _enemies.Count; i++) {
@@ -101,5 +130,19 @@ public class SniperDefault : MonoBehaviour {
                 _bulletShooter.target = _target;
             }
         }
+    }
+
+    void Fire() {
+        // If the shot is realistic looking, and the target is in the range, fire at it
+        if (_dotProd >= 0.7 && _dist < _range) {
+            _bulletShooter.Shoot();
+        }
+    }
+
+    IEnumerator FireTimer(float fireRate) {
+        // Calls Fire() every 2 seconds
+        Fire();
+        yield return new WaitForSeconds(fireRate);
+        StartCoroutine(FireTimer(_fireRate));
     }
 }
