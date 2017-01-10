@@ -6,7 +6,6 @@ public class PlaceObject : MonoBehaviour {
     public Camera tpCamera;
     
     private bool _placing = false;
-    private bool _spawn = false;
     private float? _snapX;
     private float? _snapZ;
     private int _lastPressed;
@@ -32,34 +31,15 @@ public class PlaceObject : MonoBehaviour {
             Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4) ||
             Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha6) ||
             Input.GetKeyDown(KeyCode.Alpha7) || Input.GetKeyDown(KeyCode.Alpha8)) {
-            // Gets the number the player pressed, parses it to an int, and sets it as _numKey
-            _numKey = int.Parse(Input.inputString);
-            // If _placing is false...
             if (!_placing) {
-                // Prep the spawning
-                _placing = true;
-                _spawn = true;
-            } else {
-                // Reset values and destory old item in hand
-                _placing = false;
-                Destroy(_itemInHand);
-                _allChildren.Clear();
-                _itemInHand = null;
-                // If the new number pressed is different from what was last pressed and not a default value
-                if (_numKey != 0 && _lastPressed != _numKey) {
-                    // Prep the spawning again
-                    _placing = true;
-                    _spawn = true;
-                }
-            }
-            // Hold the last button pressed for compairison later
-            _lastPressed = int.Parse(Input.inputString);
-        }
+                // Gets the number the player pressed, parses it to an int, and sets it as _numKey
+                _numKey = int.Parse(Input.inputString);
 
-        // If we're ready to spawn, call the Prelims(), and stop them from being called again
-        if (_spawn) {
-            Prelims();
-            _spawn = false;
+                GrabItem(_numKey);
+
+                // Hold the last button pressed for compairison later
+                _lastPressed = int.Parse(Input.inputString);
+            }
         }
 
         // If _placing is true...
@@ -69,9 +49,55 @@ public class PlaceObject : MonoBehaviour {
         }
     }
 
-    void Prelims () {
+    void GrabItem (int? itemNum = null, GameObject go = null) {
+        if (itemNum != null || go != null) {
+            if (itemNum != null) {
+                Debug.Log("Test");
+                if (!_placing) {
+                    _placing = true;
+                    SpawnItem();
+                } else {
+                    // If the item in your hand isn't a gem
+                    if (_itemInHand.tag != "Gem") {
+                        // Reset values and destory old item in hand
+                        _placing = false;
+                        Destroy(_itemInHand);
+                        _allChildren.Clear();
+                        _itemInHand = null;
+                        // If the new number pressedis different from what was last pressed and not a default value
+                        if (_numKey != 0 && _lastPressed != _numKey) {
+                            // Prep the spawning again
+                            _placing = true;
+                            SpawnItem();
+                        }
+                    }
+                }
+                /* // Prep the spawning
+                _placing = true;
+                _spawn = true;
+                if (_placing) {
+                    _placing = false;
+                    Destroy(_itemInHand);
+                    _allChildren.Clear();
+                    _itemInHand = null;
+                    // If the new number pressed is different from what was last pressed and not a default value
+                    if (_numKey != 0 && _lastPressed != _numKey) {
+                        // Prep the spawning again
+                        _placing = true;
+                        _spawn = true;
+                    }
+                }*/
+            } else if (go != null) {
+
+            }
+        } else {
+            Debug.LogWarning($"Warning: GrabItem() called with itemNum = {itemNum}, and go = {go}!");
+        }
+    }
+
+    void SpawnItem () {
         // Determines the object the player wants to spawn and sets _itemInHand as the spawned object
-        _itemInHand = (GameObject)Instantiate(objectList[(int)_numKey-1], Vector3.zero, Quaternion.identity);
+        _itemInHand = Instantiate(objectList[_numKey - 1], Vector3.zero, Quaternion.identity);
         // If the item in hand is a mine, randomly rotate each mine on it's y axis
         if(_itemInHand.tag == "Mine") {
             foreach(Transform _mine in _itemInHand.gameObject.GetComponentInChildren<Transform>()) {
@@ -89,7 +115,7 @@ public class PlaceObject : MonoBehaviour {
             if(_child.GetComponent<MeshRenderer>() != null) {
                 Material mat = _child.GetComponent<Renderer>().material;
                 _originalMaterial = mat;
-                mat = _itemInHand.GetComponent<Tower>().ghostMaterial;
+                mat = _itemInHand.GetComponent<Tower>().GhostMaterial;
                 _child.GetComponent<Renderer>().material = mat;
             }
         }
@@ -130,7 +156,7 @@ public class PlaceObject : MonoBehaviour {
 
     // Check the position that the player is wanting to snap to, and if it is clear, snap to it
     void CheckSnap (GameObject snapPoint) {
-        if (SnapPoint.snapPoints[snapPoint] == null) {
+        if (SnapPoint.SnapPoints[snapPoint] == null) {
             Snap(snapPoint);
         } else {
             return;
@@ -148,6 +174,10 @@ public class PlaceObject : MonoBehaviour {
         if (Input.GetMouseButtonDown(0)) {
             // Stop the placing loop
             _placing = false;
+            // If the placed item is a tower, incrament the Towers int value in SnapPoints
+            if (_itemInHand.tag == "Tower") {
+                SnapPoint.Towers++;
+            }
             // Change all materials to the original
             foreach (Transform _child in _allChildren) {
                 if (_child.GetComponent<MeshRenderer>() != null) {
@@ -155,7 +185,7 @@ public class PlaceObject : MonoBehaviour {
                     _child.gameObject.layer = 0;
                 }
             }
-            SnapPoint.snapPoints[snapPoint] = _itemInHand;
+            SnapPoint.SnapPoints[snapPoint] = _itemInHand;
             // Clear and reset all assigned variables
             _allChildren.Clear();
             _originalMaterial = null;

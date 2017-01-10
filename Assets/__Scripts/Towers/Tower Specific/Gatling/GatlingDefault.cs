@@ -13,7 +13,7 @@ public class GatlingDefault : MonoBehaviour {
     private float _fireRate = .1f;
     private float _range = 20f;
     private float _revLerp = 0;
-    private int _mode = 1;
+    private short _mode = 1;
     private Animation _rev;
     private BulletShooter _bulletShooter;
     private GameObject _lastEntered;
