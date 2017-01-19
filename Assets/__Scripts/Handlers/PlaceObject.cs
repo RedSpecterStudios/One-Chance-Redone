@@ -29,16 +29,23 @@ public class PlaceObject : MonoBehaviour {
         // If the player hits any number button 1-8 above the qwerty line
         if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) ||
             Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4) ||
-            Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha6) ||
-            Input.GetKeyDown(KeyCode.Alpha7) || Input.GetKeyDown(KeyCode.Alpha8)) {
-            if (!_placing) {
-                // Gets the number the player pressed, parses it to an int, and sets it as _numKey
-                _numKey = int.Parse(Input.inputString);
+            Input.GetKeyDown(KeyCode.Alpha5) || Input.GetKeyDown(KeyCode.Alpha6)) {
+            // Gets the number the player pressed, parses it to an int, and sets it as _numKey
+            _numKey = int.Parse(Input.inputString);
 
-                GrabItem(_numKey);
+            GrabItem(_numKey);
 
-                // Hold the last button pressed for compairison later
-                _lastPressed = int.Parse(Input.inputString);
+            // Hold the last button pressed for compairison later
+            _lastPressed = int.Parse(Input.inputString);
+        }
+
+        if (Input.GetMouseButtonDown(0)) {
+            RaycastHit hit;
+            Ray ray = tpCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 100)) {
+                if (hit.collider.tag == "Gem") {
+                    GrabItem(null, hit.collider.gameObject);
+                }
             }
         }
 
@@ -52,7 +59,6 @@ public class PlaceObject : MonoBehaviour {
     void GrabItem (int? itemNum = null, GameObject go = null) {
         if (itemNum != null || go != null) {
             if (itemNum != null) {
-                Debug.Log("Test");
                 if (!_placing) {
                     _placing = true;
                     SpawnItem();
@@ -64,7 +70,7 @@ public class PlaceObject : MonoBehaviour {
                         Destroy(_itemInHand);
                         _allChildren.Clear();
                         _itemInHand = null;
-                        // If the new number pressedis different from what was last pressed and not a default value
+                        // If the new pressed number is different from what was last pressed and not a default value
                         if (_numKey != 0 && _lastPressed != _numKey) {
                             // Prep the spawning again
                             _placing = true;
@@ -72,21 +78,6 @@ public class PlaceObject : MonoBehaviour {
                         }
                     }
                 }
-                /* // Prep the spawning
-                _placing = true;
-                _spawn = true;
-                if (_placing) {
-                    _placing = false;
-                    Destroy(_itemInHand);
-                    _allChildren.Clear();
-                    _itemInHand = null;
-                    // If the new number pressed is different from what was last pressed and not a default value
-                    if (_numKey != 0 && _lastPressed != _numKey) {
-                        // Prep the spawning again
-                        _placing = true;
-                        _spawn = true;
-                    }
-                }*/
             } else if (go != null) {
 
             }
@@ -130,9 +121,9 @@ public class PlaceObject : MonoBehaviour {
             _itemInHand.transform.position = _hit.point;
             if (_itemInHand.tag == "Tower") {
                 // If the hit object has the tag of "Pedestal"...
-                if(_hit.collider.tag == "Pedestal") {
+                if (_hit.collider.tag == "Pedestal") {
                     // Calls the CheckSnap method
-                    CheckSnap(_hit.collider.gameObject);
+                    CheckSnap(_hit.collider.gameObject, SnapPoint.SnapPoints);
                 } else {
                     // Else sets the shorcuts to null
                     _snapPoint = null;
@@ -141,11 +132,19 @@ public class PlaceObject : MonoBehaviour {
                 }
             } else if (_itemInHand.tag == "Mine") {
                 // Else if the held item is a mine, and the raycast is hitting a walkway
-                if(_hit.collider.tag == "Walkway") {
+                if (_hit.collider.tag == "Walkway") {
                     // Calls the CheckSnap method
-                    CheckSnap(_hit.collider.gameObject);
+                    CheckSnap(_hit.collider.gameObject, SnapPoint.SnapPoints);
                 } else {
                     // Else sets the shorcuts to null
+                    _snapPoint = null;
+                    _snapX = null;
+                    _snapZ = null;
+                }
+            } else if (_itemInHand.tag == "Gem") {
+                if (_hit.collider.tag == "Tower") {
+                    CheckSnap(_hit.collider.gameObject, SnapPoint.TowerPoints);
+                } else {
                     _snapPoint = null;
                     _snapX = null;
                     _snapZ = null;
@@ -155,8 +154,8 @@ public class PlaceObject : MonoBehaviour {
     }
 
     // Check the position that the player is wanting to snap to, and if it is clear, snap to it
-    void CheckSnap (GameObject snapPoint) {
-        if (SnapPoint.SnapPoints[snapPoint] == null) {
+    void CheckSnap (GameObject snapPoint, Dictionary<GameObject, GameObject> list) {
+        if (list[snapPoint] == null) {
             Snap(snapPoint);
         } else {
             return;

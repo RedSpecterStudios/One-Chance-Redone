@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
 public class Tower : MonoBehaviour {
+    [SerializeField]
+    internal Material GhostMaterialObject;
 
-    // Holds the ghost material
-    public Material GhostMaterial { get; }
+    public Material GhostMaterial => GhostMaterialObject;
 }

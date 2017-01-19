@@ -16,9 +16,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000012055856636}
+  - component: {fileID: 4000012055856636}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -31,9 +31,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000011245344536}
+  - component: {fileID: 4000011245344536}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -46,13 +46,13 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000011016162622}
-  - 95: {fileID: 95000013490566802}
-  - 114: {fileID: 114000014294044596}
-  - 114: {fileID: 114000010781183220}
-  - 114: {fileID: 114000010742083196}
+  - component: {fileID: 4000011016162622}
+  - component: {fileID: 95000013490566802}
+  - component: {fileID: 114000014294044596}
+  - component: {fileID: 114000010781183220}
+  - component: {fileID: 114000010742083196}
   m_Layer: 0
   m_Name: MortorDefault100
   m_TagString: Tower
@@ -65,12 +65,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000011614781812}
-  - 33: {fileID: 33000012830724026}
-  - 23: {fileID: 23000011441198638}
-  - 65: {fileID: 65000012176633450}
+  - component: {fileID: 4000011614781812}
+  - component: {fileID: 33000012830724026}
+  - component: {fileID: 23000011441198638}
+  - component: {fileID: 65000012176633450}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -83,12 +83,12 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000010684446422}
-  - 33: {fileID: 33000012015605282}
-  - 23: {fileID: 23000011733997886}
-  - 65: {fileID: 65000012367998064}
+  - component: {fileID: 4000010684446422}
+  - component: {fileID: 33000012015605282}
+  - component: {fileID: 23000011733997886}
+  - component: {fileID: 65000012367998064}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -105,11 +105,11 @@ Transform:
   m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: -0.5}
   m_LocalPosition: {x: 0, y: 2.8980026, z: 0}
   m_LocalScale: {x: 2.1772687, y: 2.1772697, z: 2.1772697}
-  m_LocalEulerAnglesHint: {x: 270, y: 90, z: 0}
   m_Children:
   - {fileID: 4000011245344536}
   m_Father: {fileID: 4000012055856636}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 270, y: 90, z: 0}
 --- !u!4 &4000011016162622
 Transform:
   m_ObjectHideFlags: 1
@@ -119,12 +119,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -26.316574, y: 5.2768326, z: -10.828659}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011614781812}
   - {fileID: 4000012055856636}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000011245344536
 Transform:
   m_ObjectHideFlags: 1
@@ -134,10 +134,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.377, y: 0, z: 0.655}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010684446422}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000011614781812
 Transform:
   m_ObjectHideFlags: 1
@@ -147,10 +147,10 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 2.2128594, z: 0}
   m_LocalScale: {x: 1.8104256, y: 1.8104256, z: 1.8104256}
-  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000011016162622}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!4 &4000012055856636
 Transform:
   m_ObjectHideFlags: 1
@@ -160,11 +160,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010684446422}
   m_Father: {fileID: 4000011016162622}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23000011441198638
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -179,7 +179,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 68248fe60b8476248a05ab5e19485da1, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -187,7 +189,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -209,7 +211,9 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 68248fe60b8476248a05ab5e19485da1, type: 2}
   - {fileID: 2100000, guid: 68248fe60b8476248a05ab5e19485da1, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -217,7 +221,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -318,4 +322,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bffcb80e26c0f6746b13c7fcda58aa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ghostMaterial: {fileID: 2100000, guid: 7634e08d56d19764cb4b01d3df4c3a84, type: 2}
+  GhostMaterialObject: {fileID: 2100000, guid: 7ac0e54b1835fb74da61731ebc4cd702, type: 2}
