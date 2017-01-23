@@ -1,5 +1,5 @@
 ********************************************************************************
-*                    Thursday, January 19, 2017 10:39:35 AM                    *
+*                     Monday, January 23, 2017 10:38:12 AM                     *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -11,9 +11,9 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-d0c3eab814cb7b843ae9312e7ede4474
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-bdbf5a7641913f34494f7689088725cc
 Exit code: 0
-Elapsed time: 2.38 sec
+Elapsed time: 2.09 sec
 
 - Compiler output (0 lines):
 
@@ -25,11 +25,11 @@ Elapsed time: 2.38 sec
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp.dll
 Exit code: 0
-Elapsed time: 0.12 sec
+Elapsed time: 0.10 sec
 
 - pdb2mdb.exe output (0 lines):
 ********************************************************************************
-*                    Thursday, January 19, 2017 10:39:38 AM                    *
+*                     Monday, January 23, 2017 10:38:14 AM                     *
 ********************************************************************************
 CSharpCompilerWrapper.exe version: 1.10.0.0
 Platform: Windows
@@ -41,9 +41,9 @@ Compiler: Microsoft C# 6.0
 - Compilation -----------------------------------------------
 
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\csc.exe
-Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-2806caa97a388f347898aec847e3d181
+Arguments: -nostdlib+ -noconfig -nologo -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/mscorlib.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Core.dll" -r:"C:/Program Files/Unity/Editor/Data\Mono/lib/mono/2.0/System.Xml.dll" @Temp/UnityTempFile-a5d36e6ba33dda640bc50f157ba270ab
 Exit code: 0
-Elapsed time: 2.48 sec
+Elapsed time: 2.16 sec
 
 - Compiler output (0 lines):
 
@@ -54,6 +54,6 @@ Elapsed time: 2.48 sec
 Process: C:\Users\webgang\Documents\GitHub\One-Chance-Redone\CSharp60Support\Roslyn\pdb2mdb.exe
 Arguments: Temp\Assembly-CSharp-Editor.dll
 Exit code: 0
-Elapsed time: 0.11 sec
+Elapsed time: 0.10 sec
 
 - pdb2mdb.exe output (0 lines):

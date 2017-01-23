@@ -23,12 +23,10 @@ public class SnapPoint : MonoBehaviour {
         foreach (GameObject _point in GameObject.FindGameObjectsWithTag("Pedestal")) {
             SnapPoints.Add(_point, null);
         }
-
-
-        foreach (Transform t in _Towers.GetComponentsInChildren<Transform>()) {
-            TowerPoints.Add(t.gameObject, null);
-            _towersBefore++;
+        foreach (GameObject _point in GameObject.FindGameObjectsWithTag("Tower")) {
+            TowerPoints.Add(_point, null);
             Towers++;
+            _towersBefore++;
         }
     }
 

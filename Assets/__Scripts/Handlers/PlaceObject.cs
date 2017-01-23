@@ -44,7 +44,7 @@ public class PlaceObject : MonoBehaviour {
             Ray ray = tpCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100)) {
                 if (hit.collider.tag == "Gem") {
-                    GrabItem(null, hit.collider.gameObject);
+                    GrabItem(go:hit.collider.gameObject, col:hit.collider);
                 }
             }
         }
@@ -56,7 +56,7 @@ public class PlaceObject : MonoBehaviour {
         }
     }
 
-    void GrabItem (int? itemNum = null, GameObject go = null) {
+    void GrabItem (int? itemNum = null, GameObject go = null, Collider col = null) {
         if (itemNum != null || go != null) {
             if (itemNum != null) {
                 if (!_placing) {
@@ -79,7 +79,12 @@ public class PlaceObject : MonoBehaviour {
                     }
                 }
             } else if (go != null) {
-
+                if (!_placing) {
+                    _itemInHand = go;
+                    _itemInHand.GetComponent<SphereCollider>().isTrigger = true;
+                    _itemInHand.layer = 2;
+                    _placing = true;
+                }
             }
         } else {
             Debug.LogWarning($"Warning: GrabItem() called with itemNum = {itemNum}, and go = {go}!");
@@ -117,9 +122,9 @@ public class PlaceObject : MonoBehaviour {
         _ray = tpCamera.ScreenPointToRay(Input.mousePosition);
         // If the raycast hits anything in the loaded world...
         if (Physics.Raycast(_ray, out _hit, Mathf.Infinity)) {
-            // Move the object being spawned to where the mouse is over
-            _itemInHand.transform.position = _hit.point;
             if (_itemInHand.tag == "Tower") {
+                // Move the object being spawned to where the mouse is over
+                _itemInHand.transform.position = _hit.point;
                 // If the hit object has the tag of "Pedestal"...
                 if (_hit.collider.tag == "Pedestal") {
                     // Calls the CheckSnap method
@@ -131,6 +136,8 @@ public class PlaceObject : MonoBehaviour {
                     _snapZ = null;
                 }
             } else if (_itemInHand.tag == "Mine") {
+                // Move the object being spawned to where the mouse is over
+                _itemInHand.transform.position = _hit.point;
                 // Else if the held item is a mine, and the raycast is hitting a walkway
                 if (_hit.collider.tag == "Walkway") {
                     // Calls the CheckSnap method
@@ -142,6 +149,8 @@ public class PlaceObject : MonoBehaviour {
                     _snapZ = null;
                 }
             } else if (_itemInHand.tag == "Gem") {
+                // Move the object being spawned to where the mouse is over
+                _itemInHand.transform.parent.position = new Vector3(_hit.point.x, _hit.point.y + 5.3f, _hit.point.z);
                 if (_hit.collider.tag == "Tower") {
                     CheckSnap(_hit.collider.gameObject, SnapPoint.TowerPoints);
                 } else {
