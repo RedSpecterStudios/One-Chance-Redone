@@ -151,8 +151,8 @@ public class PlaceObject : MonoBehaviour {
             } else if (_itemInHand.tag == "Gem") {
                 // Move the object being spawned to where the mouse is over
                 _itemInHand.transform.parent.position = new Vector3(_hit.point.x, _hit.point.y + 5.3f, _hit.point.z);
-                if (_hit.collider.tag == "Tower") {
-                    CheckSnap(_hit.collider.gameObject, SnapPoint.TowerPoints);
+                if (_hit.collider.tag == "TowerComponent") {
+                    CheckSnap(_hit.collider.transform.parent.gameObject, SnapPoint.TowerPoints);
                 } else {
                     _snapPoint = null;
                     _snapX = null;
@@ -177,7 +177,11 @@ public class PlaceObject : MonoBehaviour {
         _snapX = _snapPoint.transform.position.x;
         _snapZ = _snapPoint.transform.position.z;
         // Sets the _itemInHand to "snap" to the top-center of the snap point so it looks like it's on it
-        _itemInHand.transform.position = new Vector3((float)_snapX, CalculateTopPosition(_snapPoint), (float)_snapZ);
+        if (_itemInHand.tag != "Gem") {
+            _itemInHand.transform.position = new Vector3((float)_snapX, CalculateTopPosition(_snapPoint), (float)_snapZ);
+        } else {
+            _itemInHand.transform.parent.position = new Vector3((float)_snapX, CalculateTopPosition(_snapPoint), (float)_snapZ);
+        }
         // If the player left clicks...
         if (Input.GetMouseButtonDown(0)) {
             // Stop the placing loop
