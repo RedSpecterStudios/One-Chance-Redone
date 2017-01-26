@@ -9638,7 +9638,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011368847642, guid: 9b105eefcdd17a2448aaae5dce7513f7, type: 2}
       propertyPath: m_TagString
-      value: Tower
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1000010947553776, guid: 9b105eefcdd17a2448aaae5dce7513f7, type: 2}
       propertyPath: m_TagString
@@ -10317,7 +10317,7 @@ GameObject:
   - component: {fileID: 1174676703}
   m_Layer: 0
   m_Name: __Towers
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

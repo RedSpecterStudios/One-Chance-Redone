@@ -40,8 +40,8 @@ public class PlaceObject : MonoBehaviour {
         }
 
         if (Input.GetMouseButtonDown(0)) {
-            RaycastHit hit;
             Ray ray = tpCamera.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100)) {
                 if (hit.collider.tag == "Gem") {
                     GrabItem(go:hit.collider.gameObject, col:hit.collider);
@@ -152,7 +152,7 @@ public class PlaceObject : MonoBehaviour {
                 // Move the object being spawned to where the mouse is over
                 _itemInHand.transform.parent.position = new Vector3(_hit.point.x, _hit.point.y + 5.3f, _hit.point.z);
                 if (_hit.collider.tag == "TowerComponent") {
-                    CheckSnap(_hit.collider.transform.parent.gameObject, SnapPoint.TowerPoints);
+                    CheckSnap(RootParentTower(_hit.collider.gameObject), SnapPoint.TowerPoints);
                 } else {
                     _snapPoint = null;
                     _snapX = null;
@@ -169,6 +169,20 @@ public class PlaceObject : MonoBehaviour {
         } else {
             return;
         }
+    }
+
+    GameObject RootParentTower (GameObject go) {
+        Transform t = go.transform;
+        while (t.parent != null) {
+            if (t.parent.tag.Equals("Tower")) {
+                print(t.name);
+                return t.parent.gameObject;
+            }
+            t = t.parent;
+        }
+
+        Debug.LogError("No parent with the tag \"Tower\" present!");
+        return null;
     }
 
     void Snap (GameObject snapPoint) {
