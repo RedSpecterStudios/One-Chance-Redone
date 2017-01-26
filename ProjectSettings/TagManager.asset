@@ -11,6 +11,7 @@ TagManager:
   - Core
   - Gem
   - Enemy
+  - TowerComponent
   layers:
   - Default
   - TransparentFX

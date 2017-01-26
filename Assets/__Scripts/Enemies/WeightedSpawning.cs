@@ -3,10 +3,10 @@ using System.Collections;
 
 public class WeightedSpawning : MonoBehaviour {
 
+    public float _spawnTime = 6;
     public Transform spawnPoint;
     public SubDict[] levelMobs;
 
-    private float _spawnTime = 6;
     private float _totalWeight = 0f;
     private GameObject _goal;
 
@@ -22,7 +22,7 @@ public class WeightedSpawning : MonoBehaviour {
     }
     // Spawns enemy and sets it's goal
     public void SpawnEnemy () {
-        GameObject _enemy = (GameObject)Instantiate(GetEnemy(levelMobs, _totalWeight), spawnPoint.position, Quaternion.identity);
+        GameObject _enemy = Instantiate(GetEnemy(levelMobs, _totalWeight), spawnPoint.position, Quaternion.identity);
         _enemy.GetComponent<Minion>().goal = _goal.transform;
     }
     // Timer loop for spawning

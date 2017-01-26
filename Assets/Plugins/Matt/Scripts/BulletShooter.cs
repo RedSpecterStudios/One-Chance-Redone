@@ -9,7 +9,7 @@ public class BulletShooter : MonoBehaviour {
     public GameObject source;
     public GameObject target;
 
-    public void Shoot() {
+    public void Shoot(GameObject bulletToMove = null) {
         if (bulletToMove == null) {
             bulletToMove = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         }

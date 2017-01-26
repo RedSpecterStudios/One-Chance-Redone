@@ -1,15 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 
 public class Tower : MonoBehaviour {
+    [SerializeField]
+    internal Material GhostMaterialObject;
 
-    public Material ghostMaterial;
-    
-	void Start () {
-	
-	}
-	
-	void Update () {
-	
-	}
+    public Material GhostMaterial => GhostMaterialObject;
 }

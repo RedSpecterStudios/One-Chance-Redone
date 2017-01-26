@@ -2,17 +2,41 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class SnapPoint : MonoBehaviour {
-    
-    public static Dictionary<GameObject, GameObject> snapPoints;
 
+    private int _towersBefore = 0;
+
+    public Transform _Towers;
+
+    public static int Towers = 0;
+    
+    public static Dictionary<GameObject, GameObject> SnapPoints;
+    public static Dictionary<GameObject, GameObject> TowerPoints;
+
+    // Creates modular array of all available snap points, to be used by the PlaceObject script
     void Start () {
-        snapPoints = new Dictionary<GameObject, GameObject>();
+        SnapPoints = new Dictionary<GameObject, GameObject>();
+        TowerPoints = new Dictionary<GameObject, GameObject>();
 
         foreach (GameObject _point in GameObject.FindGameObjectsWithTag("Walkway")) {
-            snapPoints.Add(_point, null);
+            SnapPoints.Add(_point, null);
         }
         foreach (GameObject _point in GameObject.FindGameObjectsWithTag("Pedestal")) {
-            snapPoints.Add(_point, null);
+            SnapPoints.Add(_point, null);
+        }
+        foreach (GameObject _point in GameObject.FindGameObjectsWithTag("Tower")) {
+            TowerPoints.Add(_point, null);
+            Towers++;
+            _towersBefore++;
+        }
+    }
+
+    void Update() {
+        if (Towers != _towersBefore) {
+            TowerPoints.Clear();
+            foreach (Transform t in _Towers.GetComponentsInChildren<Transform>()) {
+                TowerPoints.Add(t.gameObject, null);
+                _towersBefore++;
+            }
         }
     }
 }
