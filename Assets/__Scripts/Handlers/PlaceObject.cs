@@ -44,7 +44,7 @@ public class PlaceObject : MonoBehaviour {
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100)) {
                 if (hit.collider.tag == "Gem") {
-                    GrabItem(go:hit.collider.gameObject, col:hit.collider);
+                    GrabItem(go: hit.collider.gameObject, col: hit.collider);
                 }
             }
         }
@@ -151,8 +151,8 @@ public class PlaceObject : MonoBehaviour {
             } else if (_itemInHand.tag == "Gem") {
                 // Move the object being spawned to where the mouse is over
                 _itemInHand.transform.parent.position = new Vector3(_hit.point.x, _hit.point.y + 5.3f, _hit.point.z);
-                if (_hit.collider.tag == "TowerComponent") {
-                    CheckSnap(RootParentTower(_hit.collider.gameObject), SnapPoint.TowerPoints);
+                if (_hit.collider.tag == "Component") {
+                    CheckSnap(RootParentTower(_hit.collider.gameObject).gameObject, SnapPoint.TowerPoints);
                 } else {
                     _snapPoint = null;
                     _snapX = null;
@@ -164,19 +164,26 @@ public class PlaceObject : MonoBehaviour {
 
     // Check the position that the player is wanting to snap to, and if it is clear, snap to it
     void CheckSnap (GameObject snapPoint, Dictionary<GameObject, GameObject> list) {
-        if (list[snapPoint] == null) {
-            Snap(snapPoint);
+        if (_itemInHand.tag == "Gem") {
+            if (list[snapPoint.transform.parent.gameObject] == null) {
+                Snap(snapPoint);
+            } else {
+                return;
+            }
         } else {
-            return;
+            if (list[snapPoint] == null) {
+                Snap(snapPoint);
+            } else {
+                return;
+            }
         }
     }
 
-    GameObject RootParentTower (GameObject go) {
+    Transform RootParentTower (GameObject go) {
         Transform t = go.transform;
         while (t.parent != null) {
-            if (t.parent.tag.Equals("Tower")) {
-                print(t.name);
-                return t.parent.gameObject;
+            if (t.tag.Equals("Tower")) {
+                return t.GetComponent<Tower>().GemBase;
             }
             t = t.parent;
         }
@@ -187,7 +194,7 @@ public class PlaceObject : MonoBehaviour {
 
     void Snap (GameObject snapPoint) {
         // Sets shortcut values
-        _snapPoint = _hit.collider.gameObject;
+        _snapPoint = snapPoint;
         _snapX = _snapPoint.transform.position.x;
         _snapZ = _snapPoint.transform.position.z;
         // Sets the _itemInHand to "snap" to the top-center of the snap point so it looks like it's on it
@@ -225,7 +232,10 @@ public class PlaceObject : MonoBehaviour {
     // Calculates the top-most global y position of any object by finding the center global y position of the object
     // and adding half the height of the object
     float CalculateTopPosition (GameObject _object) {
-        float _top = _object.GetComponent<Renderer>().bounds.center.y + (_object.GetComponent<Renderer>().bounds.size.y/2);
-        return _top;
+        if (_itemInHand.tag != "Gem") {
+            float _top = _object.GetComponent<Renderer>().bounds.center.y + (_object.GetComponent<Renderer>().bounds.size.y / 2);
+            return _top;
+        }
+        return _object.transform.position.y + 5.2f;
     }
 }
