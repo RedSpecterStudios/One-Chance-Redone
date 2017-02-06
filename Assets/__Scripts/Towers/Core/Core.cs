@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 
 public class Core : MonoBehaviour {
-
-    private void OnTriggerEnter(Collider other) {
+    
+    void OnTriggerEnter (Collider other) {
         if (other.tag == "Enemy") {
-            Destroy(other, 1.5f);
-        } else {
-            print(other.tag);
+            print("Enemy entered");
+            Destroy(other.transform.parent.gameObject, 1.5f);
         }
     }
 }
