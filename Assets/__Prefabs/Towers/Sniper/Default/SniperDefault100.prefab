@@ -121,7 +121,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013718602914}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.06, y: 4.49, z: -24.85}
+  m_LocalPosition: {x: -23.541777, y: 0.3890783, z: 10.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000013234401836}
@@ -190,7 +190,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1327540893483898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45000076, y: 7.347603, z: 0}
+  m_LocalPosition: {x: 0, y: 7.347603, z: 0}
   m_LocalScale: {x: 1.328565, y: 1.328566, z: 1.328566}
   m_Children:
   - {fileID: 4000012222700898}
@@ -296,21 +296,21 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010850313312}
-  m_Mesh: {fileID: 4300002, guid: 760bc7e8d17fad9449ccf8820f7f3b7c, type: 3}
+  m_Mesh: {fileID: 4300002, guid: 47084ce10a9e21f4b82f7ec28561dd66, type: 3}
 --- !u!33 &33000013740040156
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011788274452}
-  m_Mesh: {fileID: 4300000, guid: 760bc7e8d17fad9449ccf8820f7f3b7c, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 47084ce10a9e21f4b82f7ec28561dd66, type: 3}
 --- !u!33 &33000014084960128
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013647352514}
-  m_Mesh: {fileID: 4300004, guid: 760bc7e8d17fad9449ccf8820f7f3b7c, type: 3}
+  m_Mesh: {fileID: 4300004, guid: 47084ce10a9e21f4b82f7ec28561dd66, type: 3}
 --- !u!65 &65000013474746382
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GhostMaterialObject: {fileID: 2100000, guid: 43c0a5191cb96974d8e04e88100d85ff, type: 2}
+  GemBase: {fileID: 0}
 --- !u!114 &114647933235263322
 MonoBehaviour:
   m_ObjectHideFlags: 1
