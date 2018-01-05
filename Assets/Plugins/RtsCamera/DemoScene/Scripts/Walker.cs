@@ -1,17 +1,16 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 public class Walker : MonoBehaviour
 {
-    private NavMeshAgent _agent;
+    private UnityEngine.AI.NavMeshAgent _agent;
     private Transform _constructor;
     private Animation _anim;
 
     // Use this for initialization
     void Start()
     {
-        _agent = GetComponent<NavMeshAgent>();
-        _constructor = transform.FindChild("Constructor");
+        _agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        _constructor = transform.Find("Constructor");
         _anim = _constructor.GetComponent<Animation>();
 
         SetRandomDestination();

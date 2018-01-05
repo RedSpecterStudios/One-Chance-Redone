@@ -1,7 +1,7 @@
-//----------------------------------------------
+//-------------------------------------------------
 //            NGUI: Next-Gen UI kit
-// Copyright © 2011-2016 Tasharen Entertainment
-//----------------------------------------------
+// Copyright © 2011-2017 Tasharen Entertainment Inc
+//-------------------------------------------------
 
 using UnityEngine;
 
@@ -282,14 +282,14 @@ public class UIScrollView : MonoBehaviour
 
 			if (canMoveHorizontally)
 			{
-				if (b.min.x < clip.x - hx) return true;
-				if (b.max.x > clip.x + hx) return true;
+				if (b.min.x + 0.001f < clip.x - hx) return true;
+				if (b.max.x - 0.001f > clip.x + hx) return true;
 			}
 
 			if (canMoveVertically)
 			{
-				if (b.min.y < clip.y - hy) return true;
-				if (b.max.y > clip.y + hy) return true;
+				if (b.min.y + 0.001f < clip.y - hy) return true;
+				if (b.max.y - 0.001f > clip.y + hy) return true;
 			}
 			return false;
 		}
@@ -779,6 +779,7 @@ public class UIScrollView : MonoBehaviour
 			}
 			else if (centerOnChild)
 			{
+				if (mDragStarted && onDragFinished != null) onDragFinished();
 				centerOnChild.Recenter();
 			}
 			else

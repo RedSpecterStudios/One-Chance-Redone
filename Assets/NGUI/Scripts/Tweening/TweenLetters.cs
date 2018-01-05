@@ -1,7 +1,7 @@
-//----------------------------------------------
+//-------------------------------------------------
 //            NGUI: Next-Gen UI kit
-// Copyright © 2011-2016 Tasharen Entertainment
-//----------------------------------------------
+// Copyright © 2011-2017 Tasharen Entertainment Inc
+//-------------------------------------------------
 
 using UnityEngine;
 using System.Collections.Generic;
@@ -43,14 +43,14 @@ public class TweenLetters : UITweener
 	public AnimationProperties hoverOut;
 
 	UILabel mLabel;
-	int mLastLen = -1;
+	int mVertexCount = -1;
 	int[] mLetterOrder;
 	LetterProperties[] mLetter;
 	AnimationProperties mCurrent;
 
 	void OnEnable ()
 	{
-		mLastLen = -1;
+		mVertexCount = -1;
 		mLabel.onPostFill += OnPostFill;
 	}
 
@@ -73,19 +73,23 @@ public class TweenLetters : UITweener
 
 	void OnPostFill (UIWidget widget, int bufferOffset, List<Vector3> verts, List<Vector2> uvs, List<Color> cols)
 	{
-		if (verts == null || verts.Count == 0) return;
+		if (verts == null) return;
+		var vertexCount = verts.Count;
+		if (verts == null || vertexCount == 0) return;
 		if (mLabel == null) return;
 
+#if !UNITY_EDITOR
+		try {
+#endif
 		var quads = mLabel.quadsPerCharacter;
 		const int quadVerts = 4;
-		var characterCount = verts.Count / quads / quadVerts;
+		var characterCount = vertexCount / quads / quadVerts;
 
 		var pt = mLabel.printedText;
-		var newLen = string.IsNullOrEmpty(pt) ? 0 : pt.Length;
 
-		if (mLastLen != newLen)
+		if (mVertexCount != vertexCount)
 		{
-			mLastLen = newLen;
+			mVertexCount = vertexCount;
 			SetLetterOrder(characterCount);
 			GetLetterDuration(characterCount);
 		}
@@ -101,7 +105,7 @@ public class TweenLetters : UITweener
 		var qRot = Quaternion.Euler(mCurrent.rot);
 		var vert = Vector3.zero;
 		var c = Color.clear;
-		var timeIntoAnimation = base.tweenFactor * base.duration;
+		var timeIntoAnimation = tweenFactor * duration;
 
 		for (int q = 0; q < quads; ++q)
 		{
@@ -110,12 +114,14 @@ public class TweenLetters : UITweener
 				letter = mLetterOrder[i]; // Choose which letter to animate.
 				firstVert = q * characterCount * quadVerts + letter * quadVerts;
 
-				if (firstVert > verts.Count)
+				if (firstVert >= vertexCount)
 				{
-					Debug.LogError("TweenLetters encountered an unhandled case trying to modify a vertex " + firstVert + ". Vertex Count: " + verts.Count + " Pass: " + q + "\nText: " + pt);
+#if UNITY_EDITOR
+					Debug.LogError("TweenLetters encountered an unhandled case trying to modify a vertex " + firstVert + ". Vertex Count: " + vertexCount + " Pass: " + q + "\nText: " + pt);
+#endif
 					continue;
 				}
-				
+
 				letterStart = mLetter[letter].start;
 				t = Mathf.Clamp(timeIntoAnimation - letterStart, 0f, mLetter[letter].duration) / mLetter[letter].duration;
 				t = animationCurve.Evaluate(t);
@@ -150,6 +156,9 @@ public class TweenLetters : UITweener
 				}
 			}
 		}
+#if !UNITY_EDITOR
+		} catch (System.Exception) { enabled = false; }
+#endif
 	}
 
 #if UNITY_4_7
@@ -224,22 +233,22 @@ public class TweenLetters : UITweener
 		{
 			for (int i = 0; i < mLetter.Length; ++i)
 			{
-				mLetter[i].start = Random.Range(0f, mCurrent.randomness.x * base.duration);
-				float end = Random.Range(mCurrent.randomness.y * base.duration, base.duration);
+				mLetter[i].start = Random.Range(0f, mCurrent.randomness.x * duration);
+				float end = Random.Range(mCurrent.randomness.y * duration, duration);
 				mLetter[i].duration = end - mLetter[i].start;
 			}
 		}
 		else
 		{
 			// Calculate how long each letter will take to fade in.
-			float lengthPerLetter = base.duration / (float)letterCount;
+			float lengthPerLetter = duration / letterCount;
 			float flippedOverlap = 1f - mCurrent.overlap;
 
 			// Figure out how long the animation will be taking into account overlapping letters.
 			float totalDuration = lengthPerLetter * letterCount * flippedOverlap;
 
 			// Scale the smaller total running time back up to the requested animation time.
-			float letterDuration = ScaleRange(lengthPerLetter, totalDuration + lengthPerLetter * mCurrent.overlap, base.duration);
+			float letterDuration = ScaleRange(lengthPerLetter, totalDuration + lengthPerLetter * mCurrent.overlap, duration);
 
 			float offset = 0;
 			for (int i = 0; i < mLetter.Length; ++i)

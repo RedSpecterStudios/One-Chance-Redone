@@ -153,8 +153,8 @@ public class MortarBasic : MonoBehaviour {
                 }
 
                 if (_target != null) {
-                    if (_target.transform.parent.FindChild("Center") != null) {
-                        _target = _target.transform.parent.FindChild("Center").gameObject;
+                    if (_target.transform.parent.Find("Center") != null) {
+                        _target = _target.transform.parent.Find("Center").gameObject;
                     } else {
                         Debug.LogWarning($"No \"Center\" child in \"{_target}\"");
                     }

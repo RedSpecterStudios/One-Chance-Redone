@@ -49,7 +49,7 @@ public class DemoMain : MonoBehaviour
             return;
 
         walker.gameObject.name = walkerName;
-        walker.transform.FindChild("NameTag").GetComponent<GUIText>().text = walkerName;
+        walker.transform.Find("NameTag").GetComponent<GUIText>().text = walkerName;
     }
 
     private float MyGetTerrainHeightFunction(float x, float z)
@@ -144,8 +144,8 @@ public class DemoMain : MonoBehaviour
 
     private void EnableWalkerSelection(Transform t, bool enable)
     {
-        t.FindChild("Selection Projector").GetComponent<Projector>().enabled = enable;
-        t.FindChild("NameTag").GetComponent<GUIText>().enabled = enable;
+        t.Find("Selection Projector").GetComponent<Projector>().enabled = enable;
+        t.Find("NameTag").GetComponent<GUIText>().enabled = enable;
     }
 
     private GameObject SpawnWalker()

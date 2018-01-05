@@ -23,7 +23,7 @@ public class SniperDefault : MonoBehaviour {
         StartCoroutine(FireTimer(_fireRate));
 
         _bulletShooter = GetComponent<BulletShooter>();
-        _top = transform.FindChild("Top").gameObject;
+        _top = transform.Find("Top").gameObject;
     }
 	
 	void Update () {
@@ -121,8 +121,8 @@ public class SniperDefault : MonoBehaviour {
                         break;
                 }
 
-                if (_target.transform.parent.FindChild("Center") != null) {
-                    _target = _target.transform.parent.FindChild("Center").gameObject;
+                if (_target.transform.parent.Find("Center") != null) {
+                    _target = _target.transform.parent.Find("Center").gameObject;
                 } else {
                     Debug.LogWarning($"No \"Center\" child in \"{_target}\"");
                 }

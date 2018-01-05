@@ -12,8 +12,7 @@ using UnityEngine;
 [AddComponentMenu("Camera-Control/RtsCamera")]
 [RequireComponent(typeof(RtsCameraMouse))]
 [RequireComponent(typeof(RtsCameraKeys))]
-public class RtsCamera : MonoBehaviour
-{
+public class RtsCamera : MonoBehaviour {
     #region NOTES
     /*
      * ----------------------------------------------
@@ -138,8 +137,7 @@ public class RtsCamera : MonoBehaviour
 
     #region UNITY_METHODS
 
-    protected void Reset()
-    {
+    protected void Reset () {
         Smoothing = true;
 
         LookAtHeightOffset = 0f;
@@ -173,10 +171,8 @@ public class RtsCamera : MonoBehaviour
         FollowRotationOffset = 0;
     }
 
-    protected void Start()
-    {
-        if (GetComponent<Rigidbody>())
-        {
+    protected void Start () {
+        if (GetComponent<Rigidbody>()) {
             // don't allow camera to rotate
             GetComponent<Rigidbody>().freezeRotation = true;
         }
@@ -202,32 +198,25 @@ public class RtsCamera : MonoBehaviour
         CreateTarget();
     }
 
-    protected void Update()
-    {
+    protected void Update () {
         //
         // show or hide camera target (mainly for debugging purposes)
         //
-        if (_lastDebugCamera != ShowDebugCameraTarget)
-        {
-            if (_targetRenderer != null)
-            {
+        if (_lastDebugCamera != ShowDebugCameraTarget) {
+            if (_targetRenderer != null) {
                 _targetRenderer.enabled = ShowDebugCameraTarget;
                 _lastDebugCamera = ShowDebugCameraTarget;
             }
         }
     }
 
-    protected void LateUpdate()
-    {
+    protected void LateUpdate () {
         //
         // update desired target position
         //
-        if (IsFollowing)
-        {
+        if (IsFollowing) {
             LookAt = _followTarget.position;
-        }
-        else
-        {
+        } else {
             _moveVector.y = 0;
             LookAt += Quaternion.Euler(0, Rotation, 0) * _moveVector;
             LookAt.y = GetHeightAt(LookAt.x, LookAt.z);
@@ -244,15 +233,12 @@ public class RtsCamera : MonoBehaviour
         //
         // move from "desired" to "target" values
         //
-        if (Smoothing)
-        {
+        if (Smoothing) {
             _currRotation = Mathf.LerpAngle(_currRotation, Rotation, Time.deltaTime * RotationDampening);
             _currDistance = Mathf.Lerp(_currDistance, Distance, Time.deltaTime * ZoomDampening);
             _currTilt = Mathf.LerpAngle(_currTilt, Tilt, Time.deltaTime * TiltDampening);
             _target.transform.position = Vector3.Lerp(_target.transform.position, LookAt, Time.deltaTime * MoveDampening);
-        }
-        else
-        {
+        } else {
             _currRotation = Rotation;
             _currDistance = Distance;
             _currTilt = Tilt;
@@ -264,8 +250,7 @@ public class RtsCamera : MonoBehaviour
         //
         // if we're following AND forcing behind, override the rotation to point to target (with offset)
         //
-        if (IsFollowing && FollowBehind)
-        {
+        if (IsFollowing && FollowBehind) {
             ForceFollowBehind();
         }
 
@@ -273,8 +258,7 @@ public class RtsCamera : MonoBehaviour
         // optionally, we'll check to make sure the target is visible
         // Note: we only do this when following so that we don't "jar" when moving manually
         //
-        if (IsFollowing && TargetVisbilityViaPhysics && DistanceToTargetIsLessThan(1f))
-        {
+        if (IsFollowing && TargetVisbilityViaPhysics && DistanceToTargetIsLessThan(1f)) {
             EnsureTargetIsVisible();
         }
 
@@ -295,43 +279,33 @@ public class RtsCamera : MonoBehaviour
     /// <summary>
     /// Current transform of camera target (NOTE: should not be set directly)
     /// </summary>
-    public Transform CameraTarget
-    {
-        get { return _target.transform; }
-    }
+    public Transform CameraTarget => _target.transform;
 
     /// <summary>
     /// True if the current camera auto-follow target is set.  Else, false.
     /// </summary>
-    public bool IsFollowing
-    {
-        get { return FollowTarget != null; }
-    }
+    public bool IsFollowing => FollowTarget != null;
 
     /// <summary>
     /// Current auto-follow target
     /// </summary>
-    public Transform FollowTarget
-    {
-        get { return _followTarget; }
-    }
+    public Transform FollowTarget => _followTarget;
 
     /// <summary>
     /// Reset camera to initial (startup) position, distance, rotation, tilt, etc.
     /// </summary>
     /// <param name="includePosition">If true, position will be reset as well.  If false, only distance/rotation/tilt.</param>
     /// <param name="snap">If true, camera will snap instantly to the position.  If false, camera will slide smoothly back to initial values.</param>
-    public void ResetToInitialValues(bool includePosition, bool snap = false)
-    {
-        if (includePosition)
+    public void ResetToInitialValues (bool includePosition, bool snap = false) {
+        if (includePosition) {
             LookAt = _initialLookAt;
+        }
 
         Distance = _initialDistance;
         Rotation = _initialRotation;
         Tilt = _initialTilt;
 
-        if (snap)
-        {
+        if (snap) {
             _currDistance = Distance;
             _currRotation = Rotation;
             _currTilt = Tilt;
@@ -344,14 +318,12 @@ public class RtsCamera : MonoBehaviour
     /// </summary>
     /// <param name="toPosition">Vector3 position</param>
     /// <param name="snap">If true, camera will "snap" to the position, else will "slide"</param>
-    public void JumpTo(Vector3 toPosition, bool snap = false)
-    {
+    public void JumpTo (Vector3 toPosition, bool snap = false) {
         EndFollow();
 
         LookAt = toPosition;
 
-        if (snap)
-        {
+        if (snap) {
             _target.transform.position = toPosition;
         }
     }
@@ -361,39 +333,29 @@ public class RtsCamera : MonoBehaviour
     /// </summary>
     /// <param name="toTransform">Transform to which the camera target will be moved</param>
     /// <param name="snap">If true, camera will "snap" to the position, else will "slide"</param>
-    public void JumpTo(Transform toTransform, bool snap = false)
-    {
-        JumpTo(toTransform.position, snap);
-    }
+    public void JumpTo (Transform toTransform, bool snap = false) => JumpTo(toTransform.position, snap);
 
     /// <summary>
     /// Manually set target position (snap or slide).
     /// </summary>
     /// <param name="toGameObject">GameObject to which the camera target will be moved</param>
     /// <param name="snap">If true, camera will "snap" to the position, else will "slide"</param>
-    public void JumpTo(GameObject toGameObject, bool snap = false)
-    {
-        JumpTo(toGameObject.transform.position, snap);
-    }
+    public void JumpTo (GameObject toGameObject, bool snap = false) => JumpTo(toGameObject.transform.position, snap);
 
     /// <summary>
     /// Set current auto-follow target (snap or slide).
     /// </summary>
     /// <param name="followTarget">Transform which the camera should follow</param>
     /// <param name="snap">If true, camera will "snap" to the position, else will "slide"</param>
-    public void Follow(Transform followTarget, bool snap = false)
-    {
-        if (_followTarget != null)
-        {
+    public void Follow (Transform followTarget, bool snap = false) {
+        if (_followTarget != null) {
             OnEndFollow?.Invoke(_followTarget);
         }
 
         _followTarget = followTarget;
 
-        if (_followTarget != null)
-        {
-            if (snap)
-            {
+        if (_followTarget != null) {
+            if (snap) {
                 LookAt = _followTarget.position;
             }
 
@@ -406,18 +368,12 @@ public class RtsCamera : MonoBehaviour
     /// </summary>
     /// <param name="followTarget">GameObject which the camera should follow</param>
     /// <param name="snap">If true, camera will "snap" to the position, else will "slide"</param>
-    public void Follow(GameObject followTarget, bool snap = false)
-    {
-        Follow(followTarget.transform);
-    }
+    public void Follow (GameObject followTarget, bool snap = false) => Follow(followTarget.transform);
 
     /// <summary>
     /// Break auto-follow.   Camera will now be manually controlled by player input.
     /// </summary>
-    public void EndFollow()
-    {
-        Follow((Transform)null, false);
-    }
+    public void EndFollow () => Follow((Transform)null, false);
 
     /// <summary>
     /// Adds movement to the camera (world coordinates).
@@ -425,10 +381,7 @@ public class RtsCamera : MonoBehaviour
     /// <param name="dx">World coordinate X distance to move</param>
     /// <param name="dy">World coordinate Y distance to move</param>
     /// <param name="dz">World coordinate Z distance to move</param>
-    public void AddToPosition(float dx, float dy, float dz)
-    {
-        _moveVector += new Vector3(dx, dy, dz);
-    }
+    public void AddToPosition (float dx, float dy, float dz) => _moveVector += new Vector3(dx, dy, dz);
 
     #endregion
 
@@ -446,27 +399,23 @@ public class RtsCamera : MonoBehaviour
     /// <param name="x"></param>
     /// <param name="z"></param>
     /// <returns></returns>
-    private float GetHeightAt(float x, float z)
-    {
+    private float GetHeightAt (float x, float z) {
         //
         // priority 1:  use supplied function to get height at point
         //
-        if (GetTerrainHeight != null)
-        {
+        if (GetTerrainHeight != null) {
             return GetTerrainHeight(x, z);
         }
 
         //
         // priority 2:  use physics ray casting to get height at point
         //
-        if (TerrainHeightViaPhysics)
-        {
+        if (TerrainHeightViaPhysics) {
             var y = MaxBounds.y;
             var maxDist = MaxBounds.y - MinBounds.y + 1f;
 
             RaycastHit hitInfo;
-            if (Physics.Raycast(new Vector3(x, y, z), new Vector3(0, -1, 0), out hitInfo, maxDist, TerrainPhysicsLayerMask))
-            {
+            if (Physics.Raycast(new Vector3(x, y, z), new Vector3(0, -1, 0), out hitInfo, maxDist, TerrainPhysicsLayerMask)) {
                 return hitInfo.point.y;
             }
             return 0;   // no hit!
@@ -481,22 +430,21 @@ public class RtsCamera : MonoBehaviour
     /// <summary>
     /// Update the camera position and rotation based on calculated values
     /// </summary>
-    private void UpdateCamera()
-    {
+    private void UpdateCamera () {
         var rotation = Quaternion.Euler(_currTilt, _currRotation, 0);
         var v = new Vector3(0.0f, 0.0f, -_currDistance);
         var position = rotation * v + _target.transform.position;
 
-        if (GetComponent<Camera>().orthographic)
-        {
+        if (GetComponent<Camera>().orthographic) {
             GetComponent<Camera>().orthographicSize = _currDistance;
         }
 
         // check that camera is not below terrain
 
         var y = GetHeightAt(position.x, position.z) + 1;
-        if (y > position.y)
+        if (y > position.y) {
             position.y = y;
+        }
 
         // update position and rotation of camera
 
@@ -507,16 +455,14 @@ public class RtsCamera : MonoBehaviour
     /// <summary>
     /// Creates the camera's target, initially not visible.
     /// </summary>
-    private void CreateTarget()
-    {
+    private void CreateTarget () {
         _target = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         _target.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 
         _target.GetComponent<Renderer>().material.color = Color.green;
 
         var targetCollider = _target.GetComponent<Collider>();
-        if (targetCollider != null)
-        {
+        if (targetCollider != null) {
             targetCollider.enabled = false;
         }
 
@@ -527,10 +473,10 @@ public class RtsCamera : MonoBehaviour
         _target.transform.position = LookAt;
     }
 
-    private bool DistanceToTargetIsLessThan(float sqrDistance)
-    {
-        if (!IsFollowing)
+    private bool DistanceToTargetIsLessThan (float sqrDistance) {
+        if (!IsFollowing) {
             return true;    // our distance is technically zero
+        }
 
         var p1 = _target.transform.position;
         var p2 = _followTarget.position;
@@ -541,8 +487,7 @@ public class RtsCamera : MonoBehaviour
         return vd < sqrDistance;
     }
 
-    private void EnsureTargetIsVisible()
-    {
+    private void EnsureTargetIsVisible () {
         var direction = (transform.position - _target.transform.position);
         direction.Normalize();
 
@@ -551,8 +496,7 @@ public class RtsCamera : MonoBehaviour
         RaycastHit hitInfo;
 
         //if (Physics.Raycast(_target.transform.position, direction, out hitInfo, distance, ~TargetVisibilityIgnoreLayerMask))
-        if (Physics.SphereCast(_target.transform.position, CameraRadius, direction, out hitInfo, distance, ~TargetVisibilityIgnoreLayerMask))
-        {
+        if (Physics.SphereCast(_target.transform.position, CameraRadius, direction, out hitInfo, distance, ~TargetVisibilityIgnoreLayerMask)) {
             if (hitInfo.transform != _target)   // don't collide with outself!
             {
                 _currDistance = hitInfo.distance - 0.1f;
@@ -560,8 +504,7 @@ public class RtsCamera : MonoBehaviour
         }
     }
 
-    private void ForceFollowBehind()
-    {
+    private void ForceFollowBehind () {
         var v = _followTarget.transform.forward * -1;
         var angle = Vector3.Angle(Vector3.forward, v);
         var sign = (Vector3.Dot(v, Vector3.right) > 0.0f) ? 1.0f : -1.0f;

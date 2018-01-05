@@ -1,7 +1,7 @@
-//----------------------------------------------
+//-------------------------------------------------
 //            NGUI: Next-Gen UI kit
-// Copyright © 2011-2016 Tasharen Entertainment
-//----------------------------------------------
+// Copyright © 2011-2017 Tasharen Entertainment Inc
+//-------------------------------------------------
 
 using UnityEngine;
 using UnityEditor;
@@ -372,8 +372,8 @@ public class NGUISettings
 
 	static public bool unityPacking
 	{
-		get { return GetBool("NGUI Packing", true); }
-		set { SetBool("NGUI Packing", value); }
+		get { return GetBool("NGUI Atlas Packing", false); }
+		set { SetBool("NGUI Atlas Packing", value); }
 	}
 
 	static public bool trueColorAtlas

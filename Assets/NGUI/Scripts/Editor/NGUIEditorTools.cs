@@ -1,7 +1,7 @@
-//----------------------------------------------
+//-------------------------------------------------
 //            NGUI: Next-Gen UI kit
-// Copyright © 2011-2016 Tasharen Entertainment
-//----------------------------------------------
+// Copyright © 2011-2017 Tasharen Entertainment Inc
+//-------------------------------------------------
 
 using UnityEditor;
 using UnityEngine;
@@ -1359,7 +1359,7 @@ static public class NGUIEditorTools
 		{
 			mEndHorizontal = true;
 			GUILayout.BeginHorizontal();
-			EditorGUILayout.BeginHorizontal("AS TextArea", GUILayout.MinHeight(10f));
+			EditorGUILayout.BeginHorizontal("TextArea", GUILayout.MinHeight(10f));
 		}
 		else
 		{
