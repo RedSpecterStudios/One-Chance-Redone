@@ -298,7 +298,7 @@ public class UIAtlasInspector : Editor
 					if (GUILayout.Button("Add a Transparent Border")) AddTransparentBorder(sprite);
 					if (GUILayout.Button("Add a Clamped Border")) AddClampedBorder(sprite);
 					if (GUILayout.Button("Add a Tiled Border")) AddTiledBorder(sprite);
-					EditorGUI.BeginDisabledGroup(!sprite.hasBorder);
+					EditorGUI.BeginDisabledGroup(!sprite.HasBorder);
 					if (GUILayout.Button("Crop Border")) CropBorder(sprite);
 					EditorGUI.EndDisabledGroup();
 

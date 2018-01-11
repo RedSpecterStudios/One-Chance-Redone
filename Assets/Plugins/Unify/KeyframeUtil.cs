@@ -19,9 +19,8 @@ namespace CurveExtended {
 
     public class KeyframeUtil {
 
-        public static Keyframe GetNew (float time, float value, TangentMode leftAndRight) {
-            return GetNew(time, value, leftAndRight, leftAndRight);
-        }
+        public static Keyframe GetNew (float time, float value, TangentMode leftAndRight) => 
+            GetNew(time, value, leftAndRight, leftAndRight);
 
         public static Keyframe GetNew (float time, float value, TangentMode left, TangentMode right) {
             object boxed = new Keyframe(time, value); // cant use struct in reflection			
@@ -31,10 +30,13 @@ namespace CurveExtended {
             SetKeyTangentMode(boxed, 1, right);
 
             Keyframe keyframe = (Keyframe) boxed;
-            if (left == TangentMode.Stepped)
+            if (left == TangentMode.Stepped) {
                 keyframe.inTangent = float.PositiveInfinity;
-            if (right == TangentMode.Stepped)
+            }
+
+            if (right == TangentMode.Stepped) {
                 keyframe.outTangent = float.PositiveInfinity;
+            }
 
             return keyframe;
         }
@@ -56,17 +58,20 @@ namespace CurveExtended {
             }
 
             field.SetValue(keyframe, tangentMode);
-            if (GetKeyTangentMode(tangentMode, leftRight) == mode)
+            if (GetKeyTangentMode(tangentMode, leftRight) == mode) {
                 return;
+            }
+
             Debug.Log("bug");
         }
 
         // UnityEditor.CurveUtility.cs (c) Unity Technologies
         public static TangentMode GetKeyTangentMode (int tangentMode, int leftRight) {
-            if (leftRight == 0)
+            if (leftRight == 0) {
                 return (TangentMode) ((tangentMode & 6) >> 1);
-            else
+            } else {
                 return (TangentMode) ((tangentMode & 24) >> 3);
+            }
         }
 
         // UnityEditor.CurveUtility.cs (c) Unity Technologies
@@ -74,10 +79,12 @@ namespace CurveExtended {
             Type t = typeof(UnityEngine.Keyframe);
             FieldInfo field = t.GetField("m_TangentMode", BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
             int tangentMode = (int) field.GetValue(keyframe);
-            if (leftRight == 0)
+
+            if (leftRight == 0) {
                 return (TangentMode) ((tangentMode & 6) >> 1);
-            else
+            } else {
                 return (TangentMode) ((tangentMode & 24) >> 3);
+            }
         }
 
 
@@ -87,10 +94,12 @@ namespace CurveExtended {
             FieldInfo field = t.GetField("m_TangentMode", BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
             int tangentMode = (int) field.GetValue(keyframe);
 
-            if (broken)
+            if (broken) {
                 tangentMode |= 1;
-            else
+            } else {
                 tangentMode &= -2;
+            }
+
             field.SetValue(keyframe, tangentMode);
         }
 

@@ -562,7 +562,7 @@ public class UIFont : MonoBehaviour
 			}
 #endif
 			// Trimmed sprite? Trim the glyphs
-			if (mSprite.hasPadding) Trim();
+			if (mSprite.HasPadding) Trim();
 		}
 	}
 

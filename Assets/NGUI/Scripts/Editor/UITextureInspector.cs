@@ -74,7 +74,7 @@ public class UITextureInspector : UIBasicSpriteEditor
 
 		if (tex != null)
 		{
-			Rect tc = mTex.uvRect;
+			Rect tc = mTex.UvRect;
 			tc.xMin *= tex.width;
 			tc.xMax *= tex.width;
 			tc.yMin *= tex.height;

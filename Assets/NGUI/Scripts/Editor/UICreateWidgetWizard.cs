@@ -332,7 +332,7 @@ public class UICreateWidgetWizard : EditorWindow
 
 			UISpriteData sp = NGUISettings.atlas.GetSprite(mImage0);
 			UISprite sprite = NGUITools.AddWidget<UISprite>(go);
-			sprite.type = sp.hasBorder ? UISprite.Type.Sliced : UISprite.Type.Simple;
+			sprite.type = sp.HasBorder ? UISprite.Type.Sliced : UISprite.Type.Simple;
 			sprite.name = "Background";
 			sprite.depth = depth;
 			sprite.atlas = NGUISettings.atlas;
@@ -527,7 +527,7 @@ public class UICreateWidgetWizard : EditorWindow
 			UISpriteData bgs = NGUISettings.atlas.GetSprite(mSliderBG);
 			UISprite back = (UISprite)NGUITools.AddWidget<UISprite>(go);
 
-			back.type = bgs.hasBorder ? UISprite.Type.Sliced : UISprite.Type.Simple;
+			back.type = bgs.HasBorder ? UISprite.Type.Sliced : UISprite.Type.Simple;
 			back.name = "Background";
 			back.depth = depth;
 			back.pivot = UIWidget.Pivot.Left;
@@ -541,7 +541,7 @@ public class UICreateWidgetWizard : EditorWindow
 			// Foreground sprite
 			UISpriteData fgs = NGUISettings.atlas.GetSprite(mSliderFG);
 			UISprite front = NGUITools.AddWidget<UISprite>(go);
-			front.type = fgs.hasBorder ? UISprite.Type.Sliced : UISprite.Type.Simple;
+			front.type = fgs.HasBorder ? UISprite.Type.Sliced : UISprite.Type.Simple;
 			front.name = "Foreground";
 			front.pivot = UIWidget.Pivot.Left;
 			front.atlas = NGUISettings.atlas;
@@ -564,7 +564,7 @@ public class UICreateWidgetWizard : EditorWindow
 				UISpriteData tbs = NGUISettings.atlas.GetSprite(mSliderTB);
 				UISprite thb = NGUITools.AddWidget<UISprite>(go);
 
-				thb.type = tbs.hasBorder ? UISprite.Type.Sliced : UISprite.Type.Simple;
+				thb.type = tbs.HasBorder ? UISprite.Type.Sliced : UISprite.Type.Simple;
 				thb.name = "Thumb";
 				thb.atlas = NGUISettings.atlas;
 				thb.spriteName = mSliderTB;

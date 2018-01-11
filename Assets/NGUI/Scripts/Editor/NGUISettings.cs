@@ -522,7 +522,7 @@ public class NGUISettings
 		if (w.atlas != null && !string.IsNullOrEmpty(w.spriteName))
 		{
 			UISpriteData sp = w.atlas.GetSprite(w.spriteName);
-			if (sp != null && sp.hasBorder)
+			if (sp != null && sp.HasBorder)
 				w.type = UISprite.Type.Sliced;
 		}
 
