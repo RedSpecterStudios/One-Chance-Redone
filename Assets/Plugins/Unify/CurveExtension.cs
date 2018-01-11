@@ -13,8 +13,10 @@ namespace CurveExtended {
 
         // UnityEditor.CurveUtility.cs (c) Unity Technologies
         public static void UpdateTangentsFromMode (AnimationCurve curve, int index) {
-            if (index < 0 || index >= curve.length)
+            if (index < 0 || index >= curve.length) {
                 return;
+            }
+
             Keyframe key = curve[index];
             if (KeyframeUtil.GetKeyTangentMode(key, 0) == TangentMode.Linear && index >= 1) {
                 key.inTangent = CalculateLinearTangent(curve, index, index - 1);
@@ -24,15 +26,16 @@ namespace CurveExtended {
                 key.outTangent = CalculateLinearTangent(curve, index, index + 1);
                 curve.MoveKey(index, key);
             }
-            if (KeyframeUtil.GetKeyTangentMode(key, 0) != TangentMode.Smooth && KeyframeUtil.GetKeyTangentMode(key, 1) != TangentMode.Smooth)
+            if (KeyframeUtil.GetKeyTangentMode(key, 0) != TangentMode.Smooth && KeyframeUtil.GetKeyTangentMode(key, 1) != TangentMode.Smooth) {
                 return;
+            }
+
             curve.SmoothTangents(index, 0.0f);
         }
 
         // UnityEditor.CurveUtility.cs (c) Unity Technologies
-        private static float CalculateLinearTangent (AnimationCurve curve, int index, int toIndex) {
-            return (float) (((double) curve[index].value - (double) curve[toIndex].value) / ((double) curve[index].time - (double) curve[toIndex].time));
-        }
+        private static float CalculateLinearTangent (AnimationCurve curve, int index, int toIndex) => 
+            (float)((curve[index].value - (double)curve[toIndex].value) / (curve[index].time - (double)curve[toIndex].time));
 
     }
 }

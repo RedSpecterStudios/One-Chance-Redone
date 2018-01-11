@@ -1,9 +1,0 @@
-1 - walking
-2 - Shooting
-3 - Main menu
-(game is now playable)
-4 - options
-5 - upgrades
-6 - local score
-7 - achievments
-8 - global score
