@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Gems {
+namespace Objects.Gems {
 	public class Gems : MonoBehaviour {
 
 		public GameObject GemBody;

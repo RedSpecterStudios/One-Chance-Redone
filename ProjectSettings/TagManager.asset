@@ -12,6 +12,7 @@ TagManager:
   - Gem
   - Enemy
   - Component
+  - Bullet
   layers:
   - Default
   - TransparentFX
