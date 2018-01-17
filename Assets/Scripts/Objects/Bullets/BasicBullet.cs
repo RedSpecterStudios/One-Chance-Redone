@@ -21,7 +21,7 @@ namespace Objects.Bullets {
 		private void OnCollisionEnter (Collision other) {
 			if (other.transform.CompareTag("Enemy")) {
 				// Give enemy damage
-				Destroy(this);
+				Destroy(gameObject);
 			}
 		}
 	}
