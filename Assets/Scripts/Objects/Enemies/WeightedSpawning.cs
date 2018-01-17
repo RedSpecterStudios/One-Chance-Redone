@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Enemies {
+namespace Objects.Enemies {
     public class WeightedSpawning : MonoBehaviour {
 
         public float SpawnTime = 6;
