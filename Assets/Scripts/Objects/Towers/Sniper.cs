@@ -36,12 +36,14 @@ namespace Objects.Towers {
 			}
 		}
 
+		// Listens to OnCanFireEvent and starts FindTarget loop
 		public void Start () {
 			OnCanFireEvent += FiringHander;
 			
 			InvokeRepeating(nameof(FindTarget), 0, 0.066f);
 		}
 
+		// Looks at the target
 		public void Update () {
 			if (_target != null) {
 				_dot = Vector3.Dot((_target.position - Top.position).normalized, Top.forward);
@@ -54,24 +56,29 @@ namespace Objects.Towers {
 			}
 		}
 
+		// Finds target
 		public void FindTarget () {
 			var enemies = GameObject.FindGameObjectsWithTag(EnemyTag).ToList();
 
 			if (enemies.Count > 0) {
 				switch (Mode) {
+					// Finds the first target
 					case TowerMode.First:
 						_target = Core.EnemyArray
 							.FirstOrDefault(enemy => Vector3.Distance(transform.position, enemy.transform.position) <= Range)?.transform;
 						break;
+					// Finds the last target
 					case TowerMode.Last:
 						_target = SpawnPoint.EnemyArray
 							.FirstOrDefault(enemy => Vector3.Distance(transform.position, enemy.transform.position) <= Range)?.transform;
 						break;
+					// Finds the clostest target to tower
 					case TowerMode.Closest:
 						_target = enemies
 							.OrderBy(enemy => Vector3.Distance(transform.position, enemy.transform.position))
 							.FirstOrDefault(enemy => Vector3.Distance(transform.position, enemy.transform.position) <= Range)?.transform;
 						break;
+					// Finds the furthest target from tower
 					case TowerMode.Furthest:
 						_target = enemies.OrderByDescending(enemy => Vector3.Distance(transform.position, enemy.transform.position))
 							.FirstOrDefault(enemy => Vector3.Distance(transform.position, enemy.transform.position) <= Range)?.transform;
@@ -86,6 +93,7 @@ namespace Objects.Towers {
 			}
 		}
 
+		// Fires a shot, if the angle isn't extreme
 		public void Fire () {
 			if (_dot >= 0.7) {
 				var bullet = Instantiate(Bullet, FirePoint.position, Quaternion.identity);
@@ -93,6 +101,7 @@ namespace Objects.Towers {
 			}
 		}
 
+		// Reload timer
 		public IEnumerator FireTimer () {
 			while (true) {
 				yield return new WaitForSeconds(FireRate);
@@ -101,6 +110,7 @@ namespace Objects.Towers {
 			}
 		}
 
+		// Starts or stops the firing loop, based on canFire
 		void FiringHander (bool canFire) {
 			if (canFire) {
 				_fireTimerCoroutine = StartCoroutine(FireTimer());
@@ -109,14 +119,9 @@ namespace Objects.Towers {
 			}
 		}
 
-		// Set up OnCanFireEvent
+		// Sets up OnCanFireEvent
 		public delegate void OnCanFireDelegate (bool value);
 
 		public static event OnCanFireDelegate OnCanFireEvent;
-
-		private void OnDrawGizmos () {
-			Gizmos.color = Color.red;
-			Gizmos.DrawWireSphere(transform.position, Range);
-		}
 	}
 }
