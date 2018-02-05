@@ -112,7 +112,7 @@ namespace Objects.Towers {
 		}
 
 		// Starts or stops the firing loop, based on canFire
-		void FiringHander (bool canFire) {
+		private void FiringHander (bool canFire) {
 			if (canFire) {
 				_fireTimerCoroutine = StartCoroutine(FireTimer());
 			} else {
