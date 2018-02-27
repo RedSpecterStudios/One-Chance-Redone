@@ -142,7 +142,7 @@ public class GatlingDefault : MonoBehaviour {
                         break;
                 }
 
-                if (_target.transform.parent.Find("Center") != null) {
+                if (_target != null && _target.transform.parent.Find("Center") != null) {
                     _target = _target.transform.parent.Find("Center").gameObject;
                 } else {
                     Debug.LogWarning($"No \"Center\" child in \"{_target}\"");

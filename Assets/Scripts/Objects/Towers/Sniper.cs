@@ -21,18 +21,17 @@ namespace Objects.Towers {
 		private float _dot;
 		private Coroutine _fireTimerCoroutine;
 		private Transform _target;
-		private Vector3 _direction;
 
 		private const string EnemyTag = "Enemy";
 		
 		// Links CanFire to _canFire and OnCanFireEvent
 		private bool CanFire {
 			set {
-				if (_canFire == value) return;
+			    if (_canFire != value) {
+			        _canFire = value;
 
-				_canFire = value;
-
-				OnCanFireEvent?.Invoke(value);
+			        OnCanFireEvent?.Invoke(value);
+			    }
 			}
 		}
 
@@ -48,11 +47,11 @@ namespace Objects.Towers {
 			if (_target != null) {
 				_dot = Vector3.Dot((_target.position - Top.position).normalized, Top.forward);
 				
-				var targetPoint = _target.transform.position - Top.transform.position;
-				var rotation = Quaternion.Slerp(Top.transform.rotation, Quaternion.LookRotation(targetPoint), 10 * Time.fixedDeltaTime);
-				Top.transform.rotation = rotation;
-				var y = Top.transform.eulerAngles.y;
-				Top.transform.eulerAngles = new Vector3(0, y, 0);
+				var targetPoint = _target.position - Top.position;
+				var rotation = Quaternion.Slerp(Top.rotation, Quaternion.LookRotation(targetPoint), 10 * Time.fixedDeltaTime);
+				Top.rotation = rotation;
+				var y = Top.eulerAngles.y;
+				Top.eulerAngles = new Vector3(0, y, 0);
 			}
 		}
 
