@@ -1,23 +1,30 @@
 fileFormatVersion: 2
-guid: 0b8fa1ad23a47574ebfa01b540b101c5
-timeCreated: 1519762851
+guid: 44880dbbdecfce54fb1fb7c3122654c7
+timeCreated: 1519776267
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Top
-    100004: Top.001
-    400000: //RootNode
-    400002: Top
-    400004: Top.001
-    2100000: Material
-    2300000: Top
-    2300002: Top.001
-    3300000: Top
-    3300002: Top.001
-    4300000: Top.001
-    4300002: Top
+    100000: Cube.004
+    100002: Cylinder.000
+    100004: Cylinder.004
+    100006: //RootNode
+    400000: Cube.004
+    400002: Cylinder.000
+    400004: Cylinder.004
+    400006: //RootNode
+    2100000: No Name
+    2300000: Cube.004
+    2300002: Cylinder.000
+    2300004: Cylinder.004
+    2300006: //RootNode
+    3300000: Cube.004
+    3300002: Cylinder.000
+    3300004: Cylinder.004
+    3300006: //RootNode
+    4300000: Cylinder.000
+    4300002: Cube.004
+    4300004: Cylinder.004
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -73,7 +80,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
