@@ -85,8 +85,8 @@ namespace Objects.Towers {
 					default:
 						throw new ArgumentOutOfRangeException();
 				}
-				
-				CanFire = true;
+
+				CanFire = _target != null;
 			} else {
 				CanFire = false;
 			}

@@ -9,9 +9,8 @@ using Util.Interfaces;
 namespace Objects.Towers {
     public class Gatling : MonoBehaviour, ITower {
         public float Damage = 2;
-        public float FireRate = 50;
+        public float FireRate = 0.05f;
         public float Range = 20;
-        private float _revLerp;
         public GameObject Bullet;
         public Transform FirePoint;
         public TowerMode Mode = TowerMode.First;
@@ -19,6 +18,7 @@ namespace Objects.Towers {
 
         private bool _canFire;
         private float _dot;
+        private float _revLerp;
         private Animation _rev;
         private Coroutine _fireTimerCoroutine;
         private Transform _target;
@@ -42,9 +42,10 @@ namespace Objects.Towers {
 
             InvokeRepeating(nameof(FindTarget), 0, 0.066f);
 
-            _rev = GetComponent<Animation>();
+            // TODO: Add when animation is added
+            /*_rev = GetComponent<Animation>();
             // Makes sure the gattling barrel isn't spinning when the game starts
-            _rev["GatlingSpin"].speed = 0;
+            _rev["GatlingSpin"].speed = 0;*/
         }
 
         // Looks at the target
@@ -61,13 +62,14 @@ namespace Objects.Towers {
             }
         }
 
-        private void FixedUpdate() {
+        // TODO: Add when animation is added
+        /*private void FixedUpdate() {
             // Revs up the barrel until at max speed, if a target is present
             // Lets the barrel spin itself down until stopping, if their is no longer a target
             _rev["GatlingSpin"].speed =
                 Mathf.Lerp(_rev["GatlingSpin"].speed, _target != null ? 1 : 0, Time.fixedDeltaTime / 2);
             //_rev["GatlingSpin"].speed = _revLerp;
-        }
+        }*/
 
         // Finds target
         public void FindTarget() {
@@ -103,7 +105,7 @@ namespace Objects.Towers {
                         throw new ArgumentOutOfRangeException();
                 }
 
-                CanFire = true;
+                CanFire = _target != null;
             } else {
                 CanFire = false;
             }
