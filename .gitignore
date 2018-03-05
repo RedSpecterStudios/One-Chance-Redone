@@ -653,3 +653,10 @@ ASALocalRun/
 Assets/Plugins/Standard Assets/Effects/ImageEffects/Textures/Thumbs\.db
 
 Assets/Plugins/Standard Assets/Effects/ImageEffects/Textures/Thumbs\.db\.meta
+
+### Custom ###
+
+Assets/Testing/*
+
+!Assets/Testing/README.txt
+!Assets/Testing/README.txt.meta
